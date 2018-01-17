@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="1612" y="464.6176911544228"/>
         </scene>
-        <!--роиргири-->
+        <!--History Of Orders-->
         <scene sceneID="PY2-jk-D9e">
             <objects>
-                <viewController id="JIc-0V-J0e" sceneMemberID="viewController">
+                <viewController id="JIc-0V-J0e" userLabel="History Of Orders" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tNu-aV-5ep">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="4499" y="392"/>
         </scene>
-        <!--Заказ-->
+        <!--Order-->
         <scene sceneID="c9V-bO-13V">
             <objects>
-                <viewController id="RFq-S6-9OB" sceneMemberID="viewController">
+                <viewController id="RFq-S6-9OB" userLabel="Order" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zff-Yg-h5P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="2697" y="62"/>
         </scene>
-        <!--ТелеPort-->
+        <!--TelePort-->
         <scene sceneID="eRg-kl-0o5">
             <objects>
-                <tabBarController id="SIa-us-Iel" sceneMemberID="viewController">
+                <tabBarController id="SIa-us-Iel" userLabel="TelePort" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="ТелеPort" id="Onh-tM-Cpg"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YEU-G9-dtZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -208,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="1618.840579710145" y="-277.98913043478262"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="nLS-HD-WXP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NNN-FI-zYW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NNN-FI-zYW" userLabel="Main Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HUP-bo-Vl1">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
