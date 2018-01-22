@@ -9,33 +9,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--History of orders-->
         <scene sceneID="kka-2H-0mw">
             <objects>
-                <viewController id="EZw-FV-tYx" sceneMemberID="viewController">
+                <viewController id="EZw-FV-tYx" userLabel="History of orders" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U41-8S-gAY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="pZq-lH-9Q1"/>
+                        <viewLayoutGuide key="safeArea" id="Ibf-qu-opb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="1AT-Hb-3uU"/>
+                    <tabBarItem key="tabBarItem" title="История" id="1AT-Hb-3uU" userLabel="Tab Bar Item"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1W3-Sy-wd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="358" y="290"/>
         </scene>
-        <!--Item 1-->
+        <!--Order-->
         <scene sceneID="bQM-hi-sOL">
             <objects>
-                <viewController id="d4L-OX-CfM" sceneMemberID="viewController">
+                <viewController id="d4L-OX-CfM" userLabel="Order" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ymM-Df-qjo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="qY8-qw-tqs"/>
+                        <viewLayoutGuide key="safeArea" id="GWQ-3T-QbA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="O7q-Yw-PiZ"/>
+                    <tabBarItem key="tabBarItem" title="Заказ" id="O7q-Yw-PiZ" userLabel="Tab Bar Item"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwl-nU-bOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,11 +57,11 @@
             </objects>
             <point key="canvasLocation" x="-1625" y="-43"/>
         </scene>
-        <!--ТелеPort-->
+        <!--Tab Bar Controller-->
         <scene sceneID="o92-WH-LKW">
             <objects>
-                <tabBarController id="qEt-MB-1Hl" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="ТелеPort" id="5mb-FY-sKQ"/>
+                <tabBarController id="qEt-MB-1Hl" userLabel="Tab Bar Controller" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="ТелеPort" id="5mb-FY-sKQ" userLabel="Navigation Item"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BeJ-sF-OYR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
