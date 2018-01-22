@@ -54,7 +54,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="7sz-i3-c2u">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="vb9-qo-HEH"/>
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="4q6-xg-tHC"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,18 +64,96 @@
         <!--Check In View Controller-->
         <scene sceneID="u1D-tc-j0Z">
             <objects>
-                <viewController id="INr-gH-KwP" userLabel="Check In View Controller" customClass="CheckInViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="v7G-vG-3zF">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="INr-gH-KwP" userLabel="Check In View Controller" customClass="CheckInViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MV4-fe-s4M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="8vD-BD-VZL"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDo-cS-Ioo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pSX-3c-WF0">
+                                        <rect key="frame" x="16" y="129" width="288" height="310"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fJP-XG-jUf">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-Ze-Wl4">
+                                                <rect key="frame" x="0.0" y="40" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" textContentType="name"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Отчество" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-da-4aG">
+                                                <rect key="frame" x="0.0" y="80" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcp-dg-E45">
+                                                <rect key="frame" x="0.0" y="120" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" textContentType="tel"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJk-5y-Uos">
+                                                <rect key="frame" x="0.0" y="160" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5sZ-Wk-6ms">
+                                                <rect key="frame" x="0.0" y="200" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Подтверждение пароля" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfi-6r-Eae">
+                                                <rect key="frame" x="0.0" y="240" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj6-vf-GmR">
+                                                <rect key="frame" x="0.0" y="280" width="288" height="30"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <state key="normal" title="Зарегистрироваться"/>
+                                                <connections>
+                                                    <segue destination="F4r-Ea-C5m" kind="show" id="c4C-PZ-2IQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pSX-3c-WF0" firstAttribute="leading" secondItem="IDo-cS-Ioo" secondAttribute="leading" constant="16" id="AjG-6V-Dg0"/>
+                                    <constraint firstItem="pSX-3c-WF0" firstAttribute="centerY" secondItem="IDo-cS-Ioo" secondAttribute="centerY" id="Z3f-Uu-cl0"/>
+                                    <constraint firstAttribute="trailing" secondItem="pSX-3c-WF0" secondAttribute="trailing" constant="16" id="eZS-fY-bGg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IDo-cS-Ioo" firstAttribute="height" secondItem="MV4-fe-s4M" secondAttribute="height" id="8xy-DQ-ZZB"/>
+                            <constraint firstItem="IDo-cS-Ioo" firstAttribute="leading" secondItem="MV4-fe-s4M" secondAttribute="leading" id="N14-La-py4"/>
+                            <constraint firstItem="IDo-cS-Ioo" firstAttribute="top" secondItem="MV4-fe-s4M" secondAttribute="top" id="ZVD-Rm-4PU"/>
+                            <constraint firstItem="IDo-cS-Ioo" firstAttribute="width" secondItem="MV4-fe-s4M" secondAttribute="width" id="ihY-Hs-GMD"/>
+                            <constraint firstAttribute="trailing" secondItem="IDo-cS-Ioo" secondAttribute="trailing" id="ir5-U1-uVq"/>
+                            <constraint firstAttribute="bottom" secondItem="IDo-cS-Ioo" secondAttribute="bottom" id="xYt-om-Zd6"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="INr-gH-KwP" id="R1X-97-DmN"/>
+                        </connections>
+                    </scrollView>
                     <navigationItem key="navigationItem" title="Регистрация" id="pZL-K1-pWZ" userLabel="Navigation Item"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXj-vU-MOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="464.6176911544228"/>
+            <point key="canvasLocation" x="1610.625" y="463.73239436619718"/>
         </scene>
         <!--History Of Orders-->
         <scene sceneID="PY2-jk-D9e">
@@ -202,6 +280,7 @@
                             <constraint firstAttribute="trailing" secondItem="8Gt-On-uvF" secondAttribute="trailing" id="Sek-R0-i7l"/>
                             <constraint firstItem="8Gt-On-uvF" firstAttribute="width" secondItem="3ZP-38-tPW" secondAttribute="width" id="WkY-4h-drX"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="GGW-l6-dEm"/>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Авторизация" id="xm5-5P-Qbt" userLabel="Navigation Item"/>
                 </viewController>
@@ -228,4 +307,7 @@
             <point key="canvasLocation" x="-332" y="133"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="c4C-PZ-2IQ"/>
+    </inferredMetricsTieBreakers>
 </document>
