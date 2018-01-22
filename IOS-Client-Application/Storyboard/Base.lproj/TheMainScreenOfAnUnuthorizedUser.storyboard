@@ -122,7 +122,7 @@
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <state key="normal" title="Зарегистрироваться"/>
                                                 <connections>
-                                                    <segue destination="F4r-Ea-C5m" kind="show" id="c4C-PZ-2IQ"/>
+                                                    <segue destination="M4K-MH-78d" kind="show" id="BsL-AZ-bwu"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -155,72 +155,13 @@
             </objects>
             <point key="canvasLocation" x="1610.625" y="463.73239436619718"/>
         </scene>
-        <!--History Of Orders-->
-        <scene sceneID="PY2-jk-D9e">
+        <!--TheMainScreenOfAnAuthorizedUser-->
+        <scene sceneID="hXa-aW-WYD">
             <objects>
-                <viewController id="JIc-0V-J0e" userLabel="History Of Orders" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tNu-aV-5ep">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ykX-7m-ST2"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="История" id="mPN-qA-iFz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lsV-xZ-kGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="TheMainScreenOfAnAuthorizedUser" id="M4K-MH-78d" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4f0-E3-XYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4499" y="392"/>
-        </scene>
-        <!--Order-->
-        <scene sceneID="c9V-bO-13V">
-            <objects>
-                <viewController id="RFq-S6-9OB" userLabel="Order" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zff-Yg-h5P">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Y7N-Ne-ACW"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Заказ" id="a3n-zW-eCE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vjl-XI-eAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4499" y="-267"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8xO-0F-m4C">
-            <objects>
-                <navigationController id="F4r-Ea-C5m" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SgM-Ss-65P">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="SIa-us-Iel" kind="relationship" relationship="rootViewController" id="Nyf-j8-vwp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9WT-Gg-bC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2697" y="62"/>
-        </scene>
-        <!--TelePort-->
-        <scene sceneID="eRg-kl-0o5">
-            <objects>
-                <tabBarController id="SIa-us-Iel" userLabel="TelePort" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="ТелеPort" id="Onh-tM-Cpg" userLabel="Navigation Item"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YEU-G9-dtZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="RFq-S6-9OB" kind="relationship" relationship="viewControllers" id="qay-CI-rLv"/>
-                        <segue destination="JIc-0V-J0e" kind="relationship" relationship="viewControllers" id="OFM-Dx-dfK"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HNL-uz-fT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3583" y="62"/>
+            <point key="canvasLocation" x="2862" y="6"/>
         </scene>
         <!--Authorization View Controller-->
         <scene sceneID="QFR-2d-BXE">
@@ -256,7 +197,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Войти"/>
                                                 <connections>
-                                                    <segue destination="F4r-Ea-C5m" kind="show" id="y8J-lk-hXI"/>
+                                                    <segue destination="M4K-MH-78d" kind="show" id="gbV-Vn-ni9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -308,6 +249,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c4C-PZ-2IQ"/>
+        <segue reference="BsL-AZ-bwu"/>
     </inferredMetricsTieBreakers>
 </document>
