@@ -122,7 +122,7 @@
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <state key="normal" title="Зарегистрироваться"/>
                                                 <connections>
-                                                    <segue destination="M4K-MH-78d" kind="show" id="BsL-AZ-bwu"/>
+                                                    <segue destination="M4K-MH-78d" kind="presentation" id="kCV-th-Rg7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -198,7 +198,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Войти"/>
                                                 <connections>
-                                                    <segue destination="M4K-MH-78d" kind="show" id="gbV-Vn-ni9"/>
+                                                    <segue destination="M4K-MH-78d" kind="presentation" id="o5p-zv-gbg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -250,6 +250,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BsL-AZ-bwu"/>
+        <segue reference="kCV-th-Rg7"/>
     </inferredMetricsTieBreakers>
 </document>
