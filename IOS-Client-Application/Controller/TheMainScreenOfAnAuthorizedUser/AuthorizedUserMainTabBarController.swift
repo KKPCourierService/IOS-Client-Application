@@ -17,7 +17,7 @@ class AuthorizedUserMainTabBarController: UITabBarController {
     }
 
 
-    
+    //Нажатие на кнопку открытия меню
     @IBAction func menuBarButtonClick(_ sender: UIBarButtonItem) {
         NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
