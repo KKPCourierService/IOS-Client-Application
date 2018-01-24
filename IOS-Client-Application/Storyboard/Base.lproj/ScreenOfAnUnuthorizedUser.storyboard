@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Main Unuthorized View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Main Unuthorized View Controller" customClass="MainUnuthorizedViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,6 +145,7 @@
                             <constraint firstAttribute="trailing" secondItem="IDo-cS-Ioo" secondAttribute="trailing" id="ir5-U1-uVq"/>
                             <constraint firstAttribute="bottom" secondItem="IDo-cS-Ioo" secondAttribute="bottom" id="xYt-om-Zd6"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="dko-90-MxQ"/>
                         <connections>
                             <outlet property="delegate" destination="INr-gH-KwP" id="R1X-97-DmN"/>
                         </connections>
@@ -229,10 +230,10 @@
             </objects>
             <point key="canvasLocation" x="1618.840579710145" y="-277.98913043478262"/>
         </scene>
-        <!--Main Navigation Controller-->
+        <!--Main Unuthorized Navigation Controller-->
         <scene sceneID="nLS-HD-WXP">
             <objects>
-                <navigationController id="NNN-FI-zYW" userLabel="Main Navigation Controller" sceneMemberID="viewController">
+                <navigationController id="NNN-FI-zYW" userLabel="Main Unuthorized Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HUP-bo-Vl1">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
