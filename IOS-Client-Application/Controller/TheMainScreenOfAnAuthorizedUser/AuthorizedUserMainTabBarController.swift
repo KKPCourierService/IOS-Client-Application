@@ -12,7 +12,8 @@ class AuthorizedUserMainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        //Событие перехода на форму профиля
         NotificationCenter.default.addObserver(self, selector: #selector(showProfile), name: NSNotification.Name("ShowProfile"), object: nil)
     }
 
@@ -22,6 +23,7 @@ class AuthorizedUserMainTabBarController: UITabBarController {
         NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
     
+    //Обработчик события перехода на форму профиля
     @objc func showProfile () {
         performSegue(withIdentifier: "ShowProfile", sender: nil)
     }

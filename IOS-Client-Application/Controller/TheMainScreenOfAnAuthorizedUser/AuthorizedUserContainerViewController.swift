@@ -15,9 +15,8 @@ class AuthorizedUserContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Событие
+        //Событие для открытия/закрытия меню
         NotificationCenter.default.addObserver(self, selector: #selector(toggleSideMenu), name: NSNotification.Name("ToggleSideMenu"), object: nil)
-        // Do any additional setup after loading the view.
     }
 
     
