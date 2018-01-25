@@ -227,7 +227,7 @@
                 <viewControllerPlaceholder storyboardName="ScreenOfAnUnuthorizedUser" id="fwy-Ox-qCf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-KY-DQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2566" y="354"/>
+            <point key="canvasLocation" x="-2565" y="463"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="kGP-Tm-2O0">
