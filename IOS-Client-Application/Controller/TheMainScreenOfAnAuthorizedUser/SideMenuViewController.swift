@@ -16,6 +16,14 @@ class SideMenuViewController: UITableViewController {
    
     }
 
-  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NotificationCenter.default.post(name: Notification.Name("ToggleSideMenu"), object: nil)
+        switch indexPath.row {
+        case 0:
+            NotificationCenter.default.post(name: Notification.Name("ShowProfile"), object: nil)
+        default:
+            break
+        }
+    }
 
 }

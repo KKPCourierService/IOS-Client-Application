@@ -13,7 +13,7 @@ class AuthorizedUserMainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(showProfile), name: NSNotification.Name("ShowProfile"), object: nil)
     }
 
 
@@ -22,6 +22,9 @@ class AuthorizedUserMainTabBarController: UITabBarController {
         NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
     
+    @objc func showProfile () {
+        performSegue(withIdentifier: "ShowProfile", sender: nil)
+    }
    
 
 }
