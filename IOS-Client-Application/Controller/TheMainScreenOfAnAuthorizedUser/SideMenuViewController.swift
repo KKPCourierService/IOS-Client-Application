@@ -13,7 +13,8 @@ class SideMenuViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    //Обработчик выбора строки меню
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NotificationCenter.default.post(name: Notification.Name("ToggleSideMenu"), object: nil)
         switch indexPath.row {

@@ -67,6 +67,7 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="70y-FI-pac" firstAttribute="leading" secondItem="PLQ-9B-Et0" secondAttribute="leading" constant="-240" id="2qZ-Mg-tYk"/>
                             <constraint firstItem="Uxb-E3-Ane" firstAttribute="width" secondItem="PLQ-9B-Et0" secondAttribute="width" id="Ar2-Vy-VKl"/>
@@ -77,12 +78,27 @@
                             <constraint firstAttribute="bottom" secondItem="Uxb-E3-Ane" secondAttribute="bottom" id="jd2-oO-DVh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AHi-bA-Hh7"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Quq-Nh-8x3" appends="YES" id="xjM-cm-EHT"/>
+                            <outletCollection property="gestureRecognizers" destination="LgR-Ql-Lhl" appends="YES" id="dOO-dl-Vo0"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="sideMenuConstaint" destination="2qZ-Mg-tYk" id="4Dh-cR-Box"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JaB-GP-cuw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="Quq-Nh-8x3" userLabel="Left Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="leftSwipe:" destination="cbG-90-15V" id="ga4-kH-6F2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="LgR-Ql-Lhl" userLabel="Left Screen Edge Pan Gesture Recognizer">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="leftScreenEdgePanGesture:" destination="cbG-90-15V" id="290-Bv-Dl3"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2122.5" y="-1185.2112676056338"/>
         </scene>
@@ -213,17 +229,17 @@
             </objects>
             <point key="canvasLocation" x="-2566" y="354"/>
         </scene>
-        <!--Профиль-->
+        <!--Profile View Controller-->
         <scene sceneID="kGP-Tm-2O0">
             <objects>
-                <viewController id="Y5H-0U-3Xq" sceneMemberID="viewController">
+                <viewController id="Y5H-0U-3Xq" userLabel="Profile View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="alq-9L-aVD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CIK-RG-VCn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Профиль" id="NZM-44-u9Z"/>
+                    <navigationItem key="navigationItem" title="Профиль" id="NZM-44-u9Z" userLabel="Navigation Item"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tjs-3V-RJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
