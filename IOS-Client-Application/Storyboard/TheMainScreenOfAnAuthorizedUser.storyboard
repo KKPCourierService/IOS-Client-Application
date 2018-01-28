@@ -65,6 +65,12 @@
                                     <segue destination="aUd-52-kRH" kind="embed" id="k9y-8t-bv1"/>
                                 </connections>
                             </containerView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3l-d0-MbZ" userLabel="Hide Side Menu Button">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <action selector="hideSideMenuButtonClick:" destination="cbG-90-15V" eventType="touchUpInside" id="qp2-rg-FFE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -74,8 +80,12 @@
                             <constraint firstAttribute="bottom" secondItem="70y-FI-pac" secondAttribute="bottom" id="Qf6-d3-aHt"/>
                             <constraint firstItem="70y-FI-pac" firstAttribute="top" secondItem="PLQ-9B-Et0" secondAttribute="top" id="Rzc-au-5Kx"/>
                             <constraint firstItem="Uxb-E3-Ane" firstAttribute="top" secondItem="PLQ-9B-Et0" secondAttribute="top" id="SBe-Ns-NjK"/>
+                            <constraint firstItem="r3l-d0-MbZ" firstAttribute="leading" secondItem="70y-FI-pac" secondAttribute="trailing" id="ZS7-8j-ZbX"/>
                             <constraint firstItem="Uxb-E3-Ane" firstAttribute="leading" secondItem="70y-FI-pac" secondAttribute="trailing" id="gm5-Ag-ckd"/>
                             <constraint firstAttribute="bottom" secondItem="Uxb-E3-Ane" secondAttribute="bottom" id="jd2-oO-DVh"/>
+                            <constraint firstItem="r3l-d0-MbZ" firstAttribute="top" secondItem="PLQ-9B-Et0" secondAttribute="top" id="lXb-kF-7tE"/>
+                            <constraint firstItem="r3l-d0-MbZ" firstAttribute="trailing" secondItem="AHi-bA-Hh7" secondAttribute="trailing" id="uWQ-VF-F5r"/>
+                            <constraint firstItem="r3l-d0-MbZ" firstAttribute="bottom" secondItem="AHi-bA-Hh7" secondAttribute="bottom" id="wIM-71-eGB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AHi-bA-Hh7"/>
                         <connections>
@@ -84,6 +94,8 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="contentContainerView" destination="Uxb-E3-Ane" id="j8w-Ve-uxy"/>
+                        <outlet property="hideSideMenuButton" destination="r3l-d0-MbZ" id="Pfh-Wp-eiO"/>
                         <outlet property="sideMenuConstaint" destination="2qZ-Mg-tYk" id="4Dh-cR-Box"/>
                     </connections>
                 </viewController>
@@ -112,14 +124,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="q32-HA-58R">
-                            <rect key="frame" x="0.0" y="224" width="240" height="44"/>
+                            <rect key="frame" x="0.0" y="224" width="240" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <sections>
                             <tableViewSection id="pHG-BP-aJe">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="92" id="Vo8-4A-tCp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="92" id="Vo8-4A-tCp" userLabel="Profile Table View Cell">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vo8-4A-tCp" id="b52-Tg-gzd">
@@ -150,7 +162,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qPL-uW-M04">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qPL-uW-M04" userLabel="Setings Table View Cell">
                                         <rect key="frame" x="0.0" y="92" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qPL-uW-M04" id="N1n-l7-FJ5">
@@ -173,7 +185,7 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LEF-3c-QHe">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LEF-3c-QHe" userLabel="Exit Table View Cell">
                                         <rect key="frame" x="0.0" y="136" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LEF-3c-QHe" id="7oq-9Z-gMA">
@@ -199,7 +211,7 @@
                                             <segue destination="fwy-Ox-qCf" kind="presentation" id="D0Q-oY-ofi"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fxQ-nO-BSu">
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fxQ-nO-BSu" userLabel="Empti Table View Cell">
                                         <rect key="frame" x="0.0" y="180" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fxQ-nO-BSu" id="sRa-DC-ntx">
@@ -219,7 +231,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTR-qr-Y9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2565" y="-42.25352112676056"/>
+            <point key="canvasLocation" x="-2568.75" y="-44.366197183098592"/>
         </scene>
         <!--ScreenOfAnUnuthorizedUser-->
         <scene sceneID="8g5-4v-J0f">

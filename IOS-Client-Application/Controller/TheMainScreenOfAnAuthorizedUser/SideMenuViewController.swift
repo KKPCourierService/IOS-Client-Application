@@ -16,7 +16,7 @@ class SideMenuViewController: UITableViewController {
     
     //Обработчик выбора строки меню
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        NotificationCenter.default.post(name: Notification.Name("ToggleSideMenu"), object: nil)
+        NotificationCenter.default.post(name: Notification.Name("HideMenu"), object: nil)
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
