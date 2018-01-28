@@ -23,6 +23,7 @@ class AuthorizedUserMainTabBarController: UITabBarController {
         NotificationCenter.default.post(name: NSNotification.Name("ShowMenu"), object: nil)
     }
     
+    
     //Обработчик события перехода на форму профиля
     @objc func showProfile () {
         performSegue(withIdentifier: "ShowProfile", sender: nil)
