@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1714A9F6201E23E0009A4436 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A9F5201E23E0009A4436 /* Profile.storyboard */; };
 		2BB1E4820881E1E34500B2A7 /* Pods_IOS_Client_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E3077C97D268DA2D969728 /* Pods_IOS_Client_Application.framework */; };
 		783DEE002018197A00554378 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DEDFF2018197A00554378 /* User.swift */; };
 		784896DC200A966D005626BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784896DB200A966D005626BB /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1714A9F5201E23E0009A4436 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		433A10DF189450D7AB6AF0DE /* Pods-IOS-Client-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS-Client-Application.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOS-Client-Application/Pods-IOS-Client-Application.debug.xcconfig"; sourceTree = "<group>"; };
 		48E3077C97D268DA2D969728 /* Pods_IOS_Client_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS_Client_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		783DEDFF2018197A00554378 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				784896DF200A966D005626BB /* ScreenOfAnUnuthorizedUser.storyboard */,
 				78F6D2FF2016049E001EA4DB /* TheMainScreenOfAnAuthorizedUser.storyboard */,
+				1714A9F5201E23E0009A4436 /* Profile.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				784896E6200A966D005626BB /* LaunchScreen.storyboard in Resources */,
 				78F6D3002016049E001EA4DB /* TheMainScreenOfAnAuthorizedUser.storyboard in Resources */,
+				1714A9F6201E23E0009A4436 /* Profile.storyboard in Resources */,
 				784896E3200A966D005626BB /* Assets.xcassets in Resources */,
 				784896E1200A966D005626BB /* ScreenOfAnUnuthorizedUser.storyboard in Resources */,
 			);

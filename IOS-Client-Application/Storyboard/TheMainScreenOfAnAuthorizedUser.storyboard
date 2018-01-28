@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cbG-90-15V">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,12 +10,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Profile-->
+        <scene sceneID="6sO-Zc-xld">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="UXZ-l9-WO8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmG-Bt-6TC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-596" y="575"/>
+        </scene>
         <!--History of orders-->
         <scene sceneID="kka-2H-0mw">
             <objects>
                 <viewController id="EZw-FV-tYx" userLabel="History of orders" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U41-8S-gAY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ibf-qu-opb"/>
@@ -31,7 +39,7 @@
             <objects>
                 <viewController id="d4L-OX-CfM" userLabel="Order" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ymM-Df-qjo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GWQ-3T-QbA"/>
@@ -47,11 +55,11 @@
             <objects>
                 <viewController id="cbG-90-15V" userLabel="Container View Controller" customClass="AuthorizedUserContainerViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PLQ-9B-Et0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70y-FI-pac" userLabel="Side Menu Container View">
-                                <rect key="frame" x="-240" y="0.0" width="240" height="667"/>
+                                <rect key="frame" x="-240" y="0.0" width="240" height="568"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Zre-Pb-iiF"/>
                                 </constraints>
@@ -60,13 +68,13 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uxb-E3-Ane" userLabel="Content Container View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <connections>
                                     <segue destination="aUd-52-kRH" kind="embed" id="k9y-8t-bv1"/>
                                 </connections>
                             </containerView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3l-d0-MbZ" userLabel="Hide Side Menu Button">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <connections>
                                     <action selector="hideSideMenuButtonClick:" destination="cbG-90-15V" eventType="touchUpInside" id="qp2-rg-FFE"/>
                                 </connections>
@@ -119,12 +127,12 @@
             <objects>
                 <tableViewController id="RXf-BH-ixs" customClass="SideMenuViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ftb-ZE-MkG">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="q32-HA-58R">
-                            <rect key="frame" x="0.0" y="224" width="240" height="23"/>
+                            <rect key="frame" x="0.0" y="224" width="240" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -231,7 +239,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTR-qr-Y9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2569.5999999999999" y="-44.527736131934034"/>
+            <point key="canvasLocation" x="-2570.625" y="-45.422535211267608"/>
         </scene>
         <!--ScreenOfAnUnuthorizedUser-->
         <scene sceneID="8g5-4v-J0f">
@@ -241,41 +249,12 @@
             </objects>
             <point key="canvasLocation" x="-2565" y="463"/>
         </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="kGP-Tm-2O0">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Y5H-0U-3Xq" userLabel="Profile View Controller" sceneMemberID="viewController">
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="CTo-5D-uvA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2J-ia-BXm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="S2J-ia-BXm" firstAttribute="height" secondItem="CTo-5D-uvA" secondAttribute="height" id="0pP-LG-7TT"/>
-                            <constraint firstItem="S2J-ia-BXm" firstAttribute="leading" secondItem="CTo-5D-uvA" secondAttribute="leading" id="WEQ-1I-4bm"/>
-                            <constraint firstItem="S2J-ia-BXm" firstAttribute="width" secondItem="CTo-5D-uvA" secondAttribute="width" id="YPJ-wx-KNt"/>
-                            <constraint firstAttribute="trailing" secondItem="S2J-ia-BXm" secondAttribute="trailing" id="ZVk-mt-PxB"/>
-                            <constraint firstItem="S2J-ia-BXm" firstAttribute="top" secondItem="CTo-5D-uvA" secondAttribute="top" id="eNm-nf-w0c"/>
-                            <constraint firstAttribute="bottom" secondItem="S2J-ia-BXm" secondAttribute="bottom" id="hBf-rA-lUs"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Lke-SV-fd0"/>
-                    </scrollView>
-                    <navigationItem key="navigationItem" title="Профиль" id="NZM-44-u9Z" userLabel="Navigation Item"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tjs-3V-RJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-594.39999999999998" y="787.55622188905556"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="erU-vf-SxW">
             <objects>
                 <navigationController id="aUd-52-kRH" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G9r-gv-hML">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -306,7 +285,7 @@
                     <connections>
                         <segue destination="d4L-OX-CfM" kind="relationship" relationship="viewControllers" id="9jf-2R-Xis"/>
                         <segue destination="EZw-FV-tYx" kind="relationship" relationship="viewControllers" id="ySr-xA-KM2"/>
-                        <segue destination="Y5H-0U-3Xq" kind="show" identifier="ShowProfile" id="IJM-GK-44I"/>
+                        <segue destination="UXZ-l9-WO8" kind="show" identifier="ShowProfile" id="pBd-Nv-56D"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3J-SJ-pwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
