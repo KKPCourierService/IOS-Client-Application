@@ -14,91 +14,113 @@
         <scene sceneID="wJm-KJ-FWl">
             <objects>
                 <viewController id="SQV-fl-BEI" userLabel="Edit Name View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="K0g-RL-seF">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MIk-af-wcV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="yDZ-Jh-kye"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hn-my-Jg8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyz-1i-AQ3" userLabel="Title Label">
+                                        <rect key="frame" x="8" y="28" width="24.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tSL-Kp-0JT" userLabel="Name Text Field">
+                                        <rect key="frame" x="8" y="50" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZB-eB-u2X" userLabel="Save Button">
+                                        <rect key="frame" x="61" y="102" width="199" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Сохранить"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cyz-1i-AQ3" firstAttribute="leading" secondItem="3Hn-my-Jg8" secondAttribute="leading" constant="8" id="4X8-0V-PIG"/>
+                                    <constraint firstAttribute="trailing" secondItem="tSL-Kp-0JT" secondAttribute="trailing" constant="8" id="7VI-Gz-nim"/>
+                                    <constraint firstItem="cyz-1i-AQ3" firstAttribute="top" secondItem="3Hn-my-Jg8" secondAttribute="top" constant="28" id="QBl-zD-vNY"/>
+                                    <constraint firstItem="tSL-Kp-0JT" firstAttribute="leading" secondItem="3Hn-my-Jg8" secondAttribute="leading" constant="8" id="Yvk-Ih-Mxl"/>
+                                    <constraint firstItem="tSL-Kp-0JT" firstAttribute="top" secondItem="cyz-1i-AQ3" secondAttribute="bottom" constant="7.5" id="eAU-Wu-YaT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="3Hn-my-Jg8" firstAttribute="top" secondItem="MIk-af-wcV" secondAttribute="top" id="2v1-jH-zeb"/>
+                            <constraint firstItem="3Hn-my-Jg8" firstAttribute="width" secondItem="MIk-af-wcV" secondAttribute="width" id="3wa-v6-zfS"/>
+                            <constraint firstAttribute="bottom" secondItem="3Hn-my-Jg8" secondAttribute="bottom" id="4Ah-YP-qkl"/>
+                            <constraint firstAttribute="trailing" secondItem="3Hn-my-Jg8" secondAttribute="trailing" id="SCt-JW-gpt"/>
+                            <constraint firstItem="3Hn-my-Jg8" firstAttribute="height" secondItem="MIk-af-wcV" secondAttribute="height" id="mUO-01-Qbg"/>
+                            <constraint firstItem="3Hn-my-Jg8" firstAttribute="leading" secondItem="MIk-af-wcV" secondAttribute="leading" id="s8w-EM-Fhr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wAs-FE-E8X"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Изменить" id="8FG-YM-Cu1" userLabel="Navigation Item"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2f-Nx-9co" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2085" y="2264"/>
+            <point key="canvasLocation" x="-2088.75" y="2263.7323943661972"/>
         </scene>
         <!--Edit Surname View Controller-->
-        <scene sceneID="Rcq-7h-XPG">
+        <scene sceneID="tjs-OZ-aWr">
             <objects>
-                <viewController id="SKa-Yt-dWw" userLabel="Edit Surname View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a48-j5-gZc">
+                <viewController id="03Y-s0-hcV" userLabel="Edit Surname View Controller" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rVR-dP-HAV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="3Eq-k1-Ihj"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thk-OY-S3c">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCv-Hc-6dQ" userLabel="Title Label">
+                                        <rect key="frame" x="8" y="28" width="54" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rF5-ke-OgS" userLabel="Surname Text Field">
+                                        <rect key="frame" x="8" y="50" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hp-2l-Zrt" userLabel="Save Button">
+                                        <rect key="frame" x="61" y="102" width="199" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Сохранить"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rF5-ke-OgS" secondAttribute="trailing" constant="8" id="4gA-hh-Zrg"/>
+                                    <constraint firstItem="FCv-Hc-6dQ" firstAttribute="top" secondItem="thk-OY-S3c" secondAttribute="top" constant="28" id="5Mw-8R-hol"/>
+                                    <constraint firstItem="rF5-ke-OgS" firstAttribute="leading" secondItem="thk-OY-S3c" secondAttribute="leading" constant="8" id="Q7Q-AT-dNC"/>
+                                    <constraint firstItem="rF5-ke-OgS" firstAttribute="top" secondItem="FCv-Hc-6dQ" secondAttribute="bottom" constant="7.5" id="cQ7-hR-xWS"/>
+                                    <constraint firstItem="FCv-Hc-6dQ" firstAttribute="leading" secondItem="thk-OY-S3c" secondAttribute="leading" constant="8" id="iFq-Sq-Tad"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="thk-OY-S3c" firstAttribute="leading" secondItem="rVR-dP-HAV" secondAttribute="leading" id="GnK-Ce-KdX"/>
+                            <constraint firstItem="thk-OY-S3c" firstAttribute="height" secondItem="rVR-dP-HAV" secondAttribute="height" id="PdP-6t-PT1"/>
+                            <constraint firstAttribute="trailing" secondItem="thk-OY-S3c" secondAttribute="trailing" id="Qgb-6S-BKX"/>
+                            <constraint firstItem="thk-OY-S3c" firstAttribute="top" secondItem="rVR-dP-HAV" secondAttribute="top" id="Rbf-sX-MgO"/>
+                            <constraint firstItem="thk-OY-S3c" firstAttribute="width" secondItem="rVR-dP-HAV" secondAttribute="width" id="l4x-Cr-77l"/>
+                            <constraint firstAttribute="bottom" secondItem="thk-OY-S3c" secondAttribute="bottom" id="qJx-Zz-qXC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R1j-9W-CbR"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Изменить" id="yjM-wl-AX2" userLabel="Navigation Item"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QKo-bN-eoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8h-YZ-gxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1046" y="2264"/>
-        </scene>
-        <!--Edit Patronymic View Controller-->
-        <scene sceneID="c5b-O2-rvM">
-            <objects>
-                <viewController id="03G-mW-d7t" userLabel="Edit Patronymic View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nlb-15-fMe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="et0-zG-twx"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hJc-gj-hsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-152" y="2264"/>
-        </scene>
-        <!--Edit Phone Number View Controller-->
-        <scene sceneID="ulA-9c-tg3">
-            <objects>
-                <viewController id="0GR-WZ-mZU" userLabel="Edit Phone Number View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="d2o-Gg-j8b">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="qxs-JN-t98"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cWp-ry-Ldj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="636" y="2264"/>
-        </scene>
-        <!--Edit Email View Controller-->
-        <scene sceneID="QV9-az-pGX">
-            <objects>
-                <viewController id="AGq-3c-7hV" userLabel="Edit Email View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sfB-Zs-VB7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="kS5-yC-dZ0"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OQp-AM-BVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1508" y="2264"/>
-        </scene>
-        <!--Edit Password View Controller-->
-        <scene sceneID="TgU-D9-Vgy">
-            <objects>
-                <viewController id="nb0-YQ-zo0" userLabel="Edit Password View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Eos-PE-XFV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="V0F-XW-NV4"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DRB-XC-tav" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2379" y="2264"/>
+            <point key="canvasLocation" x="-1136" y="2264"/>
         </scene>
         <!--Profile Table View Controller-->
         <scene sceneID="MIk-9h-za6">
@@ -205,7 +227,7 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="SKa-Yt-dWw" kind="show" id="bY6-5z-FhA"/>
+                                            <segue destination="03Y-s0-hcV" kind="show" id="HaC-SW-LXJ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Pw0-Lt-tW7" userLabel="Patronymic Table View Cell">
@@ -233,7 +255,7 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="03G-mW-d7t" kind="show" id="31g-Nd-c71"/>
+                                            <segue destination="T9s-uM-axu" kind="show" id="xHr-cG-mbW"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="UzC-FX-hTn" userLabel="Phone Number View Cell">
@@ -261,7 +283,7 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="0GR-WZ-mZU" kind="show" id="7jA-9y-2z9"/>
+                                            <segue destination="vge-b4-FIy" kind="show" id="ZUJ-Bd-CNx"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="avL-y0-FLN" userLabel="Phone Email Table View Cell">
@@ -289,7 +311,7 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="AGq-3c-7hV" kind="show" id="GaD-Pz-41s"/>
+                                            <segue destination="Fws-xW-waV" kind="show" id="oi2-nT-ryb"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="y07-X1-isa" userLabel="Password Table View Cell">
@@ -317,7 +339,7 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="nb0-YQ-zo0" kind="show" id="F7m-Qh-qI9"/>
+                                            <segue destination="MVD-Fe-Npb" kind="show" id="PXM-Uf-Gxw"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -328,10 +350,296 @@
                             <outlet property="delegate" destination="rXm-zw-dfW" id="Xo8-XZ-5PE"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Профиль" id="m6Y-ij-6pS" userLabel="Navigation Item">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="aQM-mi-C9W"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AnO-xc-gue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="290.625" y="1155.6338028169014"/>
+        </scene>
+        <!--Edit Patronymic View Controller-->
+        <scene sceneID="Nyq-DF-4Qf">
+            <objects>
+                <viewController id="T9s-uM-axu" userLabel="Edit Patronymic View Controller" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="F86-n1-EmZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKJ-X1-owN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отчество" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRb-uX-zm0" userLabel="Title Label">
+                                        <rect key="frame" x="8" y="28" width="56" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2M-T1-oOS" userLabel="Patronymic Text Field">
+                                        <rect key="frame" x="8" y="50" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrC-wI-fGa" userLabel="Save Button">
+                                        <rect key="frame" x="61" y="102" width="199" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Сохранить"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="d2M-T1-oOS" secondAttribute="trailing" constant="8" id="29J-8s-OSb"/>
+                                    <constraint firstItem="lRb-uX-zm0" firstAttribute="top" secondItem="HKJ-X1-owN" secondAttribute="top" constant="28" id="5LZ-gP-5AM"/>
+                                    <constraint firstItem="d2M-T1-oOS" firstAttribute="top" secondItem="lRb-uX-zm0" secondAttribute="bottom" constant="7.5" id="GzA-qc-7rY"/>
+                                    <constraint firstItem="d2M-T1-oOS" firstAttribute="leading" secondItem="HKJ-X1-owN" secondAttribute="leading" constant="8" id="cqN-LR-sIt"/>
+                                    <constraint firstItem="lRb-uX-zm0" firstAttribute="leading" secondItem="HKJ-X1-owN" secondAttribute="leading" constant="8" id="pzA-T3-Kd0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="HKJ-X1-owN" firstAttribute="height" secondItem="F86-n1-EmZ" secondAttribute="height" id="2CQ-0s-aHY"/>
+                            <constraint firstItem="HKJ-X1-owN" firstAttribute="leading" secondItem="F86-n1-EmZ" secondAttribute="leading" id="6EO-mu-i64"/>
+                            <constraint firstAttribute="bottom" secondItem="HKJ-X1-owN" secondAttribute="bottom" id="L12-iu-LvB"/>
+                            <constraint firstAttribute="trailing" secondItem="HKJ-X1-owN" secondAttribute="trailing" id="MZ8-z2-55l"/>
+                            <constraint firstItem="HKJ-X1-owN" firstAttribute="width" secondItem="F86-n1-EmZ" secondAttribute="width" id="i6n-Fx-Kgf"/>
+                            <constraint firstItem="HKJ-X1-owN" firstAttribute="top" secondItem="F86-n1-EmZ" secondAttribute="top" id="rLY-Og-7Xn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qNM-Ai-TY9"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Изменить" id="Raw-nA-vQD" userLabel="Navigation Item"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHx-lY-gvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="2264"/>
+        </scene>
+        <!--Edit Phone Number View Controller-->
+        <scene sceneID="Qpo-zX-o6R">
+            <objects>
+                <viewController id="vge-b4-FIy" userLabel="Edit Phone Number View Controller" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="N2q-DI-Vni">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-Pc-saQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P90-YG-0h7" userLabel="Title Label">
+                                        <rect key="frame" x="8" y="28" width="100" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ik3-Q0-mVv" userLabel="Phone Number Text Field">
+                                        <rect key="frame" x="8" y="50" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIl-VF-7yO" userLabel="Save Button">
+                                        <rect key="frame" x="61" y="102" width="199" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Сохранить"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ik3-Q0-mVv" secondAttribute="trailing" constant="8" id="70h-E8-RKe"/>
+                                    <constraint firstItem="Ik3-Q0-mVv" firstAttribute="leading" secondItem="nv3-Pc-saQ" secondAttribute="leading" constant="8" id="E0I-LU-b9y"/>
+                                    <constraint firstItem="P90-YG-0h7" firstAttribute="leading" secondItem="nv3-Pc-saQ" secondAttribute="leading" constant="8" id="EO9-y1-q8y"/>
+                                    <constraint firstItem="Ik3-Q0-mVv" firstAttribute="top" secondItem="P90-YG-0h7" secondAttribute="bottom" constant="7.5" id="SVh-hL-fzd"/>
+                                    <constraint firstItem="P90-YG-0h7" firstAttribute="top" secondItem="nv3-Pc-saQ" secondAttribute="top" constant="28" id="Sxi-hP-WnX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nv3-Pc-saQ" secondAttribute="bottom" id="Lb2-pa-kbb"/>
+                            <constraint firstItem="nv3-Pc-saQ" firstAttribute="height" secondItem="N2q-DI-Vni" secondAttribute="height" id="NdE-oW-v27"/>
+                            <constraint firstAttribute="trailing" secondItem="nv3-Pc-saQ" secondAttribute="trailing" id="RnR-oR-x1W"/>
+                            <constraint firstItem="nv3-Pc-saQ" firstAttribute="width" secondItem="N2q-DI-Vni" secondAttribute="width" id="eM5-ca-Qac"/>
+                            <constraint firstItem="nv3-Pc-saQ" firstAttribute="leading" secondItem="N2q-DI-Vni" secondAttribute="leading" id="pzZ-S2-YRd"/>
+                            <constraint firstItem="nv3-Pc-saQ" firstAttribute="top" secondItem="N2q-DI-Vni" secondAttribute="top" id="vek-rF-yrF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sK1-Yj-FuP"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Изменить" id="Tyh-5A-zcB" userLabel="Navigation Item"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oso-mg-AVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="2264"/>
+        </scene>
+        <!--Edit Email View Controller-->
+        <scene sceneID="hYx-D0-uT6">
+            <objects>
+                <viewController id="Fws-xW-waV" userLabel="Edit Email View Controller" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rze-jD-8MD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7n-MG-IM2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNp-vp-NBx" userLabel="Title Label">
+                                        <rect key="frame" x="8" y="28" width="30.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ijj-Al-sfZ" userLabel="Email Text Field">
+                                        <rect key="frame" x="8" y="50" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZr-uu-Dyr" userLabel="Save Button">
+                                        <rect key="frame" x="61" y="102" width="199" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Сохранить"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ijj-Al-sfZ" secondAttribute="trailing" constant="8" id="3bs-dS-jHk"/>
+                                    <constraint firstItem="Ijj-Al-sfZ" firstAttribute="top" secondItem="wNp-vp-NBx" secondAttribute="bottom" constant="7.5" id="7lq-tF-lHk"/>
+                                    <constraint firstItem="wNp-vp-NBx" firstAttribute="leading" secondItem="r7n-MG-IM2" secondAttribute="leading" constant="8" id="PF0-nm-wfI"/>
+                                    <constraint firstItem="wNp-vp-NBx" firstAttribute="top" secondItem="r7n-MG-IM2" secondAttribute="top" constant="28" id="xkc-Bn-47i"/>
+                                    <constraint firstItem="Ijj-Al-sfZ" firstAttribute="leading" secondItem="r7n-MG-IM2" secondAttribute="leading" constant="8" id="zCs-3B-7kb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="r7n-MG-IM2" firstAttribute="top" secondItem="rze-jD-8MD" secondAttribute="top" id="AZ5-Z9-saP"/>
+                            <constraint firstAttribute="bottom" secondItem="r7n-MG-IM2" secondAttribute="bottom" id="EIG-Fx-eAV"/>
+                            <constraint firstItem="r7n-MG-IM2" firstAttribute="height" secondItem="rze-jD-8MD" secondAttribute="height" id="MNC-vL-DIe"/>
+                            <constraint firstAttribute="trailing" secondItem="r7n-MG-IM2" secondAttribute="trailing" id="PXe-l8-jJ2"/>
+                            <constraint firstItem="r7n-MG-IM2" firstAttribute="leading" secondItem="rze-jD-8MD" secondAttribute="leading" id="QkO-TX-RRe"/>
+                            <constraint firstItem="r7n-MG-IM2" firstAttribute="width" secondItem="rze-jD-8MD" secondAttribute="width" id="Y80-eX-OvC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BTO-2h-3Gh"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Изменить" id="xwA-vS-zeS" userLabel="Navigation Item"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zf0-VU-Y3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1427" y="2264"/>
+        </scene>
+        <!--Confirm Password View Controller-->
+        <scene sceneID="q6i-20-gct">
+            <objects>
+                <viewController id="MVD-Fe-Npb" userLabel="Confirm Password View Controller" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yxs-KE-gGq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdP-ba-gV4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подтвердить пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xy-wb-GaE" userLabel="Title Label">
+                                        <rect key="frame" x="8" y="28" width="122" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kmw-ra-WV1" userLabel="Password Text Field">
+                                        <rect key="frame" x="8" y="50" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyN-nz-6Nf" userLabel="Confirm Button">
+                                        <rect key="frame" x="61" y="102" width="199" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Подтвердить пароль"/>
+                                        <connections>
+                                            <segue destination="PXN-hN-Esa" kind="show" id="OI0-e8-aPT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Kmw-ra-WV1" firstAttribute="leading" secondItem="OdP-ba-gV4" secondAttribute="leading" constant="8" id="0el-uf-3vL"/>
+                                    <constraint firstItem="9Xy-wb-GaE" firstAttribute="leading" secondItem="OdP-ba-gV4" secondAttribute="leading" constant="8" id="55f-Yw-DOG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kmw-ra-WV1" secondAttribute="trailing" constant="8" id="WbM-ob-xsY"/>
+                                    <constraint firstItem="9Xy-wb-GaE" firstAttribute="top" secondItem="OdP-ba-gV4" secondAttribute="top" constant="28" id="gLG-d2-B7i"/>
+                                    <constraint firstItem="Kmw-ra-WV1" firstAttribute="top" secondItem="9Xy-wb-GaE" secondAttribute="bottom" constant="7.5" id="xLk-yQ-AM5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="OdP-ba-gV4" firstAttribute="height" secondItem="yxs-KE-gGq" secondAttribute="height" id="DL9-2r-fQo"/>
+                            <constraint firstItem="OdP-ba-gV4" firstAttribute="width" secondItem="yxs-KE-gGq" secondAttribute="width" id="L7x-hn-06G"/>
+                            <constraint firstAttribute="trailing" secondItem="OdP-ba-gV4" secondAttribute="trailing" id="b5G-8Z-JBz"/>
+                            <constraint firstAttribute="bottom" secondItem="OdP-ba-gV4" secondAttribute="bottom" id="hWN-pL-Akw"/>
+                            <constraint firstItem="OdP-ba-gV4" firstAttribute="leading" secondItem="yxs-KE-gGq" secondAttribute="leading" id="nfL-4j-BS0"/>
+                            <constraint firstItem="OdP-ba-gV4" firstAttribute="top" secondItem="yxs-KE-gGq" secondAttribute="top" id="oe9-X6-mWf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EZv-QZ-y4L"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Изменить" id="z0o-zE-A6h" userLabel="Navigation Item"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="554-oY-peI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2334" y="2264"/>
+        </scene>
+        <!--Edit Password View Controller-->
+        <scene sceneID="XXb-Nu-hdC">
+            <objects>
+                <viewController id="PXN-hN-Esa" userLabel="Edit Password View Controller" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="abO-6Y-Yw4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEd-vE-zTX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новый пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eto-uI-Dc7" userLabel="Title Label">
+                                        <rect key="frame" x="8" y="28" width="84" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tik-KG-Kce" userLabel="Password Text Field">
+                                        <rect key="frame" x="8" y="50" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I8-ez-XJ6" userLabel="Save Button">
+                                        <rect key="frame" x="61" y="102" width="199" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Изменить пароль"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tik-KG-Kce" firstAttribute="top" secondItem="eto-uI-Dc7" secondAttribute="bottom" constant="7.5" id="NXe-JK-tza"/>
+                                    <constraint firstItem="eto-uI-Dc7" firstAttribute="leading" secondItem="wEd-vE-zTX" secondAttribute="leading" constant="8" id="Pjg-2m-rDZ"/>
+                                    <constraint firstItem="eto-uI-Dc7" firstAttribute="top" secondItem="wEd-vE-zTX" secondAttribute="top" constant="28" id="TpO-of-Deh"/>
+                                    <constraint firstItem="tik-KG-Kce" firstAttribute="leading" secondItem="wEd-vE-zTX" secondAttribute="leading" constant="8" id="nCr-8s-Trh"/>
+                                    <constraint firstAttribute="trailing" secondItem="tik-KG-Kce" secondAttribute="trailing" constant="8" id="yrv-3l-aDn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wEd-vE-zTX" firstAttribute="top" secondItem="abO-6Y-Yw4" secondAttribute="top" id="VY6-wO-NDD"/>
+                            <constraint firstItem="wEd-vE-zTX" firstAttribute="height" secondItem="abO-6Y-Yw4" secondAttribute="height" id="Wxi-mW-DjB"/>
+                            <constraint firstAttribute="bottom" secondItem="wEd-vE-zTX" secondAttribute="bottom" id="c4h-Re-2lr"/>
+                            <constraint firstItem="wEd-vE-zTX" firstAttribute="leading" secondItem="abO-6Y-Yw4" secondAttribute="leading" id="iGo-iR-a0B"/>
+                            <constraint firstItem="wEd-vE-zTX" firstAttribute="width" secondItem="abO-6Y-Yw4" secondAttribute="width" id="log-2G-NFH"/>
+                            <constraint firstAttribute="trailing" secondItem="wEd-vE-zTX" secondAttribute="trailing" id="qFO-AU-r1V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cdc-bR-U8u"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Изменить" id="A6S-oB-XSr" userLabel="Navigation Item"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uVb-H7-sNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3201" y="2264"/>
         </scene>
     </scenes>
 </document>
