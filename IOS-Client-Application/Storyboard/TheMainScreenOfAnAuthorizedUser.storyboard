@@ -104,6 +104,7 @@
                     <connections>
                         <outlet property="contentContainerView" destination="Uxb-E3-Ane" id="j8w-Ve-uxy"/>
                         <outlet property="hideSideMenuButton" destination="r3l-d0-MbZ" id="Pfh-Wp-eiO"/>
+                        <outlet property="leftScreenEdgePanGesture" destination="LgR-Ql-Lhl" id="YIC-wu-azJ"/>
                         <outlet property="sideMenuConstaint" destination="2qZ-Mg-tYk" id="4Dh-cR-Box"/>
                     </connections>
                 </viewController>

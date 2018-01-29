@@ -13,6 +13,7 @@ class AuthorizedUserContainerViewController: UIViewController {
     @IBOutlet weak var contentContainerView: UIView!
     @IBOutlet weak var hideSideMenuButton: UIButton!
     @IBOutlet weak var sideMenuConstaint: NSLayoutConstraint!
+    @IBOutlet weak var leftScreenEdgePanGesture: UIScreenEdgePanGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,10 @@ class AuthorizedUserContainerViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(hideMenu), name: Notification.Name("HideMenu"), object: nil)
         //Событие выхода из аккаунта
         NotificationCenter.default.addObserver(self, selector: #selector(logOut), name: Notification.Name("LogOut"), object: nil)
+        //Событие отключения меню
+        NotificationCenter.default.addObserver(self, selector: #selector(disableSideMenu), name: Notification.Name("DisableSideMenu"), object: nil)
+        //Событие включения меню
+        NotificationCenter.default.addObserver(self, selector: #selector(enableSideMenu), name: Notification.Name("EnableSideMenu"), object: nil)
     }
     
     
@@ -68,5 +73,17 @@ class AuthorizedUserContainerViewController: UIViewController {
     //Обработчик выхода из аккаунта
     @objc func logOut() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+    //Обработчик включения меню
+    @objc func enableSideMenu() {
+        leftScreenEdgePanGesture.isEnabled = true
+    }
+    
+    
+    //Обработчик отключения меню
+    @objc func disableSideMenu() {
+        leftScreenEdgePanGesture.isEnabled = false
     }
 }
