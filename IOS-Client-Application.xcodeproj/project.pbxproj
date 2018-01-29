@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1714A9F6201E23E0009A4436 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A9F5201E23E0009A4436 /* Profile.storyboard */; };
+		17F3801D201F6896003F1C59 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F3801C201F6896003F1C59 /* EditPasswordViewController.swift */; };
+		17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F3801E201F6A72003F1C59 /* ConfirmPasswordViewController.swift */; };
 		2BB1E4820881E1E34500B2A7 /* Pods_IOS_Client_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E3077C97D268DA2D969728 /* Pods_IOS_Client_Application.framework */; };
 		783DEE002018197A00554378 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DEDFF2018197A00554378 /* User.swift */; };
 		784896DC200A966D005626BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784896DB200A966D005626BB /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		1714A9F5201E23E0009A4436 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		17F3801C201F6896003F1C59 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
+		17F3801E201F6A72003F1C59 /* ConfirmPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordViewController.swift; sourceTree = "<group>"; };
 		433A10DF189450D7AB6AF0DE /* Pods-IOS-Client-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS-Client-Application.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOS-Client-Application/Pods-IOS-Client-Application.debug.xcconfig"; sourceTree = "<group>"; };
 		48E3077C97D268DA2D969728 /* Pods_IOS_Client_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS_Client_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		783DEDFF2018197A00554378 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -54,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17F3801B201F6876003F1C59 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				17F3801C201F6896003F1C59 /* EditPasswordViewController.swift */,
+				17F3801E201F6A72003F1C59 /* ConfirmPasswordViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		2B105D10A8ABADEBC859A1AE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +146,7 @@
 		78EBAC43200E9CA300297D86 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				17F3801B201F6876003F1C59 /* Profile */,
 				783DEDFE2018188100554378 /* TheMainScreenOfAnAuthorizedUser */,
 				783DEDFD2018187700554378 /* ScreenOfAnUnuthorizedUser */,
 			);
@@ -288,6 +302,8 @@
 				783DEE002018197A00554378 /* User.swift in Sources */,
 				786E52512018B5AA00BE681F /* SideMenuViewController.swift in Sources */,
 				78BD1A3E2018B0F3002843CC /* AuthorizedUserContainerViewController.swift in Sources */,
+				17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */,
+				17F3801D201F6896003F1C59 /* EditPasswordViewController.swift in Sources */,
 				784896DC200A966D005626BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
