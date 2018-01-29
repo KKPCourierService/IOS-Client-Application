@@ -17,7 +17,6 @@
 		786E52512018B5AA00BE681F /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E52502018B5AA00BE681F /* SideMenuViewController.swift */; };
 		786E52532018BD3900BE681F /* AuthorizedUserMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E52522018BD3900BE681F /* AuthorizedUserMainTabBarController.swift */; };
 		78BD1A3E2018B0F3002843CC /* AuthorizedUserContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD1A3D2018B0F3002843CC /* AuthorizedUserContainerViewController.swift */; };
-		78EBAC47200E9D8800297D86 /* MainUnuthorizedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBAC46200E9D8800297D86 /* MainUnuthorizedViewController.swift */; };
 		78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBAC48200E9E8900297D86 /* CheckInViewController.swift */; };
 		78EBAC4B200E9EE000297D86 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBAC4A200E9EE000297D86 /* AuthorizationViewController.swift */; };
 		78F6D3002016049E001EA4DB /* TheMainScreenOfAnAuthorizedUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F6D2FF2016049E001EA4DB /* TheMainScreenOfAnAuthorizedUser.storyboard */; };
@@ -37,7 +36,6 @@
 		786E52502018B5AA00BE681F /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		786E52522018BD3900BE681F /* AuthorizedUserMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedUserMainTabBarController.swift; sourceTree = "<group>"; };
 		78BD1A3D2018B0F3002843CC /* AuthorizedUserContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedUserContainerViewController.swift; sourceTree = "<group>"; };
-		78EBAC46200E9D8800297D86 /* MainUnuthorizedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUnuthorizedViewController.swift; sourceTree = "<group>"; };
 		78EBAC48200E9E8900297D86 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		78EBAC4A200E9EE000297D86 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		78F6D2FF2016049E001EA4DB /* TheMainScreenOfAnAuthorizedUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TheMainScreenOfAnAuthorizedUser.storyboard; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 		783DEDFD2018187700554378 /* ScreenOfAnUnuthorizedUser */ = {
 			isa = PBXGroup;
 			children = (
-				78EBAC46200E9D8800297D86 /* MainUnuthorizedViewController.swift */,
 				78EBAC48200E9E8900297D86 /* CheckInViewController.swift */,
 				78EBAC4A200E9EE000297D86 /* AuthorizationViewController.swift */,
 			);
@@ -286,7 +283,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78EBAC4B200E9EE000297D86 /* AuthorizationViewController.swift in Sources */,
-				78EBAC47200E9D8800297D86 /* MainUnuthorizedViewController.swift in Sources */,
 				786E52532018BD3900BE681F /* AuthorizedUserMainTabBarController.swift in Sources */,
 				78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */,
 				783DEE002018197A00554378 /* User.swift in Sources */,

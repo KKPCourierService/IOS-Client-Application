@@ -9,58 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Unuthorized View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Main Unuthorized View Controller" customClass="MainUnuthorizedViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8po-U9-FvA">
-                                <rect key="frame" x="16" y="239" width="288" height="90"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tu-Qh-ncc" userLabel="AuthorizationButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="3FD-nY-yd4"/>
-                                        </constraints>
-                                        <state key="normal" title="Авторизация"/>
-                                        <connections>
-                                            <segue destination="b1T-gH-mJx" kind="show" id="15k-6W-N3U"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa1-xk-LKZ" userLabel="CheckInButton">
-                                        <rect key="frame" x="0.0" y="50" width="288" height="40"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="qDF-ec-l6F"/>
-                                        </constraints>
-                                        <state key="normal" title="Регистрация"/>
-                                        <connections>
-                                            <segue destination="INr-gH-KwP" kind="show" id="pvE-be-ggk"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="8po-U9-FvA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ODA-ko-WDc"/>
-                            <constraint firstItem="8po-U9-FvA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TMi-DT-xFl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8po-U9-FvA" secondAttribute="trailing" constant="16" id="u8O-Vz-s69"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="7sz-i3-c2u">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="4q6-xg-tHC"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="476" y="132.68365817091455"/>
-        </scene>
         <!--Check In View Controller-->
         <scene sceneID="u1D-tc-j0Z">
             <objects>
@@ -73,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pSX-3c-WF0">
-                                        <rect key="frame" x="16" y="129" width="288" height="310"/>
+                                        <rect key="frame" x="16" y="124" width="288" height="320"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fJP-XG-jUf" userLabel="Surname Text Field">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -118,11 +66,14 @@
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj6-vf-GmR" userLabel="Check In Button">
-                                                <rect key="frame" x="0.0" y="280" width="288" height="30"/>
+                                                <rect key="frame" x="0.0" y="280" width="288" height="40"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="XG9-JL-xE3"/>
+                                                </constraints>
                                                 <state key="normal" title="Зарегистрироваться"/>
                                                 <connections>
-                                                    <segue destination="M4K-MH-78d" kind="presentation" id="kCV-th-Rg7"/>
+                                                    <action selector="checkInButtonClick:" destination="INr-gH-KwP" eventType="touchUpInside" id="hnX-nl-fHn"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -151,10 +102,13 @@
                         </connections>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Регистрация" id="pZL-K1-pWZ" userLabel="Navigation Item"/>
+                    <connections>
+                        <segue destination="M4K-MH-78d" kind="presentation" identifier="FinishCheckIn" id="k5L-Lc-Lhm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXj-vU-MOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610.625" y="463.73239436619718"/>
+            <point key="canvasLocation" x="1618" y="526"/>
         </scene>
         <!--TheMainScreenOfAnAuthorizedUser-->
         <scene sceneID="hXa-aW-WYD">
@@ -162,7 +116,7 @@
                 <viewControllerPlaceholder storyboardName="TheMainScreenOfAnAuthorizedUser" id="M4K-MH-78d" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4f0-E3-XYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2862" y="6"/>
+            <point key="canvasLocation" x="2808" y="6"/>
         </scene>
         <!--Authorization View Controller-->
         <scene sceneID="QFR-2d-BXE">
@@ -176,7 +130,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VvJ-lQ-Ts6">
-                                        <rect key="frame" x="16" y="224" width="288" height="120"/>
+                                        <rect key="frame" x="16" y="199" width="288" height="170"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zq-3Z-ifw" userLabel="Login Text Field">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -198,7 +152,18 @@
                                                 </constraints>
                                                 <state key="normal" title="Войти"/>
                                                 <connections>
-                                                    <segue destination="M4K-MH-78d" kind="presentation" id="o5p-zv-gbg"/>
+                                                    <action selector="authorizationButtonClick:" destination="b1T-gH-mJx" eventType="touchUpInside" id="90c-eb-kXH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="825-77-5S9" userLabel="Check In Button">
+                                                <rect key="frame" x="0.0" y="130" width="288" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="YaA-sR-Fr4"/>
+                                                </constraints>
+                                                <state key="normal" title="Зарегистрироваться"/>
+                                                <connections>
+                                                    <segue destination="INr-gH-KwP" kind="show" id="GsJ-F9-MVo"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -224,7 +189,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GGW-l6-dEm"/>
                     </scrollView>
-                    <navigationItem key="navigationItem" title="Авторизация" id="xm5-5P-Qbt" userLabel="Navigation Item"/>
+                    <navigationItem key="navigationItem" title="Авторизация" id="xm5-5P-Qbt" userLabel="Navigation Item">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="CrW-JH-wCf"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="M4K-MH-78d" kind="presentation" identifier="FinishAuthorization" id="zKN-b9-Ycf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82B-Ob-sXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -241,15 +211,15 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OIb-YG-PkA"/>
+                        <segue destination="b1T-gH-mJx" kind="relationship" relationship="rootViewController" id="LCp-EE-uun"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeK-8O-oc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="133"/>
+            <point key="canvasLocation" x="724" y="-279"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kCV-th-Rg7"/>
+        <segue reference="k5L-Lc-Lhm"/>
     </inferredMetricsTieBreakers>
 </document>

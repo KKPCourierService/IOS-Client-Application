@@ -24,4 +24,10 @@ class CheckInViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
+    
+    @IBAction func checkInButtonClick(_ sender: UIButton) {
+        performSegue(withIdentifier: "FinishCheckIn", sender: self)
+        navigationController?.popViewController(animated: true)
+        
+    }
 }

@@ -23,4 +23,7 @@ class AuthorizationViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
+    @IBAction func authorizationButtonClick(_ sender: UIButton) {
+        performSegue(withIdentifier: "FinishAuthorization", sender: self)
+    }
 }
