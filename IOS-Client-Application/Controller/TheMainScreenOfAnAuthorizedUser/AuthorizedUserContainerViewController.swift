@@ -17,9 +17,11 @@ class AuthorizedUserContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Событие для открытия меню
-        NotificationCenter.default.addObserver(self, selector: #selector(showMenu), name: NSNotification.Name("ShowMenu"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showMenu), name: Notification.Name("ShowMenu"), object: nil)
         //Событие для закрытия меню
-        NotificationCenter.default.addObserver(self, selector: #selector(hideMenu), name: NSNotification.Name("HideMenu"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(hideMenu), name: Notification.Name("HideMenu"), object: nil)
+        //Событие выхода из аккаунта
+        NotificationCenter.default.addObserver(self, selector: #selector(logOut), name: Notification.Name("LogOut"), object: nil)
     }
     
     
@@ -62,4 +64,9 @@ class AuthorizedUserContainerViewController: UIViewController {
         }
     }
     
+    
+    //Обработчик выхода из аккаунта
+    @objc func logOut() {
+        dismiss(animated: true, completion: nil)
+    }
 }

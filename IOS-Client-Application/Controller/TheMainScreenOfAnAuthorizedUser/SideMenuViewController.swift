@@ -21,6 +21,8 @@ class SideMenuViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             NotificationCenter.default.post(name: Notification.Name("ShowProfile"), object: nil)
+        case 2:
+            NotificationCenter.default.post(name: Notification.Name("LogOut"), object: nil)
         default:
             break
         }
