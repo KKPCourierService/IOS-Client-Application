@@ -33,10 +33,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" textContentType="name"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZB-eB-u2X" userLabel="Save Name Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZB-eB-u2X" userLabel="Save Name Button">
                                         <rect key="frame" x="61" y="102" width="199" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="199" id="dob-u2-pdp"/>
+                                            <constraint firstAttribute="height" constant="40" id="qO2-xC-zYQ"/>
+                                        </constraints>
                                         <state key="normal" title="Сохранить"/>
                                         <connections>
                                             <action selector="saveNameButtonClick:" destination="SQV-fl-BEI" eventType="touchUpInside" id="5Sn-7F-ebi"/>
@@ -50,6 +53,8 @@
                                     <constraint firstItem="cyz-1i-AQ3" firstAttribute="top" secondItem="3Hn-my-Jg8" secondAttribute="top" constant="28" id="QBl-zD-vNY"/>
                                     <constraint firstItem="tSL-Kp-0JT" firstAttribute="leading" secondItem="3Hn-my-Jg8" secondAttribute="leading" constant="8" id="Yvk-Ih-Mxl"/>
                                     <constraint firstItem="tSL-Kp-0JT" firstAttribute="top" secondItem="cyz-1i-AQ3" secondAttribute="bottom" constant="7.5" id="eAU-Wu-YaT"/>
+                                    <constraint firstItem="IZB-eB-u2X" firstAttribute="top" secondItem="tSL-Kp-0JT" secondAttribute="bottom" constant="22" id="pfg-em-oyb"/>
+                                    <constraint firstItem="IZB-eB-u2X" firstAttribute="centerX" secondItem="3Hn-my-Jg8" secondAttribute="centerX" id="ya2-PO-lah"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -92,10 +97,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hp-2l-Zrt" userLabel="Save Surname Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hp-2l-Zrt" userLabel="Save Surname Button">
                                         <rect key="frame" x="61" y="102" width="199" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="199" id="W4u-yh-Z5x"/>
+                                            <constraint firstAttribute="height" constant="40" id="oUz-XD-rXv"/>
+                                        </constraints>
                                         <state key="normal" title="Сохранить"/>
                                         <connections>
                                             <action selector="saveSurnameButtonClick:" destination="03Y-s0-hcV" eventType="touchUpInside" id="wKc-P7-LqC"/>
@@ -106,9 +114,11 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="rF5-ke-OgS" secondAttribute="trailing" constant="8" id="4gA-hh-Zrg"/>
                                     <constraint firstItem="FCv-Hc-6dQ" firstAttribute="top" secondItem="thk-OY-S3c" secondAttribute="top" constant="28" id="5Mw-8R-hol"/>
+                                    <constraint firstItem="7hp-2l-Zrt" firstAttribute="top" secondItem="rF5-ke-OgS" secondAttribute="bottom" constant="22" id="FGo-Im-uBb"/>
                                     <constraint firstItem="rF5-ke-OgS" firstAttribute="leading" secondItem="thk-OY-S3c" secondAttribute="leading" constant="8" id="Q7Q-AT-dNC"/>
                                     <constraint firstItem="rF5-ke-OgS" firstAttribute="top" secondItem="FCv-Hc-6dQ" secondAttribute="bottom" constant="7.5" id="cQ7-hR-xWS"/>
                                     <constraint firstItem="FCv-Hc-6dQ" firstAttribute="leading" secondItem="thk-OY-S3c" secondAttribute="leading" constant="8" id="iFq-Sq-Tad"/>
+                                    <constraint firstItem="7hp-2l-Zrt" firstAttribute="centerX" secondItem="thk-OY-S3c" secondAttribute="centerX" id="mER-eH-EI8"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -417,10 +427,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrC-wI-fGa" userLabel="Save Patronymic Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrC-wI-fGa" userLabel="Save Patronymic Button">
                                         <rect key="frame" x="61" y="102" width="199" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="199" id="1QB-ks-7yL"/>
+                                            <constraint firstAttribute="height" constant="40" id="CTH-Pf-JtE"/>
+                                        </constraints>
                                         <state key="normal" title="Сохранить"/>
                                         <connections>
                                             <action selector="savePatronymicButtonClick:" destination="T9s-uM-axu" eventType="touchUpInside" id="DYY-mr-NHC"/>
@@ -429,8 +442,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="BrC-wI-fGa" firstAttribute="top" secondItem="d2M-T1-oOS" secondAttribute="bottom" constant="22" id="0TS-oK-IMb"/>
                                     <constraint firstAttribute="trailing" secondItem="d2M-T1-oOS" secondAttribute="trailing" constant="8" id="29J-8s-OSb"/>
                                     <constraint firstItem="lRb-uX-zm0" firstAttribute="top" secondItem="HKJ-X1-owN" secondAttribute="top" constant="28" id="5LZ-gP-5AM"/>
+                                    <constraint firstItem="BrC-wI-fGa" firstAttribute="centerX" secondItem="HKJ-X1-owN" secondAttribute="centerX" id="8rs-Uo-d9u"/>
                                     <constraint firstItem="d2M-T1-oOS" firstAttribute="top" secondItem="lRb-uX-zm0" secondAttribute="bottom" constant="7.5" id="GzA-qc-7rY"/>
                                     <constraint firstItem="d2M-T1-oOS" firstAttribute="leading" secondItem="HKJ-X1-owN" secondAttribute="leading" constant="8" id="cqN-LR-sIt"/>
                                     <constraint firstItem="lRb-uX-zm0" firstAttribute="leading" secondItem="HKJ-X1-owN" secondAttribute="leading" constant="8" id="pzA-T3-Kd0"/>
