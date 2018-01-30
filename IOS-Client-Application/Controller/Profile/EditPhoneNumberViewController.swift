@@ -17,4 +17,8 @@ class EditPhoneNumberViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func savePhoneNumberButtonClick(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }

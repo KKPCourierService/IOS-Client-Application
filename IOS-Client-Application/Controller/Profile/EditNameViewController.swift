@@ -18,5 +18,8 @@ class EditNameViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-
+    @IBAction func saveNameButtonClick(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

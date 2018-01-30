@@ -17,4 +17,9 @@ class EditSurnameViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func saveSurnameButtonClick(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

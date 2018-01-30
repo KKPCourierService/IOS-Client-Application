@@ -17,4 +17,7 @@ class EditEmailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    @IBAction func editEmailButtonClick(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }

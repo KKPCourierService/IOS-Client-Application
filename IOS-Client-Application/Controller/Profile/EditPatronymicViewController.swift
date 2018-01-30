@@ -17,4 +17,7 @@ class EditPatronymicViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    @IBAction func savePatronymicButtonClick(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }
