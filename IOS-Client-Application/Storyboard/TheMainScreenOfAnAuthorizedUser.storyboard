@@ -10,6 +10,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--History of Orders-->
+        <scene sceneID="ltv-tv-sbC">
+            <objects>
+                <tableViewController id="H58-lY-9uy" userLabel="History of Orders" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MNK-NE-fjE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Order" id="03g-8Y-eJi">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="03g-8Y-eJi" id="u71-jq-i0v">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H58-lY-9uy" id="v2i-tD-KfO"/>
+                            <outlet property="delegate" destination="H58-lY-9uy" id="prq-DV-56E"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="История" id="Z0M-5d-xz2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AvZ-QZ-sjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="392"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="6sO-Zc-xld">
             <objects>
@@ -17,22 +47,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmG-Bt-6TC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-596" y="575"/>
-        </scene>
-        <!--History of orders-->
-        <scene sceneID="kka-2H-0mw">
-            <objects>
-                <viewController id="EZw-FV-tYx" userLabel="History of orders" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="U41-8S-gAY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Ibf-qu-opb"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="История" id="1AT-Hb-3uU" userLabel="Tab Bar Item"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1W3-Sy-wd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="358" y="290"/>
         </scene>
         <!--Order-->
         <scene sceneID="bQM-hi-sOL">
@@ -274,8 +288,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="d4L-OX-CfM" kind="relationship" relationship="viewControllers" id="9jf-2R-Xis"/>
-                        <segue destination="EZw-FV-tYx" kind="relationship" relationship="viewControllers" id="ySr-xA-KM2"/>
                         <segue destination="UXZ-l9-WO8" kind="show" identifier="ShowProfile" id="pBd-Nv-56D"/>
+                        <segue destination="H58-lY-9uy" kind="relationship" relationship="viewControllers" id="npa-a3-7Af"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3J-SJ-pwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
