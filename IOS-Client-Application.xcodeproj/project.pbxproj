@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1714A9F6201E23E0009A4436 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A9F5201E23E0009A4436 /* Profile.storyboard */; };
+		17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BAF202026DC00947053 /* EditNameViewController.swift */; };
+		17E08BB22020271400947053 /* EditSurnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BB12020271400947053 /* EditSurnameViewController.swift */; };
+		17E08BB42020274B00947053 /* EditPatronymicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BB32020274B00947053 /* EditPatronymicViewController.swift */; };
+		17E08BB62020278200947053 /* EditPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BB52020278200947053 /* EditPhoneNumberViewController.swift */; };
+		17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BB7202027BB00947053 /* EditEmailViewController.swift */; };
 		17F3801D201F6896003F1C59 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F3801C201F6896003F1C59 /* EditPasswordViewController.swift */; };
 		17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F3801E201F6A72003F1C59 /* ConfirmPasswordViewController.swift */; };
 		2BB1E4820881E1E34500B2A7 /* Pods_IOS_Client_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E3077C97D268DA2D969728 /* Pods_IOS_Client_Application.framework */; };
@@ -26,6 +31,11 @@
 
 /* Begin PBXFileReference section */
 		1714A9F5201E23E0009A4436 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		17E08BAF202026DC00947053 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		17E08BB12020271400947053 /* EditSurnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSurnameViewController.swift; sourceTree = "<group>"; };
+		17E08BB32020274B00947053 /* EditPatronymicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatronymicViewController.swift; sourceTree = "<group>"; };
+		17E08BB52020278200947053 /* EditPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		17E08BB7202027BB00947053 /* EditEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmailViewController.swift; sourceTree = "<group>"; };
 		17F3801C201F6896003F1C59 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		17F3801E201F6A72003F1C59 /* ConfirmPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordViewController.swift; sourceTree = "<group>"; };
 		433A10DF189450D7AB6AF0DE /* Pods-IOS-Client-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS-Client-Application.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOS-Client-Application/Pods-IOS-Client-Application.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +73,11 @@
 			children = (
 				17F3801C201F6896003F1C59 /* EditPasswordViewController.swift */,
 				17F3801E201F6A72003F1C59 /* ConfirmPasswordViewController.swift */,
+				17E08BAF202026DC00947053 /* EditNameViewController.swift */,
+				17E08BB12020271400947053 /* EditSurnameViewController.swift */,
+				17E08BB32020274B00947053 /* EditPatronymicViewController.swift */,
+				17E08BB52020278200947053 /* EditPhoneNumberViewController.swift */,
+				17E08BB7202027BB00947053 /* EditEmailViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -296,15 +311,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E08BB42020274B00947053 /* EditPatronymicViewController.swift in Sources */,
 				78EBAC4B200E9EE000297D86 /* AuthorizationViewController.swift in Sources */,
+				17E08BB22020271400947053 /* EditSurnameViewController.swift in Sources */,
 				786E52532018BD3900BE681F /* AuthorizedUserMainTabBarController.swift in Sources */,
 				78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */,
+				17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */,
 				783DEE002018197A00554378 /* User.swift in Sources */,
 				786E52512018B5AA00BE681F /* SideMenuViewController.swift in Sources */,
 				78BD1A3E2018B0F3002843CC /* AuthorizedUserContainerViewController.swift in Sources */,
 				17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */,
 				17F3801D201F6896003F1C59 /* EditPasswordViewController.swift in Sources */,
 				784896DC200A966D005626BB /* AppDelegate.swift in Sources */,
+				17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */,
+				17E08BB62020278200947053 /* EditPhoneNumberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

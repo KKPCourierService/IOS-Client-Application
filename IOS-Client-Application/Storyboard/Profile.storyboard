@@ -13,7 +13,7 @@
         <!--Edit Name View Controller-->
         <scene sceneID="wJm-KJ-FWl">
             <objects>
-                <viewController id="SQV-fl-BEI" userLabel="Edit Name View Controller" sceneMemberID="viewController">
+                <viewController id="SQV-fl-BEI" userLabel="Edit Name View Controller" customClass="EditNameViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MIk-af-wcV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -69,7 +69,7 @@
         <!--Edit Surname View Controller-->
         <scene sceneID="tjs-OZ-aWr">
             <objects>
-                <viewController id="03Y-s0-hcV" userLabel="Edit Surname View Controller" sceneMemberID="viewController">
+                <viewController id="03Y-s0-hcV" userLabel="Edit Surname View Controller" customClass="EditSurnameViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rVR-dP-HAV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -391,7 +391,7 @@
         <!--Edit Patronymic View Controller-->
         <scene sceneID="Nyq-DF-4Qf">
             <objects>
-                <viewController id="T9s-uM-axu" userLabel="Edit Patronymic View Controller" sceneMemberID="viewController">
+                <viewController id="T9s-uM-axu" userLabel="Edit Patronymic View Controller" customClass="EditPatronymicViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="F86-n1-EmZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -447,7 +447,7 @@
         <!--Edit Phone Number View Controller-->
         <scene sceneID="Qpo-zX-o6R">
             <objects>
-                <viewController id="vge-b4-FIy" userLabel="Edit Phone Number View Controller" sceneMemberID="viewController">
+                <viewController id="vge-b4-FIy" userLabel="Edit Phone Number View Controller" customClass="EditPhoneNumberViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="N2q-DI-Vni">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -508,7 +508,7 @@
         <!--Edit Email View Controller-->
         <scene sceneID="hYx-D0-uT6">
             <objects>
-                <viewController id="Fws-xW-waV" userLabel="Edit Email View Controller" sceneMemberID="viewController">
+                <viewController id="Fws-xW-waV" userLabel="Edit Email View Controller" customClass="EditEmailViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rze-jD-8MD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
