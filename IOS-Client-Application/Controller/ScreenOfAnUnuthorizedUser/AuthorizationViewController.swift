@@ -20,7 +20,6 @@ class AuthorizationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     @IBAction func authorizationButtonClick(_ sender: UIButton) {

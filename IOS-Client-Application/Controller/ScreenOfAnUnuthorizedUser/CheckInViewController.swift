@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class CheckInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        IQKeyboardManager.sharedManager().enableAutoToolbar = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,13 +23,14 @@ class CheckInViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        IQKeyboardManager.sharedManager().enableAutoToolbar = false
+    }
     
     @IBAction func checkInButtonClick(_ sender: UIButton) {
         performSegue(withIdentifier: "FinishCheckIn", sender: self)
         navigationController?.popViewController(animated: true)
-        
     }
 }
