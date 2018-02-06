@@ -103,6 +103,13 @@
                     </scrollView>
                     <navigationItem key="navigationItem" title="Регистрация" id="pZL-K1-pWZ" userLabel="Navigation Item"/>
                     <connections>
+                        <outlet property="PatronymicTextField" destination="9Ij-da-4aG" id="NxB-9w-vaT"/>
+                        <outlet property="confirmPasswordTextField" destination="Bfi-6r-Eae" id="YOu-xN-4fY"/>
+                        <outlet property="emailTextField" destination="qJk-5y-Uos" id="x4x-ZP-9VO"/>
+                        <outlet property="nameTextField" destination="9Ij-da-4aG" id="Hq2-I3-s3a"/>
+                        <outlet property="passwordTextField" destination="5sZ-Wk-6ms" id="tC1-gU-ccy"/>
+                        <outlet property="phoneNumberTextField" destination="gcp-dg-E45" id="PVK-Kz-K0u"/>
+                        <outlet property="surnameTextField" destination="fJP-XG-jUf" id="TtM-jh-s8t"/>
                         <segue destination="M4K-MH-78d" kind="presentation" identifier="FinishCheckIn" id="k5L-Lc-Lhm"/>
                     </connections>
                 </viewController>

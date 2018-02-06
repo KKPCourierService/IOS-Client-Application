@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<true/>
 		</dict>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
+		<key>RxSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
 		<key>Validator.xcscheme</key>
 		<dict>
 			<key>isShown</key>

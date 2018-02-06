@@ -1,18 +1,25 @@
 PODS:
   - Alamofire (4.6.0)
   - IQKeyboardManagerSwift (5.0.7)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
   - Validator (3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - IQKeyboardManagerSwift
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
   - Validator
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
   Validator: 7d9828daffabc757604603052e407f208fa9b6d5
 
-PODFILE CHECKSUM: 7c459725bfdad4723878190219eacb64099d719f
+PODFILE CHECKSUM: 62e1bca35e2afc05c6abe8d9c53dbc1770173c78
 
 COCOAPODS: 1.4.0
