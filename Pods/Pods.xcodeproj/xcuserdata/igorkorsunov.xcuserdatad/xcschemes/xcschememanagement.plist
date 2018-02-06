@@ -6,19 +6,26 @@
 	<dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>isShown</key>
+			<true/>
 		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<true/>
 		</dict>
 		<key>Pods-IOS-Client-Application.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<true/>
+		</dict>
+		<key>Validator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
 		</dict>
 	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict/>
 </dict>
 </plist>

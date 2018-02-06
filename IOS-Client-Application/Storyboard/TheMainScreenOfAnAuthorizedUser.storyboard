@@ -134,7 +134,7 @@
                             <outlet property="delegate" destination="H58-lY-9uy" id="prq-DV-56E"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="История" id="Z0M-5d-xz2"/>
+                    <tabBarItem key="tabBarItem" title="История" id="Z0M-5d-xz2" userLabel="Navigation Item"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvZ-QZ-sjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -416,7 +416,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="q32-HA-58R">
-                            <rect key="frame" x="0.0" y="224" width="240" height="41"/>
+                            <rect key="frame" x="0.0" y="180" width="240" height="41"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -500,15 +500,6 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fxQ-nO-BSu" userLabel="Empti Table View Cell">
-                                        <rect key="frame" x="0.0" y="180" width="240" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fxQ-nO-BSu" id="sRa-DC-ntx">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -520,7 +511,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTR-qr-Y9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2570.625" y="-45.422535211267608"/>
+            <point key="canvasLocation" x="-2633" y="-43"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="erU-vf-SxW">
