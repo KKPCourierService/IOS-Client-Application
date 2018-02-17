@@ -80,7 +80,7 @@ class CheckInViewController: UIViewController {
         
         buttonCheckIn.rx.tap.bind { [unowned self] in
             if (self.passwordConfirmed && self.passwordApproved && self.emailApproved && !self.surnameTextField.text!.isEmpty
-                && !self.nameTextField.text!.isEmpty && !self.patronymicTextField.text!.isEmpty && !self.phoneNumberTextField.text!.isEmpty) {
+                && !self.nameTextField.text!.isEmpty && !self.patronymicTextField.text!.isEmpty && self.phoneNumberTextField.text!.count == 10) {
                 self.performSegue(withIdentifier: "FinishCheckIn", sender: self)
                 self.navigationController?.popViewController(animated: true)
             }
