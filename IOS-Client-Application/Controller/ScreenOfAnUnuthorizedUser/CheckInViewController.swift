@@ -15,7 +15,7 @@ class CheckInViewController: UIViewController {
     
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var PatronymicTextField: UITextField!
+    @IBOutlet weak var patronymicTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -79,7 +79,8 @@ class CheckInViewController: UIViewController {
         }).disposed(by: disposeBag)
         
         buttonCheckIn.rx.tap.bind { [unowned self] in
-            if (self.passwordConfirmed && self.passwordApproved && self.emailApproved) {
+            if (self.passwordConfirmed && self.passwordApproved && self.emailApproved && !self.surnameTextField.text!.isEmpty
+                && !self.nameTextField.text!.isEmpty && !self.patronymicTextField.text!.isEmpty && !self.phoneNumberTextField.text!.isEmpty) {
                 self.performSegue(withIdentifier: "FinishCheckIn", sender: self)
                 self.navigationController?.popViewController(animated: true)
             }
