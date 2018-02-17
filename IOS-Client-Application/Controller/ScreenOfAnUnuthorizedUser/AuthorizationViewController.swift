@@ -32,7 +32,7 @@ class AuthorizationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loginTextField.text = ""
+        passwordTextField.text = ""
     }
-    
-    
 }
