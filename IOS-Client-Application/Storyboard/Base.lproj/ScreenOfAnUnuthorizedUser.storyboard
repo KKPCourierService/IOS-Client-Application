@@ -72,9 +72,6 @@
                                                     <constraint firstAttribute="height" constant="40" id="XG9-JL-xE3"/>
                                                 </constraints>
                                                 <state key="normal" title="Зарегистрироваться"/>
-                                                <connections>
-                                                    <action selector="checkInButtonClick:" destination="INr-gH-KwP" eventType="touchUpInside" id="hnX-nl-fHn"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -104,6 +101,7 @@
                     <navigationItem key="navigationItem" title="Регистрация" id="pZL-K1-pWZ" userLabel="Navigation Item"/>
                     <connections>
                         <outlet property="PatronymicTextField" destination="9Ij-da-4aG" id="NxB-9w-vaT"/>
+                        <outlet property="buttonCheckIn" destination="Sj6-vf-GmR" id="ivV-tf-GhY"/>
                         <outlet property="confirmPasswordTextField" destination="Bfi-6r-Eae" id="YOu-xN-4fY"/>
                         <outlet property="emailTextField" destination="qJk-5y-Uos" id="x4x-ZP-9VO"/>
                         <outlet property="nameTextField" destination="9Ij-da-4aG" id="Hq2-I3-s3a"/>
@@ -158,9 +156,6 @@
                                                     <constraint firstAttribute="height" constant="40" id="iPG-xl-Mmq"/>
                                                 </constraints>
                                                 <state key="normal" title="Войти"/>
-                                                <connections>
-                                                    <action selector="authorizationButtonClick:" destination="b1T-gH-mJx" eventType="touchUpInside" id="90c-eb-kXH"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="825-77-5S9" userLabel="Check In Button">
                                                 <rect key="frame" x="0.0" y="130" width="288" height="40"/>
@@ -200,6 +195,9 @@
                         <barButtonItem key="backBarButtonItem" title="Назад" id="CrW-JH-wCf"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="authorizationButton" destination="toD-em-waa" id="yPv-nA-dsh"/>
+                        <outlet property="loginTextField" destination="3Zq-3Z-ifw" id="Dlm-6i-A98"/>
+                        <outlet property="passwordTextField" destination="H5c-RT-WQE" id="NLm-Y7-5fQ"/>
                         <segue destination="M4K-MH-78d" kind="presentation" identifier="FinishAuthorization" id="zKN-b9-Ycf"/>
                     </connections>
                 </viewController>
