@@ -10,6 +10,7 @@ import UIKit
 import IQKeyboardManagerSwift
 import RxSwift
 import Validator
+import Moya
 
 class CheckInViewController: UIViewController {
     
@@ -42,6 +43,7 @@ class CheckInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         IQKeyboardManager.sharedManager().enableAutoToolbar = true
         
@@ -209,5 +211,7 @@ class CheckInViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    
     
 }

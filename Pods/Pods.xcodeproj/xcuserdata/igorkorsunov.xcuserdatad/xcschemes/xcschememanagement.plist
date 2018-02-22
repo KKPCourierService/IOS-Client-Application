@@ -14,7 +14,17 @@
 			<key>isShown</key>
 			<true/>
 		</dict>
+		<key>Moya.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
 		<key>Pods-IOS-Client-Application.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
+		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
