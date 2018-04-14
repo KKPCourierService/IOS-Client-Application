@@ -45,7 +45,7 @@ class CheckInViewController: UIViewController {
         super.viewDidLoad()
         
         
-        IQKeyboardManager.sharedManager().enableAutoToolbar = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
         
         self.surnameTextField.layer.borderColor = UIColor.red.cgColor
         self.surnameTextField.layer.cornerRadius = 6.0
@@ -202,7 +202,7 @@ class CheckInViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        IQKeyboardManager.sharedManager().enableAutoToolbar = false
+        //IQKeyboardManager.sharedManager().enableAutoToolbar = false
     }
     
     
