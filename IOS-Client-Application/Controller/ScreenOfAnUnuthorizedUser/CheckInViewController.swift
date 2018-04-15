@@ -45,7 +45,7 @@ class CheckInViewController: UIViewController {
         super.viewDidLoad()
         
         
-        IQKeyboardManager.shared.enableAutoToolbar = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
         
         self.surnameTextField.layer.borderColor = UIColor.red.cgColor
         self.surnameTextField.layer.cornerRadius = 6.0
@@ -201,10 +201,7 @@ class CheckInViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        //IQKeyboardManager.sharedManager().enableAutoToolbar = false
-    }
-    
+ 
     
     func printExeption (messageText : String) {
         let alert = UIAlertController(title: "Ошибка", message: messageText, preferredStyle: UIAlertControllerStyle.alert)
