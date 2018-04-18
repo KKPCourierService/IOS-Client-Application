@@ -4,6 +4,7 @@ use_frameworks!
 inhibit_all_warnings!
 target 'IOS-Client-Application' do
 	pod 'Moya'
+	pod 'Moya/RxSwift'
 	pod 'IQKeyboardManagerSwift'
 	pod 'Validator'
 	pod 'RxSwift',    '~> 4.0'

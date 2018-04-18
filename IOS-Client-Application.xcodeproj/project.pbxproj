@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1714A9F6201E23E0009A4436 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A9F5201E23E0009A4436 /* Profile.storyboard */; };
+		17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D354792084A91400C17B32 /* ClientsNetworkService.swift */; };
 		17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BAF202026DC00947053 /* EditNameViewController.swift */; };
 		17E08BB22020271400947053 /* EditSurnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BB12020271400947053 /* EditSurnameViewController.swift */; };
 		17E08BB42020274B00947053 /* EditPatronymicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BB32020274B00947053 /* EditPatronymicViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		1714A9F5201E23E0009A4436 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		17D354792084A91400C17B32 /* ClientsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsNetworkService.swift; sourceTree = "<group>"; };
 		17E08BAF202026DC00947053 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
 		17E08BB12020271400947053 /* EditSurnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSurnameViewController.swift; sourceTree = "<group>"; };
 		17E08BB32020274B00947053 /* EditPatronymicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatronymicViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				783DEDFF2018197A00554378 /* User.swift */,
+				17D354792084A91400C17B32 /* ClientsNetworkService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17E08BB42020274B00947053 /* EditPatronymicViewController.swift in Sources */,
+				17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */,
 				78EBAC4B200E9EE000297D86 /* AuthorizationViewController.swift in Sources */,
 				17E08BB22020271400947053 /* EditSurnameViewController.swift in Sources */,
 				786E52532018BD3900BE681F /* AuthorizedUserMainTabBarController.swift in Sources */,

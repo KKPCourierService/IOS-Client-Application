@@ -1,11 +1,14 @@
 PODS:
-  - Alamofire (4.7.1)
-  - IQKeyboardManagerSwift (6.0.0)
+  - Alamofire (4.7.2)
+  - IQKeyboardManagerSwift (6.0.1)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - Moya/RxSwift (11.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
   - Result (3.2.4)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
@@ -15,19 +18,20 @@ PODS:
 DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Moya
+  - Moya/RxSwift
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - Validator
 
 SPEC CHECKSUMS:
-  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
-  IQKeyboardManagerSwift: 624f128983eec795deacd50c1cd2f72664d13f08
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  IQKeyboardManagerSwift: 748d06e0f8134fc28934031e6377da3cf3d4f38c
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   Validator: bf211c1d71b3f910d230c09c70e62429d0fef63a
 
-PODFILE CHECKSUM: 7d13208b92d9ff6eac317b69edc051c88aed1693
+PODFILE CHECKSUM: f0c0e92add4e88cb46a112c0233af735c939c695
 
 COCOAPODS: 1.4.0
