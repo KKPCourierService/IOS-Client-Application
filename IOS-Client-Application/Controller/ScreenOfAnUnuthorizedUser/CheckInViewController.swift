@@ -74,6 +74,7 @@ class CheckInViewController: UIViewController {
         passwordRules.add(rule: minLengthRule)
         passwordRules.add(rule: digitRule)
         
+        
         surnameTextField.rx.text.orEmpty.skip(1).bind(onNext: {
             [unowned self] in
             if ($0.description.count > 0) {
@@ -157,12 +158,26 @@ class CheckInViewController: UIViewController {
             }
         }).disposed(by: disposeBag)
         
+        
+        
+        //Регистрация
         buttonCheckIn.rx.tap.bind {
             [unowned self] in
             if (self.passwordConfirmed && self.passwordApproved && self.emailApproved && !self.surnameTextField.text!.isEmpty
                 && !self.nameTextField.text!.isEmpty && !self.patronymicTextField.text!.isEmpty && self.phoneNumberTextField.text!.count == 10) {
-                self.performSegue(withIdentifier: "FinishCheckIn", sender: self)
-                self.navigationController?.popViewController(animated: true)
+                let provider = MoyaProvider<ClientsNetworkService>()
+                provider.rx.request(.checkInNewUser(email: self.emailTextField.text!, password: self.passwordTextField.text!, name: self.nameTextField.text!, surname: self.surnameTextField.text!, patronymic: self.patronymicTextField.text!, phoneNumber: "8\(self.phoneNumberTextField.text!)"))
+                    .filter(statusCodes: 200...399)
+                    .subscribe({
+                        response in
+                        switch response {
+                        case .success(_):
+                            self.performSegue(withIdentifier: "FinishCheckIn", sender: self)
+                            self.navigationController?.popViewController(animated: true)
+                        case .error(_):
+                            self.printExeption(messageText: "Ошибка регистрации")
+                        }}
+                    ).disposed(by: self.disposeBag)
             }
             else {
                 if (!self.passwordApproved) {
