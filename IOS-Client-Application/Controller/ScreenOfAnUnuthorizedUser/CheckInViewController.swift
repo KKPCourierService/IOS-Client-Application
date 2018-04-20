@@ -171,10 +171,45 @@ class CheckInViewController: UIViewController {
                     .subscribe({
                         response in
                         switch response {
-                        case .success(_):
-                           
-                            self.performSegue(withIdentifier: "FinishCheckIn", sender: self)
-                            self.navigationController?.popViewController(animated: true)
+                        case .success(let responseJson):
+                            do {
+                                let json = try responseJson.mapJSON()
+                                if let jsonIdObject = json as? [String: Any] {
+                                    let id = (jsonIdObject["clientId"] as? Int)!
+                                    provider.rx.request(.getProfile(Id: id))
+                                        .filter(statusCodes: 200...399)
+                                        .subscribe({
+                                            response in
+                                            switch response {
+                                            case .success(let responseJsonProfile):
+                                                do {
+                                                    let jsonProfile = try responseJsonProfile.mapJSON()
+                                                    if let jsonProfileObject = jsonProfile as? [String: Any] {
+                                                        
+                                                        let email = (jsonProfileObject["clientEmail"] as? String)!
+                                                        let name = (jsonProfileObject["clientName"] as? String)!
+                                                        let surname = (jsonProfileObject["clientSurname"] as? String)!
+                                                        let patronymic = (jsonProfileObject["clientPatronymic"] as? String)!
+                                                        let phoneNumber = (jsonProfileObject["clientPhoneNumber"] as? String)!
+                                                        User.user = User.init(id: id, name: name, surname: surname, patronymic: patronymic, email: email, password: self.passwordTextField.text!, phoneNumber: phoneNumber, photoURL: nil)
+                                                        self.performSegue(withIdentifier: "FinishCheckIn", sender: self)
+                                                        self.navigationController?.popViewController(animated: true)
+                                                    }
+                                                }
+                                                catch {
+                                                    self.printExeption(messageText: "Ошибка регистрации")
+                                                }
+                                                
+                                            case .error(_):
+                                                self.printExeption(messageText: "Ошибка регистрации")
+                                            }
+                                            }
+                                        ).disposed(by: self.disposeBag)
+                                }
+                            }
+                            catch {
+                                self.printExeption(messageText: "Ошибка регистрации")
+                            }
                         case .error(_):
                             self.printExeption(messageText: "Ошибка регистрации")
                         }}

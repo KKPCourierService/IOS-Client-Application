@@ -33,7 +33,7 @@ class AuthorizationViewController: UIViewController {
                     case .success(let responseJson):
                         do {
                             let json = try responseJson.mapJSON()
-                             if let jsonIdObject = json as? [String: Any] {
+                            if let jsonIdObject = json as? [String: Any] {
                                 let id = (jsonIdObject["clientId"] as? Int)!
                                 provider.rx.request(.getProfile(Id: id))
                                     .filter(statusCodes: 200...399)
@@ -56,16 +56,15 @@ class AuthorizationViewController: UIViewController {
                                                 }
                                             }
                                             catch {
-                                                    self.printExeption(messageText: "Ошибка авторизации")
+                                                self.printExeption(messageText: "Ошибка авторизации")
                                             }
                                             
                                         case .error(_):
                                             self.printExeption(messageText: "Ошибка авторизации")
-                                        }}
+                                        }
+                                        }
                                     ).disposed(by: self.disposeBag)
-                                print(id)
                             }
-                            
                         }
                         catch {
                             self.printExeption(messageText: "Ошибка авторизации")
