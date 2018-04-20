@@ -197,21 +197,21 @@ class CheckInViewController: UIViewController {
                                                     }
                                                 }
                                                 catch {
-                                                    self.printExeption(messageText: "Ошибка регистрации")
+                                                    self.printExeptionAlert(messageText: "Ошибка регистрации")
                                                 }
                                                 
                                             case .error(_):
-                                                self.printExeption(messageText: "Ошибка регистрации")
+                                                self.printExeptionAlert(messageText: "Ошибка регистрации")
                                             }
                                             }
                                         ).disposed(by: self.disposeBag)
                                 }
                             }
                             catch {
-                                self.printExeption(messageText: "Ошибка регистрации")
+                                self.printExeptionAlert(messageText: "Ошибка регистрации")
                             }
                         case .error(_):
-                            self.printExeption(messageText: "Ошибка регистрации")
+                            self.printExeptionAlert(messageText: "Ошибка регистрации")
                         }}
                     ).disposed(by: self.disposeBag)
             }
@@ -237,7 +237,7 @@ class CheckInViewController: UIViewController {
                 if (self.phoneNumberTextField.text!.count != 10) {
                     self.phoneNumberTextField.layer.borderWidth = 1
                 }
-                self.printExeption(messageText: "Не корректно заполнены обязательные поля")
+                self.printExeptionAlert(messageText: "Не корректно заполнены обязательные поля")
             }
             }.disposed(by: disposeBag)
         
@@ -251,15 +251,4 @@ class CheckInViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
- 
-    
-    func printExeption (messageText : String) {
-        let alert = UIAlertController(title: "Ошибка", message: messageText, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    
-    
 }

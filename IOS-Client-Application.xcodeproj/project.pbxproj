@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1714A9F6201E23E0009A4436 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A9F5201E23E0009A4436 /* Profile.storyboard */; };
+		178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */; };
 		17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D354792084A91400C17B32 /* ClientsNetworkService.swift */; };
 		17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BAF202026DC00947053 /* EditNameViewController.swift */; };
 		17E08BB22020271400947053 /* EditSurnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BB12020271400947053 /* EditSurnameViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		1714A9F5201E23E0009A4436 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		17D354792084A91400C17B32 /* ClientsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsNetworkService.swift; sourceTree = "<group>"; };
 		17E08BAF202026DC00947053 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
 		17E08BB12020271400947053 /* EditSurnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSurnameViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		178ED34F2089BF25003BAE76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		17F3801B201F6876003F1C59 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,7 @@
 		78EBAC43200E9CA300297D86 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				178ED34F2089BF25003BAE76 /* Extensions */,
 				17F3801B201F6876003F1C59 /* Profile */,
 				783DEDFE2018188100554378 /* TheMainScreenOfAnAuthorizedUser */,
 				783DEDFD2018187700554378 /* ScreenOfAnUnuthorizedUser */,
@@ -328,6 +339,7 @@
 				17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */,
 				78EBAC4B200E9EE000297D86 /* AuthorizationViewController.swift in Sources */,
 				17E08BB22020271400947053 /* EditSurnameViewController.swift in Sources */,
+				178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */,
 				786E52532018BD3900BE681F /* AuthorizedUserMainTabBarController.swift in Sources */,
 				78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */,
 				17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */,

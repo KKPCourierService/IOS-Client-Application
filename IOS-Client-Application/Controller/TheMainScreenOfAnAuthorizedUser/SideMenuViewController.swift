@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Moya
+import RxSwift
 
 class SideMenuViewController: UITableViewController {
     @IBOutlet weak var userNameLabel: UILabel!
-    
+    let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.text = "\(User.user!.Surname) \(User.user!.Name)"
@@ -24,10 +26,24 @@ class SideMenuViewController: UITableViewController {
         case 0:
             NotificationCenter.default.post(name: Notification.Name("ShowProfile"), object: nil)
         case 2:
-            NotificationCenter.default.post(name: Notification.Name("LogOut"), object: nil)
+            let provider = MoyaProvider<ClientsNetworkService>()
+            provider.rx.request(.logOut())
+                .filter(statusCodes: 200...399)
+                .subscribe({
+                    response in
+                    switch response {
+                    case .success(_):
+                        NotificationCenter.default.post(name: Notification.Name("LogOut"), object: nil)
+                    case .error(_):
+                        self.printExeptionAlert(messageText: "Не возможно выйти из профиля")
+                    }
+                    }
+                ).disposed(by: self.disposeBag)
+            
         default:
             break
         }
     }
+    
 
 }

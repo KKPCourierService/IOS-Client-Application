@@ -56,21 +56,21 @@ class AuthorizationViewController: UIViewController {
                                                 }
                                             }
                                             catch {
-                                                self.printExeption(messageText: "Ошибка авторизации")
+                                                self.printExeptionAlert(messageText: "Ошибка авторизации")
                                             }
                                             
                                         case .error(_):
-                                            self.printExeption(messageText: "Ошибка авторизации")
+                                            self.printExeptionAlert(messageText: "Ошибка авторизации")
                                         }
                                         }
                                     ).disposed(by: self.disposeBag)
                             }
                         }
                         catch {
-                            self.printExeption(messageText: "Ошибка авторизации")
+                            self.printExeptionAlert(messageText: "Ошибка авторизации")
                         }
                     case .error(_):
-                        self.printExeption(messageText: "Ошибка авторизации")
+                        self.printExeptionAlert(messageText: "Ошибка авторизации")
                     }}
                 ).disposed(by: self.disposeBag)
             }.disposed(by: disposeBag)
@@ -86,9 +86,5 @@ class AuthorizationViewController: UIViewController {
         passwordTextField.text = ""
     }
     
-    func printExeption (messageText : String) {
-        let alert = UIAlertController(title: "Ошибка", message: messageText, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
+    
 }
