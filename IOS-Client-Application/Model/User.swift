@@ -22,7 +22,6 @@ public class User {
     private var _photoURL: String?
     public static var user : User?
     
-    
     //Инициализатор класса User
     public init (id: Int, name: String, surname: String, patronymic: String, email: String, password: String, phoneNumber: String, photoURL: String?) {
         _id = id

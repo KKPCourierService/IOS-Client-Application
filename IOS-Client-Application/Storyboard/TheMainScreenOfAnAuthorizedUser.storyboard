@@ -508,6 +508,9 @@
                             <outlet property="delegate" destination="RXf-BH-ixs" id="dja-fE-k3a"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="userNameLabel" destination="bZ8-bB-nXc" id="Ysy-Mn-q8Z"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTR-qr-Y9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -56,11 +56,10 @@ class AuthorizationViewController: UIViewController {
                                                 }
                                             }
                                             catch {
-                                                
+                                                    self.printExeption(messageText: "Ошибка авторизации")
                                             }
                                             
-                                        case .error(let q):
-                                            print(q.localizedDescription)
+                                        case .error(_):
                                             self.printExeption(messageText: "Ошибка авторизации")
                                         }}
                                     ).disposed(by: self.disposeBag)
@@ -69,23 +68,8 @@ class AuthorizationViewController: UIViewController {
                             
                         }
                         catch {
-                            //
-                            //
-                            //
-                            //
-                            //
-                            //
-                            //
-                            //
-                            //
-                            //
-                            //
-                            //
+                            self.printExeption(messageText: "Ошибка авторизации")
                         }
-                       
-                        
-                        //self.performSegue(withIdentifier: "FinishAuthorization", sender: self)
-                        //self.navigationController?.popViewController(animated: true)
                     case .error(_):
                         self.printExeption(messageText: "Ошибка авторизации")
                     }}

@@ -9,9 +9,11 @@
 import UIKit
 
 class SideMenuViewController: UITableViewController {
-
+    @IBOutlet weak var userNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userNameLabel.text = "\(User.user!.Surname) \(User.user!.Name)"
     }
     
     //Обработчик выбора строки меню
