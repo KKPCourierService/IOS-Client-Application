@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-public var user : User?
+
 
 public class User {
     private var _id: Int
@@ -20,10 +20,11 @@ public class User {
     private var _password: String
     private var _phoneNumber: String
     private var _photoURL: String?
+    public static var user : User?
     
     
     //Инициализатор класса User
-    private init (id: Int, name: String, surname: String, patronymic: String, email: String, password: String, phoneNumber: String, photoURL: String?) {
+    public init (id: Int, name: String, surname: String, patronymic: String, email: String, password: String, phoneNumber: String, photoURL: String?) {
         _id = id
         _name = name
         _surname = surname

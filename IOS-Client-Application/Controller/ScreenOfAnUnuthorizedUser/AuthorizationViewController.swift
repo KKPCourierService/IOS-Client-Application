@@ -10,6 +10,8 @@ import UIKit
 import RxCocoa
 import RxSwift
 import Validator
+import Moya
+
 
 class AuthorizationViewController: UIViewController {
     
@@ -22,7 +24,72 @@ class AuthorizationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         authorizationButton.rx.tap.bind { [unowned self] in
-            self.performSegue(withIdentifier: "FinishAuthorization", sender: self)
+            let provider = MoyaProvider<ClientsNetworkService>()
+            provider.rx.request(.logIn(email: self.loginTextField.text!, password: self.passwordTextField.text!))
+                .filter(statusCodes: 200...399)
+                .subscribe({
+                    response in
+                    switch response {
+                    case .success(let responseJson):
+                        do {
+                            let json = try responseJson.mapJSON()
+                             if let jsonIdObject = json as? [String: Any] {
+                                let id = (jsonIdObject["clientId"] as? Int)!
+                                provider.rx.request(.getProfile(Id: id))
+                                    .filter(statusCodes: 200...399)
+                                    .subscribe({
+                                        response in
+                                        switch response {
+                                        case .success(let responseJsonProfile):
+                                            do {
+                                                let jsonProfile = try responseJsonProfile.mapJSON()
+                                                if let jsonProfileObject = jsonProfile as? [String: Any] {
+                                                    
+                                                    let email = (jsonProfileObject["clientEmail"] as? String)!
+                                                    let name = (jsonProfileObject["clientName"] as? String)!
+                                                    let surname = (jsonProfileObject["clientSurname"] as? String)!
+                                                    let patronymic = (jsonProfileObject["clientPatronymic"] as? String)!
+                                                    let phoneNumber = (jsonProfileObject["clientPhoneNumber"] as? String)!
+                                                    User.user = User.init(id: id, name: name, surname: surname, patronymic: patronymic, email: email, password: self.passwordTextField.text!, phoneNumber: phoneNumber, photoURL: nil)
+                                                    self.performSegue(withIdentifier: "FinishAuthorization", sender: self)
+                                                    self.navigationController?.popViewController(animated: true)
+                                                }
+                                            }
+                                            catch {
+                                                
+                                            }
+                                            
+                                        case .error(let q):
+                                            print(q.localizedDescription)
+                                            self.printExeption(messageText: "Ошибка авторизации")
+                                        }}
+                                    ).disposed(by: self.disposeBag)
+                                print(id)
+                            }
+                            
+                        }
+                        catch {
+                            //
+                            //
+                            //
+                            //
+                            //
+                            //
+                            //
+                            //
+                            //
+                            //
+                            //
+                            //
+                        }
+                       
+                        
+                        //self.performSegue(withIdentifier: "FinishAuthorization", sender: self)
+                        //self.navigationController?.popViewController(animated: true)
+                    case .error(_):
+                        self.printExeption(messageText: "Ошибка авторизации")
+                    }}
+                ).disposed(by: self.disposeBag)
             }.disposed(by: disposeBag)
     }
     
@@ -34,5 +101,11 @@ class AuthorizationViewController: UIViewController {
         super.viewWillAppear(animated)
         loginTextField.text = ""
         passwordTextField.text = ""
+    }
+    
+    func printExeption (messageText : String) {
+        let alert = UIAlertController(title: "Ошибка", message: messageText, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

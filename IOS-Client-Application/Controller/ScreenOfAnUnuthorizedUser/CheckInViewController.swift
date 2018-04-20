@@ -172,6 +172,7 @@ class CheckInViewController: UIViewController {
                         response in
                         switch response {
                         case .success(_):
+                           
                             self.performSegue(withIdentifier: "FinishCheckIn", sender: self)
                             self.navigationController?.popViewController(animated: true)
                         case .error(_):

@@ -12,6 +12,7 @@ import Moya
 enum ClientsNetworkService {
     case checkInNewUser(email: String, password: String, name: String, surname: String, patronymic: String, phoneNumber: String)
     case logIn(email: String, password: String)
+    case getProfile(Id: Int)
 }
 
 
@@ -22,7 +23,9 @@ extension ClientsNetworkService: TargetType {
         case .checkInNewUser:
             return "/clients/signUpClient"
         case .logIn:
-            return "/clients/logIn"
+            return "/clients/login"
+        case .getProfile(let Id):
+            return "/clients/\(Id)/profile"
         }
         
     }
@@ -30,6 +33,8 @@ extension ClientsNetworkService: TargetType {
         switch self {
         case .checkInNewUser, .logIn:
             return .post
+        case .getProfile:
+            return .get
         }
     }
     var task: Task {
@@ -37,13 +42,16 @@ extension ClientsNetworkService: TargetType {
         case let .checkInNewUser(email, password, name, surname, patronymic, phoneNumber): 
             return .requestParameters(parameters: ["clientEmail": email, "clientPassword": password, "clientName": name,"clientSurname": surname, "clientPatronymic": patronymic, "clientPhoneNumber": phoneNumber], encoding: JSONEncoding.default)
         case let .logIn(email, password):
-            return .requestParameters(parameters: ["clientEmail": email, "courierPassword": password], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["clientEmail": email, "clientPassword": password], encoding: JSONEncoding.default)
+        case .getProfile(_):
+            return .requestPlain
         }
+       
     }
     
     var sampleData: Data {
         switch self {
-        case .checkInNewUser, .logIn(_, _):
+        case .checkInNewUser, .logIn(_, _), .getProfile:
             return  "Half measures are as bad as nothing at all.".data(using: .ascii)!
         }
     }
