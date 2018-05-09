@@ -126,18 +126,18 @@
             </objects>
             <point key="canvasLocation" x="1618" y="526"/>
         </scene>
-        <!--TheMainScreenOfAnAuthorizedUser-->
+        <!--AuthorizedUser-->
         <scene sceneID="hXa-aW-WYD">
             <objects>
-                <viewControllerPlaceholder storyboardName="TheMainScreenOfAnAuthorizedUser" id="M4K-MH-78d" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="AuthorizedUser" id="M4K-MH-78d" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4f0-E3-XYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2808" y="6"/>
         </scene>
-        <!--Authorization View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="QFR-2d-BXE">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="b1T-gH-mJx" userLabel="Authorization View Controller" customClass="AuthorizationViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="b1T-gH-mJx" userLabel="Log In View Controller" customClass="AuthorizationViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3ZP-38-tPW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -209,17 +209,17 @@
                         <outlet property="authorizationButton" destination="toD-em-waa" id="yPv-nA-dsh"/>
                         <outlet property="loginTextField" destination="3Zq-3Z-ifw" id="Dlm-6i-A98"/>
                         <outlet property="passwordTextField" destination="H5c-RT-WQE" id="NLm-Y7-5fQ"/>
-                        <segue destination="M4K-MH-78d" kind="presentation" identifier="FinishAuthorization" id="zKN-b9-Ycf"/>
+                        <segue destination="M4K-MH-78d" kind="presentation" identifier="FinishLogIn" id="zKN-b9-Ycf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82B-Ob-sXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1618.840579710145" y="-277.98913043478262"/>
         </scene>
-        <!--Main Unuthorized Navigation Controller-->
+        <!--Unuthorized Navigation Controller-->
         <scene sceneID="nLS-HD-WXP">
             <objects>
-                <navigationController id="NNN-FI-zYW" userLabel="Main Unuthorized Navigation Controller" sceneMemberID="viewController">
+                <navigationController id="NNN-FI-zYW" userLabel="Unuthorized Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HUP-bo-Vl1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -236,6 +236,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k5L-Lc-Lhm"/>
+        <segue reference="zKN-b9-Ycf"/>
     </inferredMetricsTieBreakers>
 </document>

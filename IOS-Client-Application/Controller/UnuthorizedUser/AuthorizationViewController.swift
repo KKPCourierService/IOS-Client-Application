@@ -51,7 +51,7 @@ class AuthorizationViewController: UIViewController {
                                                     let patronymic = (jsonProfileObject["clientPatronymic"] as? String)!
                                                     let phoneNumber = (jsonProfileObject["clientPhoneNumber"] as? String)!
                                                     User.user = User.init(id: id, name: name, surname: surname, patronymic: patronymic, email: email, password: self.passwordTextField.text!, phoneNumber: phoneNumber, photoURL: nil)
-                                                    self.performSegue(withIdentifier: "FinishAuthorization", sender: self)
+                                                    self.performSegue(withIdentifier: "FinishLogIn", sender: self)
                                                     self.navigationController?.popViewController(animated: true)
                                                 }
                                             }
