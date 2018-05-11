@@ -29,7 +29,7 @@ class CheckInViewModel {
     let validatedConfirmPassword: Observable<Bool>
     
     let checkInEnabled: Observable<Bool>
-    let checkInObservable: Observable<(User?, Error?)>
+    let checkInObservable: Observable<Error?>
     
     init(input: (surname: Observable<String>,
         name: Observable<String>,
@@ -96,15 +96,17 @@ class CheckInViewModel {
     }
     
     private class func checkIn(surname: String?, name: String?, patronymic: String?, phoneNumber: String?, email: String?, password: String?)
-        -> Observable<(User?, Error?)> {
+        -> Observable<Error?> {
         return  Observable.create { observer in
             if let email = email, let password = password {
                 User.checkIn(surname: surname!, name: name!, patronymic: patronymic!, phoneNumber: phoneNumber!, email: email, password: password){
                     user, error in
-                    observer.onNext((user, error))
+                    let userViewModel = UserViewModel.sharedInstance
+                    userViewModel.newUser.accept(user)
+                    observer.onNext(nil)
                 }
             } else {
-                observer.onNext((nil, Errors.LogInError))
+                observer.onNext(Errors.CheckInError)
             }
             return Disposables.create()
         }

@@ -81,14 +81,12 @@ class CheckInViewController: UIViewController {
         setupModelView()
         
         self.viewModel.checkInObservable.bind{
-            [weak self] user, error in
-            if(user == nil) {
-                self?.printExeptionAlert(messageText: "Ошибка регистрации")
-            } else {
-                let userViewModel = UserViewModel.sharedInstance
-                userViewModel.newUser.accept(user)
+            [weak self] error in
+            if(error == nil) {
                 self?.performSegue(withIdentifier: "FinishCheckIn", sender: self)
                 self?.navigationController?.popViewController(animated: true)
+            } else {
+                self?.printExeptionAlert(messageText: "Ошибка регистрации")
             }
             }.disposed(by: disposeBag)
         
