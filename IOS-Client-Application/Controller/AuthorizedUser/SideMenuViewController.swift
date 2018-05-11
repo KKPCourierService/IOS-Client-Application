@@ -19,7 +19,7 @@ class SideMenuViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userViewModel.user
+        userViewModel.userObservable
             .bind{
                 user in
                 if(user != nil){

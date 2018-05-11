@@ -40,30 +40,33 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupModelView()
-        
-        self.viewModel.loginObservable.bind{
-            [weak self] error in
-            if(error == nil) {
-                self?.loginTextField.text = ""
-                self?.passwordTextField.text = ""
-                self?.performSegue(withIdentifier: "FinishLogIn", sender: self)
-            } else {
-                self?.printExeptionAlert(messageText: "Ошибка авторизации")
-            }
+        self.viewModel
+            .loginObservable
+            .bind{
+                [weak self] error in
+                if(error == nil) {
+                    self?.loginTextField.text = ""
+                    self?.passwordTextField.text = ""
+                    self?.performSegue(withIdentifier: "FinishLogIn", sender: self)
+                } else {
+                    self?.printExeptionAlert(messageText: "Ошибка авторизации")
+                }
             }.disposed(by: disposeBag)
         
-        self.viewModel.loginEnabled.bind{
-            [weak self] valid  in
-            self?.authorizationButton.isEnabled = valid
-            self?.authorizationButton.alpha = valid ? 1 : 0.5
+        self.viewModel
+            .loginEnabled
+            .bind{
+                [weak self] valid  in
+                self?.authorizationButton.isEnabled = valid
+                self?.authorizationButton.alpha = valid ? 1 : 0.5
             }.disposed(by: disposeBag)
     }
     
-
+    
     private func setupModelView() {
         self.viewModel = LogInViewModel(input: (username: self.usernameObservable,
-                                               password: self.passwordObservable,
-                                               loginTap: self.loginButtonObservable))
+                                                password: self.passwordObservable,
+                                                loginTap: self.loginButtonObservable))
     }
     
     
@@ -73,6 +76,6 @@ class LogInViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       
+        
     }
 }

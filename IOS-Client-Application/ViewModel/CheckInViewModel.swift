@@ -77,14 +77,13 @@ class CheckInViewModel {
                     return true
                 case .invalid(_):
                     return false
-                    
                 }
             }
             .share(replay: 1)
         
         
         self.validatedConfirmPassword = Observable.combineLatest(input.password, input.confirmPassword) { $0.elementsEqual($1)}
-
+        
         self.checkInEnabled = Observable.combineLatest(validatedSurname, validatedName, validatePatronymic, validatedPhoneNumber,
                                                        validatedEmail, validatedPassword, validatedConfirmPassword) { $0 && $1 && $2 && $3 && $4 && $5 && $6 }
         
@@ -95,20 +94,26 @@ class CheckInViewModel {
         }
     }
     
+    
     private class func checkIn(surname: String?, name: String?, patronymic: String?, phoneNumber: String?, email: String?, password: String?)
         -> Observable<Error?> {
-        return  Observable.create { observer in
-            if let email = email, let password = password {
-                User.checkIn(surname: surname!, name: name!, patronymic: patronymic!, phoneNumber: phoneNumber!, email: email, password: password){
-                    user, error in
-                    let userViewModel = UserViewModel.sharedInstance
-                    userViewModel.newUser.accept(user)
-                    observer.onNext(nil)
+            return  Observable.create { observer in
+                if let email = email, let password = password {
+                    User.checkIn(surname: surname!, name: name!, patronymic: patronymic!, phoneNumber: phoneNumber!, email: email, password: password){
+                        user in
+                        guard user != nil else {
+                            observer.onNext(Errors.CheckInError)
+                            return
+                        }
+                        let userViewModel = UserViewModel.sharedInstance
+                        userViewModel.newUser.accept(user)
+                        observer.onNext(nil)
+                        
+                    }
+                } else {
+                    observer.onNext(Errors.CheckInError)
                 }
-            } else {
-                observer.onNext(Errors.CheckInError)
+                return Disposables.create()
             }
-            return Disposables.create()
-        }
     }
 }

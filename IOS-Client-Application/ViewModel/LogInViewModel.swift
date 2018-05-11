@@ -36,21 +36,28 @@ class LogInViewModel {
         }
     }
     
-    private class func login(username: String?, password: String?) -> Observable<Error?> {
+    
+    private static func login(username: String?, password: String?) -> Observable<Error?> {
         return  Observable.create { observer in
             if let username = username, let password = password {
                 User.logIn(email: username, password: password){
-                    id, error in
-                    if(id != nil){
-                        User.getProfile(id: id!, password: password){
-                            user, error in
-                            let userViewModel = UserViewModel.sharedInstance
-                            userViewModel.newUser.accept(user)
-                            observer.onNext(nil)
-                        }
-                    } else {
+                    id in
+                    guard id != nil else {
                         observer.onNext(Errors.LogInError)
+                        return
                     }
+                    User.getProfile(id: id!, password: password){
+                        user in
+                        guard user != nil else {
+                            observer.onNext(Errors.LogInError)
+                            return
+                        }
+                        let userViewModel = UserViewModel.sharedInstance
+                        userViewModel.newUser.accept(user)
+                        observer.onNext(nil)
+                        
+                    }
+                    
                 }
             } else {
                 observer.onNext(Errors.LogInError)

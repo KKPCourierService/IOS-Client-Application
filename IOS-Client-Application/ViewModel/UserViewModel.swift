@@ -15,9 +15,9 @@ class UserViewModel {
     
     var newUser = BehaviorRelay<User?>(value: nil)
     
-    let user: Observable<User?>
+    let userObservable: Observable<User?>
     
     private init(){
-        user = newUser.asObservable()
+        userObservable = newUser.asObservable()
     }
 }

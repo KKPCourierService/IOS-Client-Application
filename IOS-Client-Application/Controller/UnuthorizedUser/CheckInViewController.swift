@@ -61,8 +61,9 @@ class CheckInViewController: UIViewController {
     }
     
     private var passwordObservable: Observable<String> {
-        return passwordTextField.rx.text.throttle(0.5, scheduler : MainScheduler.instance).map(){ text in
-            return text ?? ""
+        return passwordTextField.rx.text.throttle(0.5, scheduler : MainScheduler.instance)
+            .map(){ text in
+                return text ?? ""
         }
     }
     private var confirmPasswordObservable: Observable<String> {
@@ -71,7 +72,7 @@ class CheckInViewController: UIViewController {
         }
     }
     
-
+    
     private var checkInButtonObservable: Observable<Void> {
         return self.buttonCheckIn.rx.tap.asObservable()
     }
@@ -79,25 +80,28 @@ class CheckInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupModelView()
-        
-        self.viewModel.checkInObservable.bind{
-            [weak self] error in
-            if(error == nil) {
-                self?.performSegue(withIdentifier: "FinishCheckIn", sender: self)
-                self?.navigationController?.popViewController(animated: true)
-            } else {
-                self?.printExeptionAlert(messageText: "Ошибка регистрации")
-            }
+        self.viewModel
+            .checkInObservable
+            .bind{
+                [weak self] error in
+                if(error == nil) {
+                    self?.performSegue(withIdentifier: "FinishCheckIn", sender: self)
+                    self?.navigationController?.popViewController(animated: true)
+                } else {
+                    self?.printExeptionAlert(messageText: "Ошибка регистрации")
+                }
             }.disposed(by: disposeBag)
         
-        self.viewModel.checkInEnabled.bind{
-            [weak self] valid  in
-            self?.buttonCheckIn.isEnabled = valid
-            self?.buttonCheckIn.alpha = valid ? 1 : 0.5
+        self.viewModel
+            .checkInEnabled
+            .bind{
+                [weak self] valid  in
+                self?.buttonCheckIn.isEnabled = valid
+                self?.buttonCheckIn.alpha = valid ? 1 : 0.5
             }.disposed(by: disposeBag)
     }
     
- 
+    
     private func setupModelView() {
         self.viewModel = CheckInViewModel(input: (surname: self.surnameObservable, name: nameObservable, patronymic: patronymicObservable, phoneNumber: phoneNumberObservable, email: emailObservable, password: passwordObservable, confirmPassword: confirmPasswordObservable, checkInTap: checkInButtonObservable))
     }
