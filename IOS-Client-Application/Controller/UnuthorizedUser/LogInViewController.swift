@@ -41,22 +41,27 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         setupModelView()
         
-        self.viewModel.loginObservable.bind{ user, error in
+        self.viewModel.loginObservable.bind{
+            [weak self] user, error in
             if(user == nil) {
-                self.printExeptionAlert(messageText: "Ошибка авторизации")
+                self?.printExeptionAlert(messageText: "Ошибка авторизации")
             } else {
-                User.user = user
-                self.performSegue(withIdentifier: "FinishLogIn", sender: self)
+                self?.loginTextField.text = ""
+                self?.passwordTextField.text = ""
+                let userViewModel = UserViewModel.sharedInstance
+                userViewModel.newUser.value = user
+                self?.performSegue(withIdentifier: "FinishLogIn", sender: self)
             }
             }.disposed(by: disposeBag)
         
-        self.viewModel.loginEnabled.bind{ valid  in
-            self.authorizationButton.isEnabled = valid
-            self.authorizationButton.alpha = valid ? 1 : 0.5
+        self.viewModel.loginEnabled.bind{
+            [weak self] valid  in
+            self?.authorizationButton.isEnabled = valid
+            self?.authorizationButton.alpha = valid ? 1 : 0.5
             }.disposed(by: disposeBag)
     }
     
-    // MARK: - setup
+
     private func setupModelView() {
         self.viewModel = LogInViewModel(input: (username: self.usernameObservable,
                                                password: self.passwordObservable,
@@ -70,7 +75,6 @@ class LogInViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loginTextField.text = ""
-        passwordTextField.text = ""
+       
     }
 }

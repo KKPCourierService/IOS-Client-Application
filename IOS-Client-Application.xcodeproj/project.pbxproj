@@ -13,6 +13,7 @@
 		178DF47020A56D72004C1329 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DF46F20A56D72004C1329 /* CheckInViewModel.swift */; };
 		178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */; };
 		17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D354792084A91400C17B32 /* ClientsNetworkService.swift */; };
+		17D45E1120A592B90049148D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D45E1020A592B90049148D /* UserViewModel.swift */; };
 		17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BAF202026DC00947053 /* EditNameViewController.swift */; };
 		17E08BB22020271400947053 /* EditSurnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BB12020271400947053 /* EditSurnameViewController.swift */; };
 		17E08BB42020274B00947053 /* EditPatronymicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BB32020274B00947053 /* EditPatronymicViewController.swift */; };
@@ -41,6 +42,7 @@
 		178DF46F20A56D72004C1329 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
 		178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		17D354792084A91400C17B32 /* ClientsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsNetworkService.swift; sourceTree = "<group>"; };
+		17D45E1020A592B90049148D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		17E08BAF202026DC00947053 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
 		17E08BB12020271400947053 /* EditSurnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSurnameViewController.swift; sourceTree = "<group>"; };
 		17E08BB32020274B00947053 /* EditPatronymicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatronymicViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				1758430120A35BD70052B30D /* LogInViewModel.swift */,
 				178DF46F20A56D72004C1329 /* CheckInViewModel.swift */,
+				17D45E1020A592B90049148D /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				783DEE002018197A00554378 /* User.swift in Sources */,
 				786E52512018B5AA00BE681F /* SideMenuViewController.swift in Sources */,
 				78BD1A3E2018B0F3002843CC /* AuthorizedUserContainerViewController.swift in Sources */,
+				17D45E1120A592B90049148D /* UserViewModel.swift in Sources */,
 				17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */,
 				17F3801D201F6896003F1C59 /* EditPasswordViewController.swift in Sources */,
 				784896DC200A966D005626BB /* AppDelegate.swift in Sources */,

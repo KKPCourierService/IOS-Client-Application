@@ -12,10 +12,18 @@ import RxSwift
 
 class SideMenuViewController: UITableViewController {
     @IBOutlet weak var userNameLabel: UILabel!
+    
     let disposeBag = DisposeBag()
+    let userViewModel = UserViewModel.sharedInstance
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = "\(User.user!.Surname) \(User.user!.Name)"
+        userViewModel.user
+            .bind{
+                user in
+                self.userNameLabel.text = "\(user!.Surname) \(user!.Name)"
+            }.disposed(by: disposeBag)
     }
     
     //Обработчик выбора строки меню
@@ -45,5 +53,5 @@ class SideMenuViewController: UITableViewController {
         }
     }
     
-
+    
 }

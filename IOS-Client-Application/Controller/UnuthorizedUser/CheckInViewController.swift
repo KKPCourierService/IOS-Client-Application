@@ -80,19 +80,22 @@ class CheckInViewController: UIViewController {
         super.viewDidLoad()
         setupModelView()
         
-        self.viewModel.checkInObservable.bind{ user, error in
+        self.viewModel.checkInObservable.bind{
+            [weak self] user, error in
             if(user == nil) {
-                self.printExeptionAlert(messageText: "Ошибка регистрации")
+                self?.printExeptionAlert(messageText: "Ошибка регистрации")
             } else {
-                User.user = user
-                self.performSegue(withIdentifier: "FinishCheckIn", sender: self)
-                self.navigationController?.popViewController(animated: true)
+                let userViewModel = UserViewModel.sharedInstance
+                userViewModel.newUser.value = user
+                self?.performSegue(withIdentifier: "FinishCheckIn", sender: self)
+                self?.navigationController?.popViewController(animated: true)
             }
             }.disposed(by: disposeBag)
         
-        self.viewModel.checkInEnabled.bind{ valid  in
-            self.buttonCheckIn.isEnabled = valid
-            self.buttonCheckIn.alpha = valid ? 1 : 0.5
+        self.viewModel.checkInEnabled.bind{
+            [weak self] valid  in
+            self?.buttonCheckIn.isEnabled = valid
+            self?.buttonCheckIn.alpha = valid ? 1 : 0.5
             }.disposed(by: disposeBag)
     }
     
@@ -108,12 +111,5 @@ class CheckInViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        surnameTextField.text = ""
-        nameTextField.text = ""
-        passwordTextField.text = ""
-        phoneNumberTextField.text = ""
-        emailTextField.text = ""
-        passwordTextField.text = ""
-        confirmPasswordTextField.text = ""
     }
 }
