@@ -8,11 +8,12 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class UserViewModel {
     static let sharedInstance = UserViewModel()
     
-    var newUser = Variable<User?>(nil)
+    var newUser = BehaviorRelay<User?>(value: nil)
     let user: Observable<User?>
     private init(){
         user = newUser.asObservable()

@@ -86,7 +86,7 @@ class CheckInViewController: UIViewController {
                 self?.printExeptionAlert(messageText: "Ошибка регистрации")
             } else {
                 let userViewModel = UserViewModel.sharedInstance
-                userViewModel.newUser.value = user
+                userViewModel.newUser.accept(user)
                 self?.performSegue(withIdentifier: "FinishCheckIn", sender: self)
                 self?.navigationController?.popViewController(animated: true)
             }

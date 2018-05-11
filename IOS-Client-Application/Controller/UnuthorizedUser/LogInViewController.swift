@@ -49,7 +49,7 @@ class LogInViewController: UIViewController {
                 self?.loginTextField.text = ""
                 self?.passwordTextField.text = ""
                 let userViewModel = UserViewModel.sharedInstance
-                userViewModel.newUser.value = user
+                userViewModel.newUser.accept(user)
                 self?.performSegue(withIdentifier: "FinishLogIn", sender: self)
             }
             }.disposed(by: disposeBag)
