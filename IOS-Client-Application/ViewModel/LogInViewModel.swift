@@ -14,7 +14,7 @@ class LogInViewModel {
     let validatedEmail: Observable<Bool>
     let validatedPassword: Observable<Bool>
     let loginEnabled: Observable<Bool>
-    let loginObservable: Observable<(User?, Error?)>
+    let loginObservable: Observable<Error?>
     
     init(input: (username: Observable<String>,
         password: Observable<String>,
@@ -36,7 +36,7 @@ class LogInViewModel {
         }
     }
     
-    private class func login(username: String?, password: String?) -> Observable<(User?, Error?)> {
+    private class func login(username: String?, password: String?) -> Observable<Error?> {
         return  Observable.create { observer in
             if let username = username, let password = password {
                 User.logIn(email: username, password: password){
@@ -44,14 +44,16 @@ class LogInViewModel {
                     if(id != nil){
                         User.getProfile(id: id!, password: password){
                             user, error in
-                            observer.onNext((user, error))
+                            let userViewModel = UserViewModel.sharedInstance
+                            userViewModel.newUser.accept(user)
+                            observer.onNext(nil)
                         }
                     } else {
-                        observer.onNext((nil, error))
+                        observer.onNext(Errors.LogInError)
                     }
                 }
             } else {
-                observer.onNext((nil, Errors.LogInError))
+                observer.onNext(Errors.LogInError)
             }
             return Disposables.create()
         }

@@ -42,15 +42,13 @@ class LogInViewController: UIViewController {
         setupModelView()
         
         self.viewModel.loginObservable.bind{
-            [weak self] user, error in
-            if(user == nil) {
-                self?.printExeptionAlert(messageText: "Ошибка авторизации")
-            } else {
+            [weak self] error in
+            if(error == nil) {
                 self?.loginTextField.text = ""
                 self?.passwordTextField.text = ""
-                let userViewModel = UserViewModel.sharedInstance
-                userViewModel.newUser.accept(user)
                 self?.performSegue(withIdentifier: "FinishLogIn", sender: self)
+            } else {
+                self?.printExeptionAlert(messageText: "Ошибка авторизации")
             }
             }.disposed(by: disposeBag)
         

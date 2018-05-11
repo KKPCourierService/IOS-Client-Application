@@ -72,6 +72,8 @@ class AuthorizedUserContainerViewController: UIViewController {
     
     //Обработчик выхода из аккаунта
     @objc func logOut() {
+        let user = UserViewModel.sharedInstance
+        user.newUser.accept(nil)
         dismiss(animated: true, completion: nil)
     }
     

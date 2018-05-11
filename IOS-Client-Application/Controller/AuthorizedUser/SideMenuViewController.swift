@@ -22,7 +22,9 @@ class SideMenuViewController: UITableViewController {
         userViewModel.user
             .bind{
                 user in
-                self.userNameLabel.text = "\(user!.Surname) \(user!.Name)"
+                if(user != nil){
+                    self.userNameLabel.text = "\(user!.Surname) \(user!.Name)"
+                }  
             }.disposed(by: disposeBag)
     }
     
