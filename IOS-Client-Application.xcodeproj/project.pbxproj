@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		1714A9F6201E23E0009A4436 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A9F5201E23E0009A4436 /* Profile.storyboard */; };
 		171D29D620A411BF0027ADED /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D29D520A411BF0027ADED /* Errors.swift */; };
-		1758430220A35BD70052B30D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1758430120A35BD70052B30D /* UserViewModel.swift */; };
+		1758430220A35BD70052B30D /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1758430120A35BD70052B30D /* LogInViewModel.swift */; };
+		178DF47020A56D72004C1329 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DF46F20A56D72004C1329 /* CheckInViewModel.swift */; };
 		178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */; };
 		17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D354792084A91400C17B32 /* ClientsNetworkService.swift */; };
 		17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BAF202026DC00947053 /* EditNameViewController.swift */; };
@@ -36,7 +37,8 @@
 /* Begin PBXFileReference section */
 		1714A9F5201E23E0009A4436 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		171D29D520A411BF0027ADED /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		1758430120A35BD70052B30D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		1758430120A35BD70052B30D /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		178DF46F20A56D72004C1329 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
 		178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		17D354792084A91400C17B32 /* ClientsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsNetworkService.swift; sourceTree = "<group>"; };
 		17E08BAF202026DC00947053 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +81,8 @@
 		1758430020A35BC10052B30D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1758430120A35BD70052B30D /* UserViewModel.swift */,
+				1758430120A35BD70052B30D /* LogInViewModel.swift */,
+				178DF46F20A56D72004C1329 /* CheckInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				17E08BB42020274B00947053 /* EditPatronymicViewController.swift in Sources */,
 				17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */,
 				78EBAC4B200E9EE000297D86 /* LogInViewController.swift in Sources */,
+				178DF47020A56D72004C1329 /* CheckInViewModel.swift in Sources */,
 				17E08BB22020271400947053 /* EditSurnameViewController.swift in Sources */,
 				178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */,
 				786E52532018BD3900BE681F /* AuthorizedUserMainTabBarController.swift in Sources */,
@@ -364,7 +368,7 @@
 				17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */,
 				17F3801D201F6896003F1C59 /* EditPasswordViewController.swift in Sources */,
 				784896DC200A966D005626BB /* AppDelegate.swift in Sources */,
-				1758430220A35BD70052B30D /* UserViewModel.swift in Sources */,
+				1758430220A35BD70052B30D /* LogInViewModel.swift in Sources */,
 				17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */,
 				17E08BB62020278200947053 /* EditPhoneNumberViewController.swift in Sources */,
 			);

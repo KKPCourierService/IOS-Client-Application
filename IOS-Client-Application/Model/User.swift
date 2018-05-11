@@ -110,6 +110,29 @@ public class User {
             ).disposed(by: disposeBag)
     }
     
+    public static func checkIn (surname: String, name: String, patronymic: String, phoneNumber: String, email: String, password: String, result:@escaping(User?, Errors) ->()) {
+        provider.rx.request(.checkInNewUser(email: email, password: password, name: name, surname: surname, patronymic: patronymic, phoneNumber: "8\(phoneNumber)"))
+            .filter(statusCodes: 200...399)
+            .subscribe({
+                response in
+                switch response {
+                case .success(let responseJson):
+                    do {
+                        let json = try responseJson.mapJSON()
+                        if let jsonIdObject = json as? [String: Any] {
+                            let id = (jsonIdObject["clientId"] as? Int)!
+                            result(User.init(id: id, name: name, surname: surname, patronymic: patronymic, email: email, password: password, phoneNumber: phoneNumber, photoURL: nil), Errors.CheckInError)
+                        }
+                    }
+                    catch {
+                        result(nil, Errors.CheckInError)
+                    }
+                case .error(_):
+                    result(nil, Errors.CheckInError)
+                }}
+            ).disposed(by: self.disposeBag)
+    }
+    
     public static func getProfile (id: Int, password: String, result:@escaping(User?, Errors) ->()) {
         provider.rx.request(.getProfile(Id: id))
             .filter(statusCodes: 200...399)

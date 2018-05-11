@@ -1,5 +1,5 @@
 //
-//  UserViewModel.swift
+//  LogInViewModel.swift
 //  IOS-Client-Application
 //
 //  Created by Игорь Коршунов on 09.05.2018.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class UserViewModel {
+class LogInViewModel {
     
     let validatedEmail: Observable<Bool>
     let validatedPassword: Observable<Bool>
@@ -32,7 +32,7 @@ class UserViewModel {
         let userAndPassword = Observable.combineLatest(input.username, input.password) {($0,$1)}
         
         self.loginObservable = input.loginTap.withLatestFrom(userAndPassword).flatMapLatest{ (username, password) in
-            return UserViewModel.login(username: username, password: password).observeOn(MainScheduler.instance)
+            return LogInViewModel.login(username: username, password: password).observeOn(MainScheduler.instance)
         }
     }
     

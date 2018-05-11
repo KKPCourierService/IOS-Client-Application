@@ -20,7 +20,7 @@ class LogInViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    private var viewModel: UserViewModel!
+    private var viewModel: LogInViewModel!
     
     
     private var usernameObservable: Observable<String> {
@@ -58,7 +58,7 @@ class LogInViewController: UIViewController {
     
     // MARK: - setup
     private func setupModelView() {
-        self.viewModel = UserViewModel(input: (username: self.usernameObservable,
+        self.viewModel = LogInViewModel(input: (username: self.usernameObservable,
                                                password: self.passwordObservable,
                                                loginTap: self.loginButtonObservable))
     }

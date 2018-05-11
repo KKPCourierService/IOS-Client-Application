@@ -10,4 +10,5 @@ import Foundation
 
 public enum Errors : Error{
     case LogInError
+    case CheckInError
 }
