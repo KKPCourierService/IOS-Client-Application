@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1714A9F6201E23E0009A4436 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A9F5201E23E0009A4436 /* Profile.storyboard */; };
+		171D29D620A411BF0027ADED /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D29D520A411BF0027ADED /* Errors.swift */; };
+		1758430220A35BD70052B30D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1758430120A35BD70052B30D /* UserViewModel.swift */; };
 		178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */; };
 		17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D354792084A91400C17B32 /* ClientsNetworkService.swift */; };
 		17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BAF202026DC00947053 /* EditNameViewController.swift */; };
@@ -26,13 +28,15 @@
 		786E52532018BD3900BE681F /* AuthorizedUserMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E52522018BD3900BE681F /* AuthorizedUserMainTabBarController.swift */; };
 		78BD1A3E2018B0F3002843CC /* AuthorizedUserContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD1A3D2018B0F3002843CC /* AuthorizedUserContainerViewController.swift */; };
 		78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBAC48200E9E8900297D86 /* CheckInViewController.swift */; };
-		78EBAC4B200E9EE000297D86 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBAC4A200E9EE000297D86 /* AuthorizationViewController.swift */; };
+		78EBAC4B200E9EE000297D86 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBAC4A200E9EE000297D86 /* LogInViewController.swift */; };
 		78F6D3002016049E001EA4DB /* AuthorizedUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F6D2FF2016049E001EA4DB /* AuthorizedUser.storyboard */; };
 		EC9EB6F53ABCF2CC0B6A892A /* Pods_IOS_Client_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7287907FEA40860E33032E /* Pods_IOS_Client_Application.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1714A9F5201E23E0009A4436 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		171D29D520A411BF0027ADED /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		1758430120A35BD70052B30D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		17D354792084A91400C17B32 /* ClientsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsNetworkService.swift; sourceTree = "<group>"; };
 		17E08BAF202026DC00947053 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +59,7 @@
 		786E52522018BD3900BE681F /* AuthorizedUserMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedUserMainTabBarController.swift; sourceTree = "<group>"; };
 		78BD1A3D2018B0F3002843CC /* AuthorizedUserContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedUserContainerViewController.swift; sourceTree = "<group>"; };
 		78EBAC48200E9E8900297D86 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
-		78EBAC4A200E9EE000297D86 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		78EBAC4A200E9EE000297D86 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		78F6D2FF2016049E001EA4DB /* AuthorizedUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizedUser.storyboard; sourceTree = "<group>"; };
 		C5AF9F82BB11510F3AB15835 /* Pods-IOS-Client-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS-Client-Application.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOS-Client-Application/Pods-IOS-Client-Application.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1758430020A35BC10052B30D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1758430120A35BD70052B30D /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		178ED34F2089BF25003BAE76 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				78EBAC48200E9E8900297D86 /* CheckInViewController.swift */,
-				78EBAC4A200E9EE000297D86 /* AuthorizationViewController.swift */,
+				78EBAC4A200E9EE000297D86 /* LogInViewController.swift */,
 			);
 			path = UnuthorizedUser;
 			sourceTree = "<group>";
@@ -142,6 +154,7 @@
 		784896DA200A966D005626BB /* IOS-Client-Application */ = {
 			isa = PBXGroup;
 			children = (
+				1758430020A35BC10052B30D /* ViewModel */,
 				784896DB200A966D005626BB /* AppDelegate.swift */,
 				78F6D2FC2016037B001EA4DB /* Storyboard */,
 				78EBAC43200E9CA300297D86 /* Controller */,
@@ -158,6 +171,7 @@
 			children = (
 				783DEDFF2018197A00554378 /* User.swift */,
 				17D354792084A91400C17B32 /* ClientsNetworkService.swift */,
+				171D29D520A411BF0027ADED /* Errors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,10 +351,11 @@
 			files = (
 				17E08BB42020274B00947053 /* EditPatronymicViewController.swift in Sources */,
 				17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */,
-				78EBAC4B200E9EE000297D86 /* AuthorizationViewController.swift in Sources */,
+				78EBAC4B200E9EE000297D86 /* LogInViewController.swift in Sources */,
 				17E08BB22020271400947053 /* EditSurnameViewController.swift in Sources */,
 				178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */,
 				786E52532018BD3900BE681F /* AuthorizedUserMainTabBarController.swift in Sources */,
+				171D29D620A411BF0027ADED /* Errors.swift in Sources */,
 				78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */,
 				17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */,
 				783DEE002018197A00554378 /* User.swift in Sources */,
@@ -349,6 +364,7 @@
 				17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */,
 				17F3801D201F6896003F1C59 /* EditPasswordViewController.swift in Sources */,
 				784896DC200A966D005626BB /* AppDelegate.swift in Sources */,
+				1758430220A35BD70052B30D /* UserViewModel.swift in Sources */,
 				17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */,
 				17E08BB62020278200947053 /* EditPhoneNumberViewController.swift in Sources */,
 			);

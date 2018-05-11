@@ -137,7 +137,7 @@
         <!--Log In View Controller-->
         <scene sceneID="QFR-2d-BXE">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="b1T-gH-mJx" userLabel="Log In View Controller" customClass="AuthorizationViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="b1T-gH-mJx" userLabel="Log In View Controller" customClass="LogInViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3ZP-38-tPW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

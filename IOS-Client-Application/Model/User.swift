@@ -7,11 +7,16 @@
 //
 
 import Foundation
-import Alamofire
+import Moya
+import RxSwift
 
 
 
 public class User {
+    
+    private static let disposeBag = DisposeBag()
+    private static let provider = MoyaProvider<ClientsNetworkService>()
+    
     private var id: Int
     private var name: String
     private var surname: String
@@ -80,5 +85,58 @@ public class User {
         get {
             return photoURL
         }
+    }
+    
+    public static func logIn (email: String, password: String, result:@escaping(Int?, Errors) ->()) {
+        provider.rx.request(.logIn(email: email, password: password))
+            .filter(statusCodes: 200...399)
+            .subscribe({
+                response in
+                switch response {
+                case .success(let responseJson):
+                    do {
+                        let json = try responseJson.mapJSON()
+                        if let jsonIdObject = json as? [String: Any] {
+                            let id = (jsonIdObject["clientId"] as? Int)!
+                            result(id, Errors.LogInError)
+                        }
+                    }
+                    catch {
+                        result(nil, Errors.LogInError)
+                    }
+                case .error(_):
+                    result(nil, Errors.LogInError)
+                }}
+            ).disposed(by: disposeBag)
+    }
+    
+    public static func getProfile (id: Int, password: String, result:@escaping(User?, Errors) ->()) {
+        provider.rx.request(.getProfile(Id: id))
+            .filter(statusCodes: 200...399)
+            .subscribe({
+                response in
+                switch response {
+                case .success(let responseJsonProfile):
+                    do {
+                        let jsonProfile = try responseJsonProfile.mapJSON()
+                        if let jsonProfileObject = jsonProfile as? [String: Any] {
+                            let email = (jsonProfileObject["clientEmail"] as? String)!
+                            let name = (jsonProfileObject["clientName"] as? String)!
+                            let surname = (jsonProfileObject["clientSurname"] as? String)!
+                            let patronymic = (jsonProfileObject["clientPatronymic"] as? String)!
+                            let phoneNumber = (jsonProfileObject["clientPhoneNumber"] as? String)!
+                            result(User.init(id: id, name: name, surname: surname, patronymic: patronymic, email: email, password: password, phoneNumber: phoneNumber, photoURL: nil), Errors.LogInError)
+                        }
+                    }
+                    catch {
+                        result(nil, Errors.LogInError)
+                    }
+                    
+                case .error(_):
+                    result(nil, Errors.LogInError)
+                }
+                }
+            ).disposed(by: disposeBag)
+        
     }
 }
