@@ -20,7 +20,7 @@ class LogInViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    private var viewModel: LogInViewModel!
+    private var logInViewModel: LogInViewModel!
     
     
     private var usernameObservable: Observable<String> {
@@ -40,7 +40,7 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupModelView()
-        self.viewModel
+        self.logInViewModel
             .loginObservable
             .bind{
                 [weak self] error in
@@ -53,7 +53,7 @@ class LogInViewController: UIViewController {
                 }
             }.disposed(by: disposeBag)
         
-        self.viewModel
+        self.logInViewModel
             .loginEnabled
             .bind{
                 [weak self] valid  in
@@ -64,7 +64,7 @@ class LogInViewController: UIViewController {
     
     
     private func setupModelView() {
-        self.viewModel = LogInViewModel(input: (username: self.usernameObservable,
+        self.logInViewModel = LogInViewModel(input: (username: self.usernameObservable,
                                                 password: self.passwordObservable,
                                                 loginTap: self.loginButtonObservable))
     }

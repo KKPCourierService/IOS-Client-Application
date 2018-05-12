@@ -19,16 +19,16 @@ class SideMenuViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userViewModel.userObservable
+        /*userViewModel.userObservable
             .bind{
                 user in
                 if(user != nil){
                     self.userNameLabel.text = "\(user!.Surname) \(user!.Name)"
                 }  
-            }.disposed(by: disposeBag)
+            }.disposed(by: disposeBag)*/
     }
     
-    //Обработчик выбора строки меню
+ 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NotificationCenter.default.post(name: Notification.Name("HideMenu"), object: nil)
         tableView.deselectRow(at: indexPath, animated: true)
@@ -36,6 +36,7 @@ class SideMenuViewController: UITableViewController {
         case 0:
             NotificationCenter.default.post(name: Notification.Name("ShowProfile"), object: nil)
         case 2:
+         
             let provider = MoyaProvider<ClientsNetworkService>()
             provider.rx.request(.logOut())
                 .filter(statusCodes: 200...399)
@@ -49,7 +50,7 @@ class SideMenuViewController: UITableViewController {
                     }
                     }
                 ).disposed(by: self.disposeBag)
-            
+        
         default:
             break
         }

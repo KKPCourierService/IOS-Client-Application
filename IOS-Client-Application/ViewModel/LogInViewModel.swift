@@ -11,15 +11,14 @@ import RxSwift
 
 class LogInViewModel {
     
-    let validatedEmail: Observable<Bool>
-    let validatedPassword: Observable<Bool>
+    private let validatedEmail: Observable<Bool>
+    private let validatedPassword: Observable<Bool>
     let loginEnabled: Observable<Bool>
     let loginObservable: Observable<Error?>
     
     init(input: (username: Observable<String>,
         password: Observable<String>,
         loginTap: Observable<Void>)) {
-        
         self.validatedEmail = input.username
             .map { $0.count >= 5 }
             .share(replay: 1)
@@ -32,37 +31,7 @@ class LogInViewModel {
         let userAndPassword = Observable.combineLatest(input.username, input.password) {($0,$1)}
         
         self.loginObservable = input.loginTap.withLatestFrom(userAndPassword).flatMapLatest{ (username, password) in
-            return LogInViewModel.login(username: username, password: password).observeOn(MainScheduler.instance)
-        }
-    }
-    
-    
-    private static func login(username: String?, password: String?) -> Observable<Error?> {
-        return  Observable.create { observer in
-            if let username = username, let password = password {
-                User.logIn(email: username, password: password){
-                    id in
-                    guard id != nil else {
-                        observer.onNext(Errors.LogInError)
-                        return
-                    }
-                    User.getProfile(id: id!, password: password){
-                        user in
-                        guard user != nil else {
-                            observer.onNext(Errors.LogInError)
-                            return
-                        }
-                        let userViewModel = UserViewModel.sharedInstance
-                        userViewModel.newUser.accept(user)
-                        observer.onNext(nil)
-                        
-                    }
-                    
-                }
-            } else {
-                observer.onNext(Errors.LogInError)
-            }
-            return Disposables.create()
+            return UserViewModel.sharedInstance.login(username: username, password: password).observeOn(MainScheduler.instance)
         }
     }
 }

@@ -6,7 +6,6 @@
 //  Copyright © 2018 Игорь Коршунов. All rights reserved.
 //
 
-import Foundation
 
 import RxSwift
 import Validator
@@ -19,15 +18,15 @@ class CheckInViewModel {
         case thereAreNoDigitsInThePassword
     }
     
+
     
-    let validatedSurname: Observable<Bool>
-    let validatedName: Observable<Bool>
-    let validatePatronymic: Observable<Bool>
-    let validatedPhoneNumber: Observable<Bool>
-    let validatedEmail: Observable<Bool>
-    let validatedPassword: Observable<Bool>
-    let validatedConfirmPassword: Observable<Bool>
-    
+    private let validatedSurname: Observable<Bool>
+    private let validatedName: Observable<Bool>
+    private let validatePatronymic: Observable<Bool>
+    private let validatedPhoneNumber: Observable<Bool>
+    private let validatedEmail: Observable<Bool>
+    private let validatedPassword: Observable<Bool>
+    private let validatedConfirmPassword: Observable<Bool>
     let checkInEnabled: Observable<Bool>
     let checkInObservable: Observable<Error?>
     
@@ -40,6 +39,7 @@ class CheckInViewModel {
         confirmPassword: Observable<String>,
         checkInTap: Observable<Void>)) {
         
+
         
         self.validatedSurname = input.surname
             .map{ $0.count > 0}
@@ -90,30 +90,7 @@ class CheckInViewModel {
         let userProfile = Observable.combineLatest(input.surname, input.name, input.patronymic, input.phoneNumber, input.email, input.password) {($0, $1, $2, $3, $4, $5)}
         
         self.checkInObservable = input.checkInTap.withLatestFrom(userProfile).flatMapLatest{ (surname, name, patronymic, phoneNumber, email, password) in
-            return CheckInViewModel.checkIn(surname: surname, name: name, patronymic: patronymic, phoneNumber: phoneNumber, email: email, password: password).observeOn(MainScheduler.instance)
+            return UserViewModel.sharedInstance.checkIn(surname: surname, name: name, patronymic: patronymic, phoneNumber: phoneNumber, email: email, password: password).observeOn(MainScheduler.instance)
         }
-    }
-    
-    
-    private class func checkIn(surname: String?, name: String?, patronymic: String?, phoneNumber: String?, email: String?, password: String?)
-        -> Observable<Error?> {
-            return  Observable.create { observer in
-                if let email = email, let password = password {
-                    User.checkIn(surname: surname!, name: name!, patronymic: patronymic!, phoneNumber: phoneNumber!, email: email, password: password){
-                        user in
-                        guard user != nil else {
-                            observer.onNext(Errors.CheckInError)
-                            return
-                        }
-                        let userViewModel = UserViewModel.sharedInstance
-                        userViewModel.newUser.accept(user)
-                        observer.onNext(nil)
-                        
-                    }
-                } else {
-                    observer.onNext(Errors.CheckInError)
-                }
-                return Disposables.create()
-            }
     }
 }

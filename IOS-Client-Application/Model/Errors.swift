@@ -6,9 +6,10 @@
 //  Copyright © 2018 Игорь Коршунов. All rights reserved.
 //
 
-import Foundation
+
 
 public enum Errors : Error{
     case LogInError
     case CheckInError
+    case LogOutError
 }

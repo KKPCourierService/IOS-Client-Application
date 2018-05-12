@@ -26,7 +26,7 @@ class CheckInViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    private var viewModel: CheckInViewModel!
+    private var checkInViewModel: CheckInViewModel!
     
     
     private var surnameObservable: Observable<String> {
@@ -80,7 +80,7 @@ class CheckInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupModelView()
-        self.viewModel
+        self.checkInViewModel
             .checkInObservable
             .bind{
                 [weak self] error in
@@ -92,7 +92,7 @@ class CheckInViewController: UIViewController {
                 }
             }.disposed(by: disposeBag)
         
-        self.viewModel
+        self.checkInViewModel
             .checkInEnabled
             .bind{
                 [weak self] valid  in
@@ -103,7 +103,7 @@ class CheckInViewController: UIViewController {
     
     
     private func setupModelView() {
-        self.viewModel = CheckInViewModel(input: (surname: self.surnameObservable, name: nameObservable, patronymic: patronymicObservable, phoneNumber: phoneNumberObservable, email: emailObservable, password: passwordObservable, confirmPassword: confirmPasswordObservable, checkInTap: checkInButtonObservable))
+        self.checkInViewModel = CheckInViewModel(input: (surname: self.surnameObservable, name: nameObservable, patronymic: patronymicObservable, phoneNumber: phoneNumberObservable, email: emailObservable, password: passwordObservable, confirmPassword: confirmPasswordObservable, checkInTap: checkInButtonObservable))
     }
     
     

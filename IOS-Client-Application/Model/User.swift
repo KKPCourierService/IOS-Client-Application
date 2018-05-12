@@ -6,9 +6,9 @@
 //  Copyright © 2018 Игорь Коршунов. All rights reserved.
 //
 
-import Foundation
 import Moya
 import RxSwift
+import RxCocoa
 
 
 
@@ -17,76 +17,69 @@ public class User {
     private static let disposeBag = DisposeBag()
     private static let provider = MoyaProvider<ClientsNetworkService>()
     
-    private var id: Int
-    private var name: String
-    private var surname: String
-    private var patronymic: String
-    private var email: String
-    private var password: String
-    private var phoneNumber: String
-    private var photoURL: String?
+    private var id: BehaviorRelay<Int>
+    private var name: BehaviorRelay<String>
+    private var surname: BehaviorRelay<String>
+    private var patronymic: BehaviorRelay<String>
+    private var email: BehaviorRelay<String>
+    private var password: BehaviorRelay<String>
+    private var phoneNumber: BehaviorRelay<String>
+  
     
     
     public init (id: Int, name: String, surname: String, patronymic: String, email: String,
-                 password: String, phoneNumber: String, photoURL: String?) {
-        self.id = id
-        self.name = name
-        self.surname = surname
-        self.patronymic = patronymic
-        self.email = email
-        self.password = password
-        self.phoneNumber = phoneNumber
-        self.photoURL = photoURL
+                 password: String, phoneNumber: String) {
+        self.id = BehaviorRelay(value: id)
+        self.name = BehaviorRelay(value: name)
+        self.surname = BehaviorRelay(value: surname)
+        self.patronymic = BehaviorRelay(value: patronymic)
+        self.email = BehaviorRelay(value: email)
+        self.password = BehaviorRelay(value: password)
+        self.phoneNumber = BehaviorRelay(value: phoneNumber)
     }
     
     
-    public var Id : Int {
+    public var IdObservable : Observable<Int> {
         get {
-            return id
+            return id.asObservable()
         }
     }
     
-    public var Name: String {
+    public var NameObservable: Observable<String> {
         get {
-            return name
-        }
-    }
-    
-    
-    public var Surname: String {
-        get {
-            return surname
+            return name.asObservable()
         }
     }
     
     
-    public var Patronymic: String {
+    public var SurnameObservable: Observable<String> {
         get {
-            return patronymic
+            return surname.asObservable()
         }
     }
     
     
-    public var Email: String {
+    public var PatronymicObservable: Observable<String> {
         get {
-            return email
+            return patronymic.asObservable()
+        }
+    }
+    
+    public var EmailObservable: Observable<String> {
+        get {
+            return email.asObservable()
         }
     }
     
     
-    public var PhoneNumber: String {
+    public var PhoneNumberObservable: Observable<String> {
         get {
-            return phoneNumber
+            return phoneNumber.asObservable()
         }
     }
     
     
-    public var PhotoURL: String? {
-        get {
-            return photoURL
-        }
-    }
-    
+
     
     public static func logIn (email: String, password: String, result:@escaping(Int?) ->()) {
         provider.rx
@@ -139,7 +132,7 @@ public class User {
                             return
                         }
                         result(User.init(id: id, name: name, surname: surname, patronymic: patronymic,
-                                         email: email, password: password, phoneNumber: phoneNumber, photoURL: nil))
+                                         email: email, password: password, phoneNumber: phoneNumber))
                     }
                     catch {
                         result(nil)
@@ -185,7 +178,7 @@ public class User {
                             return
                         }
                         result(User(id: id, name: name, surname: surname, patronymic: patronymic, email: email,
-                                    password: password, phoneNumber: phoneNumber, photoURL: nil))
+                                    password: password, phoneNumber: phoneNumber))
                         
                     }
                     catch {
@@ -198,5 +191,23 @@ public class User {
                 }
             ).disposed(by: disposeBag)
         
+    }
+    
+    
+    public func logOut(result:@escaping(Error?) ->()) {
+        let provider = MoyaProvider<ClientsNetworkService>()
+        let disposeBag = DisposeBag()
+        provider.rx.request(.logOut())
+            .filter(statusCodes: 200...399)
+            .subscribe({
+                response in
+                switch response {
+                case .success(_):
+                    result(nil)
+                case .error(_):
+                    result(Errors.LogOutError)
+                }
+                }
+            ).disposed(by: disposeBag)
     }
 }
