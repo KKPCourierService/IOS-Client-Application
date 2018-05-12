@@ -14,6 +14,7 @@
 		178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */; };
 		17CBF4DD20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBF4DC20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift */; };
 		17CBF4DF20A75F9400D63E3B /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBF4DE20A75F9400D63E3B /* SideMenuViewModel.swift */; };
+		17CBF4E120A7600B00D63E3B /* MainTabBarControllerOfAuthorizedUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBF4E020A7600B00D63E3B /* MainTabBarControllerOfAuthorizedUserViewModel.swift */; };
 		17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D354792084A91400C17B32 /* ClientsNetworkService.swift */; };
 		17D45E1120A592B90049148D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D45E1020A592B90049148D /* UserViewModel.swift */; };
 		17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BAF202026DC00947053 /* EditNameViewController.swift */; };
@@ -45,6 +46,7 @@
 		178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		17CBF4DC20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerOfAuthorizedUserViewModel.swift; sourceTree = "<group>"; };
 		17CBF4DE20A75F9400D63E3B /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		17CBF4E020A7600B00D63E3B /* MainTabBarControllerOfAuthorizedUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerOfAuthorizedUserViewModel.swift; sourceTree = "<group>"; };
 		17D354792084A91400C17B32 /* ClientsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsNetworkService.swift; sourceTree = "<group>"; };
 		17D45E1020A592B90049148D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		17E08BAF202026DC00947053 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				17CBF4DC20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift */,
 				17CBF4DE20A75F9400D63E3B /* SideMenuViewModel.swift */,
+				17CBF4E020A7600B00D63E3B /* MainTabBarControllerOfAuthorizedUserViewModel.swift */,
 			);
 			path = AuthorizedUser;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */,
 				17CBF4DD20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift in Sources */,
 				783DEE002018197A00554378 /* User.swift in Sources */,
+				17CBF4E120A7600B00D63E3B /* MainTabBarControllerOfAuthorizedUserViewModel.swift in Sources */,
 				786E52512018B5AA00BE681F /* SideMenuViewController.swift in Sources */,
 				78BD1A3E2018B0F3002843CC /* ContainerViewControllerOfAuthorizedUser.swift in Sources */,
 				17D45E1120A592B90049148D /* UserViewModel.swift in Sources */,
