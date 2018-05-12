@@ -13,10 +13,42 @@ class UserViewModel {
     static let sharedInstance = UserViewModel()
     
     private var user = BehaviorRelay<User?>(value: nil)
+    private let disposeBag = DisposeBag()
     private let userObservable: Observable<User?>
+    
+    
+  
+    public var idObservable: Observable<Int>?
+    public var nameObservable: Observable<String>?
+    public var surnameObservable: Observable<String>?
+    public var patronymicObservable: Observable<String>?
+    public var emailObservable: Observable<String>?
+    public var passwordObservable: Observable<String>?
+    public var phoneNumberObservable: Observable<String>?
+    
     
     private init(){
         userObservable = user.asObservable()
+        userObservable.bind{
+            value in
+            guard value == nil else {
+                self.idObservable = value?.IdObservable
+                self.nameObservable = value?.NameObservable
+                self.surnameObservable = value?.SurnameObservable
+                self.patronymicObservable = value?.PatronymicObservable
+                self.emailObservable = value?.EmailObservable
+                self.passwordObservable = value?.PasswordObservable
+                self.phoneNumberObservable = value?.PhoneNumberObservable
+                return
+            }
+            self.idObservable = nil
+            self.nameObservable = nil
+            self.surnameObservable = nil
+            self.patronymicObservable = nil
+            self.emailObservable = nil
+            self.passwordObservable = nil
+            self.phoneNumberObservable = nil
+        }.disposed(by: disposeBag)
     }
     
 

@@ -15,17 +15,17 @@ class SideMenuViewController: UITableViewController {
     
     let disposeBag = DisposeBag()
     let userViewModel = UserViewModel.sharedInstance
-    
+    var userNameAndSurname: Observable<String>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*userViewModel.userObservable
-            .bind{
-                user in
-                if(user != nil){
-                    self.userNameLabel.text = "\(user!.Surname) \(user!.Name)"
-                }  
-            }.disposed(by: disposeBag)*/
+        userNameAndSurname = Observable.combineLatest(userViewModel.nameObservable!, userViewModel.surnameObservable!) {
+            "\($0) \($1)"
+        }
+        userNameAndSurname?.bind{
+            [weak self] value in
+                self?.userNameLabel.text = "\(value)"
+        }.disposed(by: disposeBag)
     }
     
  

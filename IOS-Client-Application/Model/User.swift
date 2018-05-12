@@ -78,6 +78,11 @@ public class User {
         }
     }
     
+    public var PasswordObservable: Observable<String> {
+        get {
+            return password.asObservable()
+        }
+    }
     
 
     
