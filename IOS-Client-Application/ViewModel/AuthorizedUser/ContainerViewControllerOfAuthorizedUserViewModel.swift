@@ -9,8 +9,8 @@
 import RxSwift
 import RxCocoa
 
-class AuthorizedUserViewModel {
-    public static let sharedInstance = AuthorizedUserViewModel()
+class ContainerViewControllerOfAuthorizedUserViewModel {
+    public static let sharedInstance = ContainerViewControllerOfAuthorizedUserViewModel()
     let disposeBag = DisposeBag()
     private var openMenu = BehaviorRelay<Bool>(value: false)
     private var activateOpenMenu = BehaviorRelay<Bool>(value: true)

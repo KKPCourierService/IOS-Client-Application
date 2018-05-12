@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AuthorizedUserMainTabBarController: UITabBarController {
+class MainTabBarControllerOfAuthorizedUser: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +18,11 @@ class AuthorizedUserMainTabBarController: UITabBarController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        AuthorizedUserViewModel.sharedInstance.activateMenu()
+        ContainerViewControllerOfAuthorizedUserViewModel.sharedInstance.activateMenu()
     }
     
     //Нажатие на кнопку открытия меню
     @IBAction func menuBarButtonClick(_ sender: UIBarButtonItem) {
-        AuthorizedUserViewModel.sharedInstance.showMenu()
+        ContainerViewControllerOfAuthorizedUserViewModel.sharedInstance.showMenu()
     }
 }

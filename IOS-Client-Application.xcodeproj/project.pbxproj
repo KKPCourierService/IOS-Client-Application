@@ -12,7 +12,7 @@
 		1758430220A35BD70052B30D /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1758430120A35BD70052B30D /* LogInViewModel.swift */; };
 		178DF47020A56D72004C1329 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DF46F20A56D72004C1329 /* CheckInViewModel.swift */; };
 		178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */; };
-		17CBF4DD20A7280200D63E3B /* AuthorizedUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBF4DC20A7280200D63E3B /* AuthorizedUserViewModel.swift */; };
+		17CBF4DD20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBF4DC20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift */; };
 		17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D354792084A91400C17B32 /* ClientsNetworkService.swift */; };
 		17D45E1120A592B90049148D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D45E1020A592B90049148D /* UserViewModel.swift */; };
 		17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BAF202026DC00947053 /* EditNameViewController.swift */; };
@@ -28,8 +28,8 @@
 		784896E3200A966D005626BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 784896E2200A966D005626BB /* Assets.xcassets */; };
 		784896E6200A966D005626BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784896E4200A966D005626BB /* LaunchScreen.storyboard */; };
 		786E52512018B5AA00BE681F /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E52502018B5AA00BE681F /* SideMenuViewController.swift */; };
-		786E52532018BD3900BE681F /* AuthorizedUserMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E52522018BD3900BE681F /* AuthorizedUserMainTabBarController.swift */; };
-		78BD1A3E2018B0F3002843CC /* AuthorizedUserContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD1A3D2018B0F3002843CC /* AuthorizedUserContainerViewController.swift */; };
+		786E52532018BD3900BE681F /* MainTabBarControllerOfAuthorizedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E52522018BD3900BE681F /* MainTabBarControllerOfAuthorizedUser.swift */; };
+		78BD1A3E2018B0F3002843CC /* ContainerViewControllerOfAuthorizedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD1A3D2018B0F3002843CC /* ContainerViewControllerOfAuthorizedUser.swift */; };
 		78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBAC48200E9E8900297D86 /* CheckInViewController.swift */; };
 		78EBAC4B200E9EE000297D86 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBAC4A200E9EE000297D86 /* LogInViewController.swift */; };
 		78F6D3002016049E001EA4DB /* AuthorizedUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F6D2FF2016049E001EA4DB /* AuthorizedUser.storyboard */; };
@@ -42,7 +42,7 @@
 		1758430120A35BD70052B30D /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		178DF46F20A56D72004C1329 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
 		178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		17CBF4DC20A7280200D63E3B /* AuthorizedUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedUserViewModel.swift; sourceTree = "<group>"; };
+		17CBF4DC20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerOfAuthorizedUserViewModel.swift; sourceTree = "<group>"; };
 		17D354792084A91400C17B32 /* ClientsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsNetworkService.swift; sourceTree = "<group>"; };
 		17D45E1020A592B90049148D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		17E08BAF202026DC00947053 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 		784896E5200A966D005626BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		784896E7200A966D005626BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		786E52502018B5AA00BE681F /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		786E52522018BD3900BE681F /* AuthorizedUserMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedUserMainTabBarController.swift; sourceTree = "<group>"; };
-		78BD1A3D2018B0F3002843CC /* AuthorizedUserContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedUserContainerViewController.swift; sourceTree = "<group>"; };
+		786E52522018BD3900BE681F /* MainTabBarControllerOfAuthorizedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerOfAuthorizedUser.swift; sourceTree = "<group>"; };
+		78BD1A3D2018B0F3002843CC /* ContainerViewControllerOfAuthorizedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerOfAuthorizedUser.swift; sourceTree = "<group>"; };
 		78EBAC48200E9E8900297D86 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		78EBAC4A200E9EE000297D86 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		78F6D2FF2016049E001EA4DB /* AuthorizedUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizedUser.storyboard; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		17CBF4DB20A727D000D63E3B /* AuthorizedUser */ = {
 			isa = PBXGroup;
 			children = (
-				17CBF4DC20A7280200D63E3B /* AuthorizedUserViewModel.swift */,
+				17CBF4DC20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift */,
 			);
 			path = AuthorizedUser;
 			sourceTree = "<group>";
@@ -151,9 +151,9 @@
 		783DEDFE2018188100554378 /* AuthorizedUser */ = {
 			isa = PBXGroup;
 			children = (
-				78BD1A3D2018B0F3002843CC /* AuthorizedUserContainerViewController.swift */,
+				78BD1A3D2018B0F3002843CC /* ContainerViewControllerOfAuthorizedUser.swift */,
 				786E52502018B5AA00BE681F /* SideMenuViewController.swift */,
-				786E52522018BD3900BE681F /* AuthorizedUserMainTabBarController.swift */,
+				786E52522018BD3900BE681F /* MainTabBarControllerOfAuthorizedUser.swift */,
 			);
 			path = AuthorizedUser;
 			sourceTree = "<group>";
@@ -380,14 +380,14 @@
 				178DF47020A56D72004C1329 /* CheckInViewModel.swift in Sources */,
 				17E08BB22020271400947053 /* EditSurnameViewController.swift in Sources */,
 				178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */,
-				786E52532018BD3900BE681F /* AuthorizedUserMainTabBarController.swift in Sources */,
+				786E52532018BD3900BE681F /* MainTabBarControllerOfAuthorizedUser.swift in Sources */,
 				171D29D620A411BF0027ADED /* Errors.swift in Sources */,
 				78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */,
 				17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */,
-				17CBF4DD20A7280200D63E3B /* AuthorizedUserViewModel.swift in Sources */,
+				17CBF4DD20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift in Sources */,
 				783DEE002018197A00554378 /* User.swift in Sources */,
 				786E52512018B5AA00BE681F /* SideMenuViewController.swift in Sources */,
-				78BD1A3E2018B0F3002843CC /* AuthorizedUserContainerViewController.swift in Sources */,
+				78BD1A3E2018B0F3002843CC /* ContainerViewControllerOfAuthorizedUser.swift in Sources */,
 				17D45E1120A592B90049148D /* UserViewModel.swift in Sources */,
 				17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */,
 				17F3801D201F6896003F1C59 /* EditPasswordViewController.swift in Sources */,

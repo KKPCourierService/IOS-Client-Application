@@ -336,7 +336,7 @@
         <!--Container View Controller-->
         <scene sceneID="rCD-Qu-YtG">
             <objects>
-                <viewController id="cbG-90-15V" userLabel="Container View Controller" customClass="AuthorizedUserContainerViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cbG-90-15V" userLabel="Container View Controller" customClass="ContainerViewControllerOfAuthorizedUser" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PLQ-9B-Et0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -526,7 +526,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="o92-WH-LKW">
             <objects>
-                <tabBarController id="qEt-MB-1Hl" userLabel="Tab Bar Controller" customClass="AuthorizedUserMainTabBarController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="qEt-MB-1Hl" userLabel="Tab Bar Controller" customClass="MainTabBarControllerOfAuthorizedUser" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="ТелеPort" id="5mb-FY-sKQ" userLabel="Navigation Item">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="6wU-US-7ob"/>
                         <barButtonItem key="leftBarButtonItem" title="Меню" id="AVs-SE-pvP" userLabel="Menu Bar Button Item">

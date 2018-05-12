@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class AuthorizedUserContainerViewController: UIViewController {
+class ContainerViewControllerOfAuthorizedUser: UIViewController {
     
     @IBOutlet weak var contentContainerView: UIView!
     @IBOutlet weak var hideSideMenuButton: UIButton!
@@ -18,7 +18,7 @@ class AuthorizedUserContainerViewController: UIViewController {
     @IBOutlet weak var leftScreenEdgePanGesture: UIScreenEdgePanGestureRecognizer!
     @IBOutlet weak var leftSwipe: UISwipeGestureRecognizer!
     
-    private var authorizedUserViewModel: AuthorizedUserViewModel!
+    private var authorizedUserViewModel: ContainerViewControllerOfAuthorizedUserViewModel!
     private let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class AuthorizedUserContainerViewController: UIViewController {
     }
     
     private func setupModelView() {
-        self.authorizedUserViewModel = AuthorizedUserViewModel.sharedInstance
+        self.authorizedUserViewModel = ContainerViewControllerOfAuthorizedUserViewModel.sharedInstance
         authorizedUserViewModel.setAuthorizedUserViewModel(input: (
             hideSideMenuButtonTap: self.hideSideMenuTapObservable,
             letfSwipe: self.leftSwipeObservable,
