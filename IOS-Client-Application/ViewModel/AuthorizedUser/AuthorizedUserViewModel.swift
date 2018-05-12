@@ -11,9 +11,11 @@ import RxCocoa
 
 class AuthorizedUserViewModel {
     public static let sharedInstance = AuthorizedUserViewModel()
-    private var openMenu = BehaviorRelay<Bool>(value: false)
-    public var openMenuObservable: Observable<Bool>?
     let disposeBag = DisposeBag()
+    private var openMenu = BehaviorRelay<Bool>(value: false)
+    private var activateOpenMenu = BehaviorRelay<Bool>(value: true)
+    public var openMenuObservable: Observable<Bool>?
+    
     
     private init(){}
     
@@ -31,7 +33,23 @@ class AuthorizedUserViewModel {
             }.disposed(by: disposeBag)
         input.leftScreenEdgePanGesture.bind{
             _ in
-            self.openMenu.accept(true)
+            if(self.activateOpenMenu.value){
+                self.openMenu.accept(true)
+            }
         }.disposed(by: disposeBag)
+    }
+    
+    public func activateMenu(){
+        activateOpenMenu.accept(true)
+    }
+    
+    public func deactivateMenu(){
+        activateOpenMenu.accept(false)
+    }
+    
+    public func showMenu(){
+        if(self.activateOpenMenu.value){
+            self.openMenu.accept(true)
+        }
     }
 }

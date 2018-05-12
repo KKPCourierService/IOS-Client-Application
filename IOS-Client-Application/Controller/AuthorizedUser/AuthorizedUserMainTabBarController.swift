@@ -9,30 +9,20 @@
 import UIKit
 
 class AuthorizedUserMainTabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       /* self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        //Событие перехода на форму профиля
-        NotificationCenter.default.addObserver(self, selector: #selector(showProfile), name: NSNotification.Name("ShowProfile"), object: nil)*/
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
     }
-
+    
     
     override func viewWillAppear(_ animated: Bool) {
-       // NotificationCenter.default.post(name: Notification.Name("EnableSideMenu"), object: nil)
-    }
-
-    //Нажатие на кнопку открытия меню
-    @IBAction func menuBarButtonClick(_ sender: UIBarButtonItem) {
-        NotificationCenter.default.post(name: NSNotification.Name("ShowMenu"), object: nil)
+        AuthorizedUserViewModel.sharedInstance.activateMenu()
     }
     
-    /*
-    //Обработчик события перехода на форму профиля
-    @objc func showProfile () {
-        NotificationCenter.default.post(name: Notification.Name("DisableSideMenu"), object: nil)
-        performSegue(withIdentifier: "ShowProfile", sender: nil)
+    //Нажатие на кнопку открытия меню
+    @IBAction func menuBarButtonClick(_ sender: UIBarButtonItem) {
+        AuthorizedUserViewModel.sharedInstance.showMenu()
     }
-   
-*/
 }
