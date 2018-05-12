@@ -30,7 +30,7 @@ class SideMenuViewController: UITableViewController {
     
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        NotificationCenter.default.post(name: Notification.Name("HideMenu"), object: nil)
+        //NotificationCenter.default.post(name: Notification.Name("HideMenu"), object: nil)
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:

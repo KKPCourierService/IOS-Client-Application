@@ -12,6 +12,7 @@
 		1758430220A35BD70052B30D /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1758430120A35BD70052B30D /* LogInViewModel.swift */; };
 		178DF47020A56D72004C1329 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DF46F20A56D72004C1329 /* CheckInViewModel.swift */; };
 		178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */; };
+		17CBF4DD20A7280200D63E3B /* AuthorizedUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBF4DC20A7280200D63E3B /* AuthorizedUserViewModel.swift */; };
 		17D3547A2084A91400C17B32 /* ClientsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D354792084A91400C17B32 /* ClientsNetworkService.swift */; };
 		17D45E1120A592B90049148D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D45E1020A592B90049148D /* UserViewModel.swift */; };
 		17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BAF202026DC00947053 /* EditNameViewController.swift */; };
@@ -41,6 +42,7 @@
 		1758430120A35BD70052B30D /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		178DF46F20A56D72004C1329 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
 		178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		17CBF4DC20A7280200D63E3B /* AuthorizedUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedUserViewModel.swift; sourceTree = "<group>"; };
 		17D354792084A91400C17B32 /* ClientsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsNetworkService.swift; sourceTree = "<group>"; };
 		17D45E1020A592B90049148D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		17E08BAF202026DC00947053 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
@@ -83,8 +85,8 @@
 		1758430020A35BC10052B30D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1758430120A35BD70052B30D /* LogInViewModel.swift */,
-				178DF46F20A56D72004C1329 /* CheckInViewModel.swift */,
+				17CBF4DB20A727D000D63E3B /* AuthorizedUser */,
+				17CBF4DA20A727A400D63E3B /* UnuthorizedUser */,
 				17D45E1020A592B90049148D /* UserViewModel.swift */,
 			);
 			path = ViewModel;
@@ -96,6 +98,23 @@
 				178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		17CBF4DA20A727A400D63E3B /* UnuthorizedUser */ = {
+			isa = PBXGroup;
+			children = (
+				1758430120A35BD70052B30D /* LogInViewModel.swift */,
+				178DF46F20A56D72004C1329 /* CheckInViewModel.swift */,
+			);
+			path = UnuthorizedUser;
+			sourceTree = "<group>";
+		};
+		17CBF4DB20A727D000D63E3B /* AuthorizedUser */ = {
+			isa = PBXGroup;
+			children = (
+				17CBF4DC20A7280200D63E3B /* AuthorizedUserViewModel.swift */,
+			);
+			path = AuthorizedUser;
 			sourceTree = "<group>";
 		};
 		17F3801B201F6876003F1C59 /* Profile */ = {
@@ -365,6 +384,7 @@
 				171D29D620A411BF0027ADED /* Errors.swift in Sources */,
 				78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */,
 				17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */,
+				17CBF4DD20A7280200D63E3B /* AuthorizedUserViewModel.swift in Sources */,
 				783DEE002018197A00554378 /* User.swift in Sources */,
 				786E52512018B5AA00BE681F /* SideMenuViewController.swift in Sources */,
 				78BD1A3E2018B0F3002843CC /* AuthorizedUserContainerViewController.swift in Sources */,
