@@ -10,12 +10,14 @@ import RxSwift
 import RxCocoa
 
 class AuthorizedUserViewModel {
+    public static let sharedInstance = AuthorizedUserViewModel()
     private var openMenu = BehaviorRelay<Bool>(value: false)
-    public let openMenuObservable: Observable<Bool>
+    public var openMenuObservable: Observable<Bool>?
     let disposeBag = DisposeBag()
     
+    private init(){}
     
-    init(input: (hideSideMenuButtonTap: Observable<Void>,
+    public func setAuthorizedUserViewModel(input: (hideSideMenuButtonTap: Observable<Void>,
         letfSwipe: Observable<UISwipeGestureRecognizer>,
         leftScreenEdgePanGesture: Observable<UIScreenEdgePanGestureRecognizer>)) {
         openMenuObservable = openMenu.asObservable()

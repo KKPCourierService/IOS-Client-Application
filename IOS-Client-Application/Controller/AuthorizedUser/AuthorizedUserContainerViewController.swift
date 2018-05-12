@@ -24,7 +24,7 @@ class AuthorizedUserContainerViewController: UIViewController {
         super.viewDidLoad()
         setupModelView()
         self.authorizedUserViewModel
-            .openMenuObservable
+            .openMenuObservable!
             .skip(1)
             .subscribe{
                 [weak self] value in
@@ -56,18 +56,18 @@ class AuthorizedUserContainerViewController: UIViewController {
     }
     
     private func setupModelView() {
-        self.authorizedUserViewModel =
-            AuthorizedUserViewModel(input: (
-                hideSideMenuButtonTap: self.hideSideMenuTapObservable,
-                letfSwipe: self.leftSwipeObservable,
-                leftScreenEdgePanGesture: self.leftScreenEdgePanGestureObservable))
+        self.authorizedUserViewModel = AuthorizedUserViewModel.sharedInstance
+        authorizedUserViewModel.setAuthorizedUserViewModel(input: (
+            hideSideMenuButtonTap: self.hideSideMenuTapObservable,
+            letfSwipe: self.leftSwipeObservable,
+            leftScreenEdgePanGesture: self.leftScreenEdgePanGestureObservable))
     }
     
-
-
+    
+    
     @objc func logOut() {
         dismiss(animated: true, completion: nil)
     }
     
- 
+    
 }
