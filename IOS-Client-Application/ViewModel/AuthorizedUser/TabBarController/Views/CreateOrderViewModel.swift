@@ -38,4 +38,13 @@ class CreateOrderViewModel {
         {$0 && $1 && $2 && $3}
         
     }
+    
+    
+    
+    
+    /*  let userAndPassword = Observable.combineLatest(input.username, input.password) {($0,$1)}
+     
+     self.loginObservable = input.loginTap.withLatestFrom(userAndPassword).flatMapLatest{ (username, password) in
+     return UserViewModel.sharedInstance.login(username: username, password: password).observeOn(MainScheduler.instance)*/
+    
 }
