@@ -24,33 +24,18 @@ class SideMenuViewController: UITableViewController {
         }
         userNameAndSurname?.bind{
             [weak self] value in
-                self?.userNameLabel.text = "\(value)"
-        }.disposed(by: disposeBag)
+            self?.userNameLabel.text = "\(value)"
+            }.disposed(by: disposeBag)
     }
     
- 
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //NotificationCenter.default.post(name: Notification.Name("HideMenu"), object: nil)
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            NotificationCenter.default.post(name: Notification.Name("ShowProfile"), object: nil)
+            MainTabBarControllerOfAuthorizedUserViewModel.sharedInstance.showProfile()
         case 2:
-         
-            let provider = MoyaProvider<ClientsNetworkService>()
-            provider.rx.request(.logOut())
-                .filter(statusCodes: 200...399)
-                .subscribe({
-                    response in
-                    switch response {
-                    case .success(_):
-                        NotificationCenter.default.post(name: Notification.Name("LogOut"), object: nil)
-                    case .error(_):
-                        self.printExeptionAlert(messageText: "Не возможно выйти из профиля")
-                    }
-                    }
-                ).disposed(by: self.disposeBag)
-        
+            ContainerViewControllerOfAuthorizedUserViewModel.sharedInstance.logOut()
         default:
             break
         }

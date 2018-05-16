@@ -11,5 +11,17 @@ import RxSwift
 import RxCocoa
 
 class MainTabBarControllerOfAuthorizedUserViewModel{
+    public static let sharedInstance = MainTabBarControllerOfAuthorizedUserViewModel()
+    private let segueBehaviorRelay = BehaviorRelay<Bool>(value: false)
+    public let showProfileObservable: Observable<Bool>
     
+    init(){
+        showProfileObservable = segueBehaviorRelay.asObservable()
+    }
+    
+    public func showProfile(){
+        segueBehaviorRelay.accept(true)
+        segueBehaviorRelay.accept(false)
+        ContainerViewControllerOfAuthorizedUserViewModel.sharedInstance.deactivateMenu()
+    }
 }

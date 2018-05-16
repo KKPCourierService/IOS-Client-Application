@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MainTabBarControllerOfAuthorizedUser: UITabBarController {
     
+    private var viewModel = MainTabBarControllerOfAuthorizedUserViewModel.sharedInstance
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.showProfileObservable
+            .subscribe{
+                [weak self] value in
+                if (value.element!) {
+                    self?.performSegue(withIdentifier: "ShowProfile", sender: nil)
+                }
+            }.disposed(by: disposeBag)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
     }
@@ -19,9 +31,10 @@ class MainTabBarControllerOfAuthorizedUser: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         ContainerViewControllerOfAuthorizedUserViewModel.sharedInstance.activateMenu()
+        
     }
     
-    //Нажатие на кнопку открытия меню
+    
     @IBAction func menuBarButtonClick(_ sender: UIBarButtonItem) {
         ContainerViewControllerOfAuthorizedUserViewModel.sharedInstance.showMenu()
     }

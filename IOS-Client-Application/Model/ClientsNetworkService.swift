@@ -55,7 +55,7 @@ extension ClientsNetworkService: TargetType {
     var sampleData: Data {
         switch self {
         case .checkInNewUser, .logIn(_, _), .getProfile, .logOut:
-            return  "Half measures are as bad as nothing at all.".data(using: .ascii)!
+            return  "".data(using: .ascii)!
         }
     }
     

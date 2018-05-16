@@ -41,6 +41,14 @@ class ContainerViewControllerOfAuthorizedUser: UIViewController {
                 })
                 
             }.disposed(by: disposeBag)
+        self.authorizedUserViewModel
+        .logOutObservable?
+            .subscribe{
+            [weak self] value in
+                if (value.element!) {
+                    self?.dismiss(animated: true, completion: nil)
+                }
+        }.disposed(by: disposeBag)
     }
     
     private var leftSwipeObservable: Observable<UISwipeGestureRecognizer> {
@@ -64,10 +72,7 @@ class ContainerViewControllerOfAuthorizedUser: UIViewController {
     }
     
     
-    
-    @objc func logOut() {
-        dismiss(animated: true, completion: nil)
-    }
+
     
     
 }

@@ -13,8 +13,10 @@ class ContainerViewControllerOfAuthorizedUserViewModel {
     public static let sharedInstance = ContainerViewControllerOfAuthorizedUserViewModel()
     let disposeBag = DisposeBag()
     private var openMenu = BehaviorRelay<Bool>(value: false)
+    private var logOutBehaviorRelay = BehaviorRelay<Bool>(value: false)
     private var activateOpenMenu = BehaviorRelay<Bool>(value: true)
     public var openMenuObservable: Observable<Bool>?
+    public var logOutObservable: Observable<Bool>?
     
     
     private init(){}
@@ -23,6 +25,8 @@ class ContainerViewControllerOfAuthorizedUserViewModel {
         letfSwipe: Observable<UISwipeGestureRecognizer>,
         leftScreenEdgePanGesture: Observable<UIScreenEdgePanGestureRecognizer>)) {
         openMenuObservable = openMenu.asObservable()
+        logOutObservable = logOutBehaviorRelay.asObservable()
+        
         input.letfSwipe.bind{
             _ in
             self.openMenu.accept(false)
@@ -45,11 +49,18 @@ class ContainerViewControllerOfAuthorizedUserViewModel {
     
     public func deactivateMenu(){
         activateOpenMenu.accept(false)
+        openMenu.accept(false)
     }
     
     public func showMenu(){
         if(self.activateOpenMenu.value){
             self.openMenu.accept(true)
+        }
+    }
+    
+    public func logOut(){
+        if(self.activateOpenMenu.value){
+            self.logOutBehaviorRelay.accept(true)
         }
     }
 }
