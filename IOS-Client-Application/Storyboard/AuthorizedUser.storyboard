@@ -162,8 +162,7 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lry-wK-b29" userLabel="Type Order Segment Control">
                                         <rect key="frame" x="29" y="9" width="263" height="29"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="263" id="oa6-iS-spK"/>
-                                            <constraint firstAttribute="height" constant="28" id="vyu-gS-AuN"/>
+                                            <constraint firstAttribute="width" constant="263" id="pUe-ce-EA2"/>
                                         </constraints>
                                         <segments>
                                             <segment title="Обычная доставка"/>
@@ -194,87 +193,65 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО получателя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovT-6b-JFt" userLabel="Full Name Label">
-                                        <rect key="frame" x="8" y="187" width="304" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mPC-hi-WtT" userLabel="Full Name Text Field">
-                                        <rect key="frame" x="8" y="218" width="304" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gqJ-ib-7O0" userLabel="Phone Number Text Field">
-                                        <rect key="frame" x="8" y="289" width="304" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона получателя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2z0-eW-NkZ" userLabel="Phone Number Label">
-                                        <rect key="frame" x="8" y="258" width="232" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комментарий к заказу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-yT-08H" userLabel="Comment To The Order Label">
-                                        <rect key="frame" x="8" y="329" width="304" height="21"/>
+                                        <rect key="frame" x="8" y="187" width="182" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiF-Pd-9FJ" userLabel="Comment To The Order Text Field">
-                                        <rect key="frame" x="8" y="360" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="218" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоимость" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhU-cy-Aqa">
+                                        <rect key="frame" x="8" y="262" width="87" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 рублей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdS-uM-6nl">
+                                        <rect key="frame" x="215" y="262" width="93" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSz-lR-F0y" userLabel="To Order Button">
-                                        <rect key="frame" x="89" y="400" width="141" height="40"/>
+                                        <rect key="frame" x="89.5" y="291" width="141" height="30"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="141" id="4hN-4y-Bks"/>
-                                            <constraint firstAttribute="height" constant="40" id="61g-z6-Uex"/>
+                                            <constraint firstAttribute="width" constant="141" id="WCZ-5D-46e"/>
                                         </constraints>
                                         <state key="normal" title="Заказать"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="eiF-Pd-9FJ" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="0CW-1F-Nr8"/>
-                                    <constraint firstAttribute="trailing" secondItem="mPC-hi-WtT" secondAttribute="trailing" constant="8" id="3eE-E7-Tp5"/>
-                                    <constraint firstItem="ovT-6b-JFt" firstAttribute="top" secondItem="ttC-58-dke" secondAttribute="bottom" constant="8" id="4eD-VQ-NPB"/>
+                                    <constraint firstItem="ttC-58-dke" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="0YY-wi-49e"/>
+                                    <constraint firstItem="kVr-Xw-Jw9" firstAttribute="top" secondItem="FOl-zH-vsG" secondAttribute="bottom" constant="10" id="1Xd-BP-pze"/>
+                                    <constraint firstItem="KdS-uM-6nl" firstAttribute="top" secondItem="eiF-Pd-9FJ" secondAttribute="bottom" constant="14" id="6aI-ID-WZM"/>
+                                    <constraint firstAttribute="trailing" secondItem="KdS-uM-6nl" secondAttribute="trailing" constant="12" id="AdW-Iq-uyL"/>
                                     <constraint firstAttribute="height" constant="477" id="Bzj-Fv-emz"/>
-                                    <constraint firstItem="2z0-eW-NkZ" firstAttribute="top" secondItem="mPC-hi-WtT" secondAttribute="bottom" constant="10" id="C63-8O-jqr"/>
-                                    <constraint firstItem="mPC-hi-WtT" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="EPR-CV-Gu7"/>
-                                    <constraint firstItem="ttC-58-dke" firstAttribute="top" secondItem="kVr-Xw-Jw9" secondAttribute="bottom" constant="10" id="Fi6-pO-4f3"/>
-                                    <constraint firstItem="iSz-lR-F0y" firstAttribute="top" secondItem="eiF-Pd-9FJ" secondAttribute="bottom" constant="10" id="HkL-Sx-LcM"/>
-                                    <constraint firstItem="2z0-eW-NkZ" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="NUN-9N-TiH"/>
-                                    <constraint firstAttribute="trailing" secondItem="ttC-58-dke" secondAttribute="trailing" constant="8" id="ScY-kx-5nQ"/>
-                                    <constraint firstItem="FOl-zH-vsG" firstAttribute="top" secondItem="NAt-hg-DXA" secondAttribute="bottom" constant="10" id="U6s-dy-As5"/>
-                                    <constraint firstAttribute="trailing" secondItem="sE4-yT-08H" secondAttribute="trailing" constant="8" id="Vfi-kL-YWZ"/>
-                                    <constraint firstItem="sE4-yT-08H" firstAttribute="top" secondItem="gqJ-ib-7O0" secondAttribute="bottom" constant="10" id="aUt-Pc-l4j"/>
-                                    <constraint firstItem="ovT-6b-JFt" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="bKH-Hc-CH6"/>
-                                    <constraint firstItem="kVr-Xw-Jw9" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="cO5-NP-BPQ"/>
-                                    <constraint firstItem="Lry-wK-b29" firstAttribute="top" secondItem="ECr-jk-YsB" secondAttribute="top" constant="9" id="dhp-PJ-yhf"/>
-                                    <constraint firstItem="Lry-wK-b29" firstAttribute="centerX" secondItem="ECr-jk-YsB" secondAttribute="centerX" id="eoA-oL-AWe"/>
-                                    <constraint firstItem="ttC-58-dke" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="ezM-EO-emd"/>
-                                    <constraint firstItem="kVr-Xw-Jw9" firstAttribute="top" secondItem="FOl-zH-vsG" secondAttribute="bottom" constant="10" id="f8N-lz-6dD"/>
-                                    <constraint firstItem="NAt-hg-DXA" firstAttribute="top" secondItem="Lry-wK-b29" secondAttribute="bottom" constant="10" id="gEH-nz-Rek"/>
-                                    <constraint firstItem="NAt-hg-DXA" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="oq9-ML-lu8"/>
-                                    <constraint firstItem="iSz-lR-F0y" firstAttribute="centerX" secondItem="ECr-jk-YsB" secondAttribute="centerX" id="osq-fC-MNx"/>
-                                    <constraint firstAttribute="trailing" secondItem="eiF-Pd-9FJ" secondAttribute="trailing" constant="8" id="pVV-rW-905"/>
-                                    <constraint firstItem="gqJ-ib-7O0" firstAttribute="top" secondItem="2z0-eW-NkZ" secondAttribute="bottom" constant="10" id="pzd-Jz-vd8"/>
-                                    <constraint firstItem="mPC-hi-WtT" firstAttribute="top" secondItem="ovT-6b-JFt" secondAttribute="bottom" constant="10" id="s12-Jf-3RZ"/>
-                                    <constraint firstItem="FOl-zH-vsG" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="s7E-KV-yWN"/>
-                                    <constraint firstAttribute="trailing" secondItem="2z0-eW-NkZ" secondAttribute="trailing" constant="80" id="s8O-ok-NXH"/>
-                                    <constraint firstAttribute="trailing" secondItem="ovT-6b-JFt" secondAttribute="trailing" constant="8" id="sPn-Wa-Mrr"/>
-                                    <constraint firstAttribute="trailing" secondItem="FOl-zH-vsG" secondAttribute="trailing" constant="8" id="vGA-CJ-P7f"/>
-                                    <constraint firstAttribute="trailing" secondItem="gqJ-ib-7O0" secondAttribute="trailing" constant="8" id="x2C-lB-q6v"/>
-                                    <constraint firstItem="sE4-yT-08H" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="yZC-MY-JVF"/>
-                                    <constraint firstItem="eiF-Pd-9FJ" firstAttribute="top" secondItem="sE4-yT-08H" secondAttribute="bottom" constant="10" id="zeC-ho-aqO"/>
-                                    <constraint firstItem="gqJ-ib-7O0" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="zk2-ZA-ocQ"/>
+                                    <constraint firstItem="sE4-yT-08H" firstAttribute="top" secondItem="ttC-58-dke" secondAttribute="bottom" constant="8" id="Bzm-PH-m6N"/>
+                                    <constraint firstItem="FOl-zH-vsG" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="DHZ-1Z-Vds"/>
+                                    <constraint firstAttribute="trailing" secondItem="eiF-Pd-9FJ" secondAttribute="trailing" constant="8" id="Dcc-6s-7M0"/>
+                                    <constraint firstItem="jhU-cy-Aqa" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="EGp-aA-Djc"/>
+                                    <constraint firstItem="eiF-Pd-9FJ" firstAttribute="top" secondItem="sE4-yT-08H" secondAttribute="bottom" constant="10" id="EIc-pK-UK3"/>
+                                    <constraint firstItem="jhU-cy-Aqa" firstAttribute="top" secondItem="eiF-Pd-9FJ" secondAttribute="bottom" constant="14" id="GTg-F5-QlS"/>
+                                    <constraint firstItem="Lry-wK-b29" firstAttribute="top" secondItem="ECr-jk-YsB" secondAttribute="top" constant="9" id="HHK-w6-ddb"/>
+                                    <constraint firstItem="iSz-lR-F0y" firstAttribute="centerX" secondItem="ECr-jk-YsB" secondAttribute="centerX" id="Myn-RM-pyD"/>
+                                    <constraint firstAttribute="trailing" secondItem="FOl-zH-vsG" secondAttribute="trailing" constant="8" id="OCS-gt-BZC"/>
+                                    <constraint firstAttribute="trailing" secondItem="ttC-58-dke" secondAttribute="trailing" constant="8" id="Rdl-fy-j5W"/>
+                                    <constraint firstItem="FOl-zH-vsG" firstAttribute="top" secondItem="NAt-hg-DXA" secondAttribute="bottom" constant="10" id="XZx-DO-SY7"/>
+                                    <constraint firstItem="Lry-wK-b29" firstAttribute="centerX" secondItem="ECr-jk-YsB" secondAttribute="centerX" id="ayh-WX-OXU"/>
+                                    <constraint firstItem="NAt-hg-DXA" firstAttribute="top" secondItem="Lry-wK-b29" secondAttribute="bottom" constant="10" id="o9X-0x-NGb"/>
+                                    <constraint firstItem="sE4-yT-08H" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="ocO-la-Mx2"/>
+                                    <constraint firstItem="ttC-58-dke" firstAttribute="top" secondItem="kVr-Xw-Jw9" secondAttribute="bottom" constant="10" id="oxl-WQ-l4h"/>
+                                    <constraint firstItem="eiF-Pd-9FJ" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="qQp-8A-Bik"/>
+                                    <constraint firstItem="NAt-hg-DXA" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="uDg-ib-pE1"/>
+                                    <constraint firstItem="kVr-Xw-Jw9" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="xK9-Mp-Fhd"/>
+                                    <constraint firstItem="iSz-lR-F0y" firstAttribute="top" secondItem="jhU-cy-Aqa" secondAttribute="bottom" constant="8" id="ySS-9g-Fvj"/>
                                 </constraints>
                             </view>
                         </subviews>
