@@ -148,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="-596" y="575"/>
         </scene>
-        <!--Order-->
+        <!--Create Order-->
         <scene sceneID="4ix-Na-XiX">
             <objects>
-                <viewController id="qul-83-9of" userLabel="Order" sceneMemberID="viewController">
+                <viewController id="qul-83-9of" userLabel="Create Order" customClass="CreateOrderViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="tf1-ws-2yB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="590"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -169,89 +169,100 @@
                                             <segment title="Срочная доставка"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Откуда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAt-hg-DXA" userLabel="From Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Откуда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAt-hg-DXA" userLabel="Whence Label">
                                         <rect key="frame" x="8" y="47" width="58" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOl-zH-vsG" userLabel="From Text Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOl-zH-vsG" userLabel="Whence Text Field">
                                         <rect key="frame" x="8" y="78" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Куда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVr-Xw-Jw9" userLabel="To Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Куда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVr-Xw-Jw9" userLabel="Where Label">
                                         <rect key="frame" x="8" y="118" width="39" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttC-58-dke" userLabel="To Text Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttC-58-dke" userLabel="Where Text Field">
                                         <rect key="frame" x="8" y="149" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комментарий к заказу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-yT-08H" userLabel="Comment To The Order Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комментарий к заказу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-yT-08H" userLabel="Description To The Order Label">
                                         <rect key="frame" x="8" y="187" width="182" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiF-Pd-9FJ" userLabel="Comment To The Order Text Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiF-Pd-9FJ" userLabel="DescriptionTo The Order Text Field">
                                         <rect key="frame" x="8" y="218" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоимость" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhU-cy-Aqa">
-                                        <rect key="frame" x="8" y="262" width="87" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоимость" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhU-cy-Aqa" userLabel="Cost Label">
+                                        <rect key="frame" x="8" y="267" width="87" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 рублей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdS-uM-6nl">
-                                        <rect key="frame" x="215" y="262" width="93" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="рублей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdS-uM-6nl" userLabel="Currency Label">
+                                        <rect key="frame" x="254" y="267" width="58" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSz-lR-F0y" userLabel="To Order Button">
-                                        <rect key="frame" x="89.5" y="291" width="141" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NK0-OE-qsm" userLabel="Cost Text Field">
+                                        <rect key="frame" x="163" y="262" width="83" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="83" id="vUe-Sr-JQa"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSz-lR-F0y" userLabel="Create Order Button">
+                                        <rect key="frame" x="90" y="300" width="141" height="30"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="141" id="WCZ-5D-46e"/>
+                                            <constraint firstAttribute="width" constant="141" id="4kQ-6J-vmb"/>
                                         </constraints>
                                         <state key="normal" title="Заказать"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="jhU-cy-Aqa" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="0QK-iX-rTN"/>
                                     <constraint firstItem="ttC-58-dke" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="0YY-wi-49e"/>
                                     <constraint firstItem="kVr-Xw-Jw9" firstAttribute="top" secondItem="FOl-zH-vsG" secondAttribute="bottom" constant="10" id="1Xd-BP-pze"/>
-                                    <constraint firstItem="KdS-uM-6nl" firstAttribute="top" secondItem="eiF-Pd-9FJ" secondAttribute="bottom" constant="14" id="6aI-ID-WZM"/>
-                                    <constraint firstAttribute="trailing" secondItem="KdS-uM-6nl" secondAttribute="trailing" constant="12" id="AdW-Iq-uyL"/>
                                     <constraint firstAttribute="height" constant="477" id="Bzj-Fv-emz"/>
                                     <constraint firstItem="sE4-yT-08H" firstAttribute="top" secondItem="ttC-58-dke" secondAttribute="bottom" constant="8" id="Bzm-PH-m6N"/>
                                     <constraint firstItem="FOl-zH-vsG" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="DHZ-1Z-Vds"/>
                                     <constraint firstAttribute="trailing" secondItem="eiF-Pd-9FJ" secondAttribute="trailing" constant="8" id="Dcc-6s-7M0"/>
-                                    <constraint firstItem="jhU-cy-Aqa" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="EGp-aA-Djc"/>
                                     <constraint firstItem="eiF-Pd-9FJ" firstAttribute="top" secondItem="sE4-yT-08H" secondAttribute="bottom" constant="10" id="EIc-pK-UK3"/>
-                                    <constraint firstItem="jhU-cy-Aqa" firstAttribute="top" secondItem="eiF-Pd-9FJ" secondAttribute="bottom" constant="14" id="GTg-F5-QlS"/>
+                                    <constraint firstItem="jhU-cy-Aqa" firstAttribute="top" secondItem="eiF-Pd-9FJ" secondAttribute="bottom" constant="19" id="FbG-RZ-UUs"/>
                                     <constraint firstItem="Lry-wK-b29" firstAttribute="top" secondItem="ECr-jk-YsB" secondAttribute="top" constant="9" id="HHK-w6-ddb"/>
-                                    <constraint firstItem="iSz-lR-F0y" firstAttribute="centerX" secondItem="ECr-jk-YsB" secondAttribute="centerX" id="Myn-RM-pyD"/>
                                     <constraint firstAttribute="trailing" secondItem="FOl-zH-vsG" secondAttribute="trailing" constant="8" id="OCS-gt-BZC"/>
+                                    <constraint firstItem="KdS-uM-6nl" firstAttribute="top" secondItem="eiF-Pd-9FJ" secondAttribute="bottom" constant="19" id="P9j-Mj-fdL"/>
+                                    <constraint firstItem="iSz-lR-F0y" firstAttribute="top" secondItem="NK0-OE-qsm" secondAttribute="bottom" constant="8" id="Qdu-Sa-LBO"/>
                                     <constraint firstAttribute="trailing" secondItem="ttC-58-dke" secondAttribute="trailing" constant="8" id="Rdl-fy-j5W"/>
+                                    <constraint firstAttribute="trailing" secondItem="KdS-uM-6nl" secondAttribute="trailing" constant="8" id="S3A-o7-NpW"/>
+                                    <constraint firstItem="NK0-OE-qsm" firstAttribute="top" secondItem="eiF-Pd-9FJ" secondAttribute="bottom" constant="14" id="Wd3-JH-tVQ"/>
                                     <constraint firstItem="FOl-zH-vsG" firstAttribute="top" secondItem="NAt-hg-DXA" secondAttribute="bottom" constant="10" id="XZx-DO-SY7"/>
                                     <constraint firstItem="Lry-wK-b29" firstAttribute="centerX" secondItem="ECr-jk-YsB" secondAttribute="centerX" id="ayh-WX-OXU"/>
+                                    <constraint firstItem="KdS-uM-6nl" firstAttribute="leading" secondItem="NK0-OE-qsm" secondAttribute="trailing" constant="8" id="fgM-rq-2Af"/>
                                     <constraint firstItem="NAt-hg-DXA" firstAttribute="top" secondItem="Lry-wK-b29" secondAttribute="bottom" constant="10" id="o9X-0x-NGb"/>
                                     <constraint firstItem="sE4-yT-08H" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="ocO-la-Mx2"/>
                                     <constraint firstItem="ttC-58-dke" firstAttribute="top" secondItem="kVr-Xw-Jw9" secondAttribute="bottom" constant="10" id="oxl-WQ-l4h"/>
                                     <constraint firstItem="eiF-Pd-9FJ" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="qQp-8A-Bik"/>
                                     <constraint firstItem="NAt-hg-DXA" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="uDg-ib-pE1"/>
                                     <constraint firstItem="kVr-Xw-Jw9" firstAttribute="leading" secondItem="ECr-jk-YsB" secondAttribute="leading" constant="8" id="xK9-Mp-Fhd"/>
-                                    <constraint firstItem="iSz-lR-F0y" firstAttribute="top" secondItem="jhU-cy-Aqa" secondAttribute="bottom" constant="8" id="ySS-9g-Fvj"/>
+                                    <constraint firstItem="iSz-lR-F0y" firstAttribute="centerX" secondItem="ECr-jk-YsB" secondAttribute="centerX" id="xPx-bo-vSU"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -267,6 +278,14 @@
                     </scrollView>
                     <tabBarItem key="tabBarItem" title="Заказ" id="E23-bk-eZW" userLabel="Navigation Item"/>
                     <size key="freeformSize" width="320" height="590"/>
+                    <connections>
+                        <outlet property="costTextField" destination="NK0-OE-qsm" id="cvj-N6-uu2"/>
+                        <outlet property="createOrderButton" destination="iSz-lR-F0y" id="Ukf-lf-BMy"/>
+                        <outlet property="descriptionTextField" destination="eiF-Pd-9FJ" id="7c7-7k-Idh"/>
+                        <outlet property="orderTypeSegmentController" destination="Lry-wK-b29" id="uMg-99-kRo"/>
+                        <outlet property="whenceTextField" destination="FOl-zH-vsG" id="gvj-3d-vjc"/>
+                        <outlet property="whereTextField" destination="ttC-58-dke" id="mKp-oj-uKl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jkG-ud-m6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
