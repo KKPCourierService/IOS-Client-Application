@@ -25,6 +25,7 @@
 		17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E08BB7202027BB00947053 /* EditEmailViewController.swift */; };
 		17E609F920AC2C04007E09FD /* CreateOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E609F820AC2C04007E09FD /* CreateOrderViewModel.swift */; };
 		17E609FD20AC31D9007E09FD /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E609FC20AC31D9007E09FD /* CreateOrderViewController.swift */; };
+		17E60A0020AC3926007E09FD /* OrdersNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E609FF20AC3926007E09FD /* OrdersNetworkService.swift */; };
 		17F3801D201F6896003F1C59 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F3801C201F6896003F1C59 /* EditPasswordViewController.swift */; };
 		17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F3801E201F6A72003F1C59 /* ConfirmPasswordViewController.swift */; };
 		783DEE002018197A00554378 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DEDFF2018197A00554378 /* User.swift */; };
@@ -60,6 +61,7 @@
 		17E08BB7202027BB00947053 /* EditEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmailViewController.swift; sourceTree = "<group>"; };
 		17E609F820AC2C04007E09FD /* CreateOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderViewModel.swift; sourceTree = "<group>"; };
 		17E609FC20AC31D9007E09FD /* CreateOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderViewController.swift; sourceTree = "<group>"; };
+		17E609FF20AC3926007E09FD /* OrdersNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersNetworkService.swift; sourceTree = "<group>"; };
 		17F3801C201F6896003F1C59 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		17F3801E201F6A72003F1C59 /* ConfirmPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordViewController.swift; sourceTree = "<group>"; };
 		5B7287907FEA40860E33032E /* Pods_IOS_Client_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS_Client_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		17E609FE20AC38FE007E09FD /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				17D354792084A91400C17B32 /* ClientsNetworkService.swift */,
+				17E609FF20AC3926007E09FD /* OrdersNetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
 		17F3801B201F6876003F1C59 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,8 +260,8 @@
 		78EBAC42200E9C6A00297D86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				17E609FE20AC38FE007E09FD /* NetworkService */,
 				783DEDFF2018197A00554378 /* User.swift */,
-				17D354792084A91400C17B32 /* ClientsNetworkService.swift */,
 				171D29D520A411BF0027ADED /* Errors.swift */,
 			);
 			path = Model;
@@ -447,6 +458,7 @@
 				17CBF4E120A7600B00D63E3B /* MainTabBarControllerOfAuthorizedUserViewModel.swift in Sources */,
 				786E52512018B5AA00BE681F /* SideMenuViewController.swift in Sources */,
 				17E609F920AC2C04007E09FD /* CreateOrderViewModel.swift in Sources */,
+				17E60A0020AC3926007E09FD /* OrdersNetworkService.swift in Sources */,
 				78BD1A3E2018B0F3002843CC /* ContainerViewControllerOfAuthorizedUser.swift in Sources */,
 				17D45E1120A592B90049148D /* UserViewModel.swift in Sources */,
 				17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */,
