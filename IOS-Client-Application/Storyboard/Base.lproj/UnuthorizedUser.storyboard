@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NNN-FI-zYW">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,35 +14,35 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="INr-gH-KwP" userLabel="Check In View Controller" customClass="CheckInViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MV4-fe-s4M">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDo-cS-Ioo">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pSX-3c-WF0">
-                                        <rect key="frame" x="16" y="173.5" width="343" height="320"/>
+                                        <rect key="frame" x="16" y="92" width="288" height="320"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fJP-XG-jUf" userLabel="Surname Text Field">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-Ze-Wl4" userLabel="Name Text Field">
-                                                <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="40" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" textContentType="name"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Отчество" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-da-4aG" userLabel="Patronymic Text Field">
-                                                <rect key="frame" x="0.0" y="80" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="80" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ER-AI-VbQ">
-                                                <rect key="frame" x="0.0" y="120" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="120" width="288" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwR-Zm-dws" userLabel="Phone Number Label">
                                                         <rect key="frame" x="0.0" y="0.0" width="18.5" height="30"/>
@@ -51,7 +51,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcp-dg-E45" userLabel="Phone Number Text Field">
-                                                        <rect key="frame" x="18.5" y="0.0" width="324.5" height="30"/>
+                                                        <rect key="frame" x="18.5" y="0.0" width="269.5" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" textContentType="tel"/>
@@ -59,25 +59,25 @@
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJk-5y-Uos">
-                                                <rect key="frame" x="0.0" y="160" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="160" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5sZ-Wk-6ms" userLabel="Password Text Field">
-                                                <rect key="frame" x="0.0" y="200" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="200" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Подтверждение пароля" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfi-6r-Eae" userLabel="Confirmation Password Text Field">
-                                                <rect key="frame" x="0.0" y="240" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="240" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj6-vf-GmR" userLabel="Check In Button">
-                                                <rect key="frame" x="0.0" y="280" width="343" height="40"/>
+                                                <rect key="frame" x="0.0" y="280" width="288" height="40"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="XG9-JL-xE3"/>
@@ -97,9 +97,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IDo-cS-Ioo" firstAttribute="height" secondItem="MV4-fe-s4M" secondAttribute="height" id="8xy-DQ-ZZB"/>
+                            <constraint firstItem="IDo-cS-Ioo" firstAttribute="top" secondItem="MV4-fe-s4M" secondAttribute="top" constant="64" id="1TC-q2-vpl"/>
+                            <constraint firstItem="IDo-cS-Ioo" firstAttribute="height" secondItem="dko-90-MxQ" secondAttribute="height" id="8xy-DQ-ZZB"/>
                             <constraint firstItem="IDo-cS-Ioo" firstAttribute="leading" secondItem="MV4-fe-s4M" secondAttribute="leading" id="N14-La-py4"/>
-                            <constraint firstItem="IDo-cS-Ioo" firstAttribute="top" secondItem="MV4-fe-s4M" secondAttribute="top" id="ZVD-Rm-4PU"/>
                             <constraint firstItem="IDo-cS-Ioo" firstAttribute="width" secondItem="MV4-fe-s4M" secondAttribute="width" id="ihY-Hs-GMD"/>
                             <constraint firstAttribute="trailing" secondItem="IDo-cS-Ioo" secondAttribute="trailing" id="ir5-U1-uVq"/>
                             <constraint firstAttribute="bottom" secondItem="IDo-cS-Ioo" secondAttribute="bottom" id="xYt-om-Zd6"/>
@@ -139,29 +139,29 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="b1T-gH-mJx" userLabel="Log In View Controller" customClass="LogInViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3ZP-38-tPW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gt-On-uvF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VvJ-lQ-Ts6">
-                                        <rect key="frame" x="16" y="248.5" width="343" height="170"/>
+                                        <rect key="frame" x="16" y="167" width="288" height="170"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zq-3Z-ifw" userLabel="Login Text Field">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-RT-WQE" userLabel="Password Text Field">
-                                                <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="40" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toD-em-waa" userLabel="Authorization Button">
-                                                <rect key="frame" x="0.0" y="80" width="343" height="40"/>
+                                                <rect key="frame" x="0.0" y="80" width="288" height="40"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="iPG-xl-Mmq"/>
@@ -169,7 +169,7 @@
                                                 <state key="normal" title="Войти"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="825-77-5S9" userLabel="Check In Button">
-                                                <rect key="frame" x="0.0" y="130" width="343" height="40"/>
+                                                <rect key="frame" x="0.0" y="130" width="288" height="40"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="YaA-sR-Fr4"/>
@@ -194,11 +194,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8Gt-On-uvF" firstAttribute="leading" secondItem="3ZP-38-tPW" secondAttribute="leading" id="16y-ik-H87"/>
-                            <constraint firstItem="8Gt-On-uvF" firstAttribute="height" secondItem="3ZP-38-tPW" secondAttribute="height" id="1ji-kO-cVw"/>
-                            <constraint firstItem="8Gt-On-uvF" firstAttribute="top" secondItem="3ZP-38-tPW" secondAttribute="top" id="PUs-vH-2cH"/>
+                            <constraint firstItem="8Gt-On-uvF" firstAttribute="top" secondItem="3ZP-38-tPW" secondAttribute="top" constant="64" id="DH0-zh-SoU"/>
                             <constraint firstAttribute="bottom" secondItem="8Gt-On-uvF" secondAttribute="bottom" id="RmC-Dg-ij7"/>
                             <constraint firstAttribute="trailing" secondItem="8Gt-On-uvF" secondAttribute="trailing" id="Sek-R0-i7l"/>
                             <constraint firstItem="8Gt-On-uvF" firstAttribute="width" secondItem="3ZP-38-tPW" secondAttribute="width" id="WkY-4h-drX"/>
+                            <constraint firstItem="8Gt-On-uvF" firstAttribute="height" secondItem="GGW-l6-dEm" secondAttribute="height" id="xVy-1K-ld3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GGW-l6-dEm"/>
                     </scrollView>
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82B-Ob-sXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618.840579710145" y="-277.98913043478262"/>
+            <point key="canvasLocation" x="1618.125" y="-278.87323943661971"/>
         </scene>
         <!--Unuthorized Navigation Controller-->
         <scene sceneID="nLS-HD-WXP">
@@ -222,7 +222,7 @@
                 <navigationController id="NNN-FI-zYW" userLabel="Unuthorized Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HUP-bo-Vl1">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

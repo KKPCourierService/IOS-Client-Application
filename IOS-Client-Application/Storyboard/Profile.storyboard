@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hn-my-Jg8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyz-1i-AQ3" userLabel="Title Label">
                                         <rect key="frame" x="8" y="28" width="24.5" height="14.5"/>
@@ -63,7 +63,7 @@
                             <constraint firstItem="3Hn-my-Jg8" firstAttribute="width" secondItem="MIk-af-wcV" secondAttribute="width" id="3wa-v6-zfS"/>
                             <constraint firstAttribute="bottom" secondItem="3Hn-my-Jg8" secondAttribute="bottom" id="4Ah-YP-qkl"/>
                             <constraint firstAttribute="trailing" secondItem="3Hn-my-Jg8" secondAttribute="trailing" id="SCt-JW-gpt"/>
-                            <constraint firstItem="3Hn-my-Jg8" firstAttribute="height" secondItem="MIk-af-wcV" secondAttribute="height" id="mUO-01-Qbg"/>
+                            <constraint firstItem="3Hn-my-Jg8" firstAttribute="height" secondItem="wAs-FE-E8X" secondAttribute="height" id="lyq-08-wF4"/>
                             <constraint firstItem="3Hn-my-Jg8" firstAttribute="leading" secondItem="MIk-af-wcV" secondAttribute="leading" id="s8w-EM-Fhr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wAs-FE-E8X"/>
@@ -83,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thk-OY-S3c">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCv-Hc-6dQ" userLabel="Title Label">
                                         <rect key="frame" x="8" y="28" width="54" height="14.5"/>
@@ -124,9 +124,9 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="thk-OY-S3c" firstAttribute="leading" secondItem="rVR-dP-HAV" secondAttribute="leading" id="GnK-Ce-KdX"/>
-                            <constraint firstItem="thk-OY-S3c" firstAttribute="height" secondItem="rVR-dP-HAV" secondAttribute="height" id="PdP-6t-PT1"/>
                             <constraint firstAttribute="trailing" secondItem="thk-OY-S3c" secondAttribute="trailing" id="Qgb-6S-BKX"/>
-                            <constraint firstItem="thk-OY-S3c" firstAttribute="top" secondItem="rVR-dP-HAV" secondAttribute="top" id="Rbf-sX-MgO"/>
+                            <constraint firstItem="thk-OY-S3c" firstAttribute="height" secondItem="R1j-9W-CbR" secondAttribute="height" id="S7F-MS-5Ub"/>
+                            <constraint firstItem="thk-OY-S3c" firstAttribute="top" secondItem="rVR-dP-HAV" secondAttribute="top" id="YW6-hU-Ys5"/>
                             <constraint firstItem="thk-OY-S3c" firstAttribute="width" secondItem="rVR-dP-HAV" secondAttribute="width" id="l4x-Cr-77l"/>
                             <constraint firstAttribute="bottom" secondItem="thk-OY-S3c" secondAttribute="bottom" id="qJx-Zz-qXC"/>
                         </constraints>
@@ -142,12 +142,12 @@
         <scene sceneID="MIk-9h-za6">
             <objects>
                 <tableViewController id="rXm-zw-dfW" userLabel="Profile Table View Controller" customClass="ProfileViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bjp-tU-PpV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bjp-tU-PpV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="66f-OJ-Epd">
-                            <rect key="frame" x="0.0" y="360" width="320" height="13"/>
+                            <rect key="frame" x="0.0" y="360" width="320" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -374,7 +374,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AnO-xc-gue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288.75" y="1154.5774647887324"/>
+            <point key="canvasLocation" x="286.875" y="1153.5211267605634"/>
         </scene>
         <!--Edit Patronymic View Controller-->
         <scene sceneID="Nyq-DF-4Qf">
@@ -385,7 +385,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKJ-X1-owN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отчество" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRb-uX-zm0" userLabel="Title Label">
                                         <rect key="frame" x="8" y="28" width="56" height="14.5"/>
@@ -425,10 +425,10 @@
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="HKJ-X1-owN" firstAttribute="height" secondItem="F86-n1-EmZ" secondAttribute="height" id="2CQ-0s-aHY"/>
                             <constraint firstItem="HKJ-X1-owN" firstAttribute="leading" secondItem="F86-n1-EmZ" secondAttribute="leading" id="6EO-mu-i64"/>
                             <constraint firstAttribute="bottom" secondItem="HKJ-X1-owN" secondAttribute="bottom" id="L12-iu-LvB"/>
                             <constraint firstAttribute="trailing" secondItem="HKJ-X1-owN" secondAttribute="trailing" id="MZ8-z2-55l"/>
+                            <constraint firstItem="HKJ-X1-owN" firstAttribute="height" secondItem="qNM-Ai-TY9" secondAttribute="height" id="O7M-vI-Q7C"/>
                             <constraint firstItem="HKJ-X1-owN" firstAttribute="width" secondItem="F86-n1-EmZ" secondAttribute="width" id="i6n-Fx-Kgf"/>
                             <constraint firstItem="HKJ-X1-owN" firstAttribute="top" secondItem="F86-n1-EmZ" secondAttribute="top" id="rLY-Og-7Xn"/>
                         </constraints>
@@ -449,7 +449,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-Pc-saQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P90-YG-0h7" userLabel="Title Label">
                                         <rect key="frame" x="8" y="28" width="100" height="14.5"/>
@@ -489,8 +489,8 @@
                             </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="nv3-Pc-saQ" firstAttribute="height" secondItem="sK1-Yj-FuP" secondAttribute="height" id="8F5-FJ-TOa"/>
                             <constraint firstAttribute="bottom" secondItem="nv3-Pc-saQ" secondAttribute="bottom" id="Lb2-pa-kbb"/>
-                            <constraint firstItem="nv3-Pc-saQ" firstAttribute="height" secondItem="N2q-DI-Vni" secondAttribute="height" id="NdE-oW-v27"/>
                             <constraint firstAttribute="trailing" secondItem="nv3-Pc-saQ" secondAttribute="trailing" id="RnR-oR-x1W"/>
                             <constraint firstItem="nv3-Pc-saQ" firstAttribute="width" secondItem="N2q-DI-Vni" secondAttribute="width" id="eM5-ca-Qac"/>
                             <constraint firstItem="nv3-Pc-saQ" firstAttribute="leading" secondItem="N2q-DI-Vni" secondAttribute="leading" id="pzZ-S2-YRd"/>
@@ -513,7 +513,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7n-MG-IM2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNp-vp-NBx" userLabel="Title Label">
                                         <rect key="frame" x="8" y="28" width="30.5" height="14.5"/>
@@ -555,7 +555,7 @@
                         <constraints>
                             <constraint firstItem="r7n-MG-IM2" firstAttribute="top" secondItem="rze-jD-8MD" secondAttribute="top" id="AZ5-Z9-saP"/>
                             <constraint firstAttribute="bottom" secondItem="r7n-MG-IM2" secondAttribute="bottom" id="EIG-Fx-eAV"/>
-                            <constraint firstItem="r7n-MG-IM2" firstAttribute="height" secondItem="rze-jD-8MD" secondAttribute="height" id="MNC-vL-DIe"/>
+                            <constraint firstItem="r7n-MG-IM2" firstAttribute="height" secondItem="BTO-2h-3Gh" secondAttribute="height" id="FDl-j7-AwG"/>
                             <constraint firstAttribute="trailing" secondItem="r7n-MG-IM2" secondAttribute="trailing" id="PXe-l8-jJ2"/>
                             <constraint firstItem="r7n-MG-IM2" firstAttribute="leading" secondItem="rze-jD-8MD" secondAttribute="leading" id="QkO-TX-RRe"/>
                             <constraint firstItem="r7n-MG-IM2" firstAttribute="width" secondItem="rze-jD-8MD" secondAttribute="width" id="Y80-eX-OvC"/>
@@ -577,7 +577,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdP-ba-gV4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подтвердить пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xy-wb-GaE" userLabel="Title Label">
                                         <rect key="frame" x="8" y="28" width="122" height="14.5"/>
@@ -617,9 +617,9 @@
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="OdP-ba-gV4" firstAttribute="height" secondItem="yxs-KE-gGq" secondAttribute="height" id="DL9-2r-fQo"/>
                             <constraint firstItem="OdP-ba-gV4" firstAttribute="width" secondItem="yxs-KE-gGq" secondAttribute="width" id="L7x-hn-06G"/>
                             <constraint firstAttribute="trailing" secondItem="OdP-ba-gV4" secondAttribute="trailing" id="b5G-8Z-JBz"/>
+                            <constraint firstItem="OdP-ba-gV4" firstAttribute="height" secondItem="EZv-QZ-y4L" secondAttribute="height" id="bUL-3D-EGt"/>
                             <constraint firstAttribute="bottom" secondItem="OdP-ba-gV4" secondAttribute="bottom" id="hWN-pL-Akw"/>
                             <constraint firstItem="OdP-ba-gV4" firstAttribute="leading" secondItem="yxs-KE-gGq" secondAttribute="leading" id="nfL-4j-BS0"/>
                             <constraint firstItem="OdP-ba-gV4" firstAttribute="top" secondItem="yxs-KE-gGq" secondAttribute="top" id="oe9-X6-mWf"/>
@@ -646,7 +646,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEd-vE-zTX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новый пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eto-uI-Dc7" userLabel="Title Label">
                                         <rect key="frame" x="8" y="28" width="84" height="14.5"/>
@@ -704,7 +704,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="wEd-vE-zTX" firstAttribute="top" secondItem="abO-6Y-Yw4" secondAttribute="top" id="VY6-wO-NDD"/>
-                            <constraint firstItem="wEd-vE-zTX" firstAttribute="height" secondItem="abO-6Y-Yw4" secondAttribute="height" id="Wxi-mW-DjB"/>
+                            <constraint firstItem="wEd-vE-zTX" firstAttribute="height" secondItem="cdc-bR-U8u" secondAttribute="height" id="WkW-a6-moI"/>
                             <constraint firstAttribute="bottom" secondItem="wEd-vE-zTX" secondAttribute="bottom" id="c4h-Re-2lr"/>
                             <constraint firstItem="wEd-vE-zTX" firstAttribute="leading" secondItem="abO-6Y-Yw4" secondAttribute="leading" id="iGo-iR-a0B"/>
                             <constraint firstItem="wEd-vE-zTX" firstAttribute="width" secondItem="abO-6Y-Yw4" secondAttribute="width" id="log-2G-NFH"/>
