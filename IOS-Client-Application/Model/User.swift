@@ -210,7 +210,7 @@ public class User {
                 case .success(_):
                     result(nil)
                 case .error(_):
-                    result(Errors.LogOutError)
+                    result(UserErrors.LogOutError)
                 }
                 }
             ).disposed(by: disposeBag)

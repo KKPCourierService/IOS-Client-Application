@@ -60,13 +60,13 @@ class UserViewModel {
                 User.logIn(email: username, password: password){
                     id in
                     guard id != nil else {
-                        observer.onNext(Errors.LogInError)
+                        observer.onNext(UserErrors.LogInError)
                         return
                     }
                     User.getProfile(id: id!, password: password){
                         user in
                         guard user != nil else {
-                            observer.onNext(Errors.LogInError)
+                            observer.onNext(UserErrors.LogInError)
                             return
                         }
                         self.user.accept(user)
@@ -76,7 +76,7 @@ class UserViewModel {
                     
                 }
             } else {
-                observer.onNext(Errors.LogInError)
+                observer.onNext(UserErrors.LogInError)
             }
             return Disposables.create()
         }
@@ -89,7 +89,7 @@ class UserViewModel {
                     User.checkIn(surname: surname!, name: name!, patronymic: patronymic!, phoneNumber: phoneNumber!, email: email, password: password){
                         user in
                         guard user != nil else {
-                            observer.onNext(Errors.CheckInError)
+                            observer.onNext(UserErrors.CheckInError)
                             return
                         }
                         self.user.accept(user)
@@ -97,7 +97,7 @@ class UserViewModel {
                         
                     }
                 } else {
-                    observer.onNext(Errors.CheckInError)
+                    observer.onNext(UserErrors.CheckInError)
                 }
                 return Disposables.create()
             }
@@ -109,7 +109,7 @@ class UserViewModel {
                     self.user.value?.logOut(){
                         error in
                         guard error != nil else {
-                            observer.onNext(Errors.LogOutError)
+                            observer.onNext(UserErrors.LogOutError)
                             return
                         }
                         observer.onNext(nil)

@@ -8,8 +8,12 @@
 
 
 
-public enum Errors : Error{
+public enum UserErrors : Error{
     case LogInError
     case CheckInError
     case LogOutError
+}
+
+public enum OrderErrors : Error{
+    case GetInformationError
 }
