@@ -160,6 +160,35 @@ class Order {
                     result(OrderErrors.GetInformationError)
                 }
             }).disposed(by: disposeBag)
-        
+    }
+    
+    public static func createOrder(clientId: Int, typeID: Int, statusId: Int, numberOfAddresses: Int, informationAboutAddresses: String, description: String, cost: Double, result:@escaping(Order?) ->()){
+        provider.rx
+            .request(.createOrder(clientId: clientId, orderType: typeID, orderStatusId: statusId, orderNumberOfAddresses: numberOfAddresses, orderInformationAboutAddresses: informationAboutAddresses, orderDescription: description, orderCost: cost))
+            .filter(statusCodes: 200...399)
+            .subscribe({
+                response in
+                switch response{
+                case .success(let responseJson):
+                    do {
+                        let json = try responseJson.mapJSON()
+                        guard let jsonIdObject = json as? [String: Any] else {
+                            result(nil)
+                            return
+                        }
+                        guard let id = (jsonIdObject["clientId"] as? Int) else {
+                            result(nil)
+                            return
+                        }
+                        result(Order(id: id))
+                    }
+                    catch {
+                        result(nil)
+                    }
+                case .error(_):
+                    result(nil)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
