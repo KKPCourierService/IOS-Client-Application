@@ -11,6 +11,7 @@
 		171D29D620A411BF0027ADED /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D29D520A411BF0027ADED /* Errors.swift */; };
 		17202FE520AC0C060069927A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17202FE420AC0C060069927A /* ProfileViewController.swift */; };
 		1758430220A35BD70052B30D /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1758430120A35BD70052B30D /* LogInViewModel.swift */; };
+		176B939420AEA3DE009918EC /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B939320AEA3DE009918EC /* OrderViewModel.swift */; };
 		178DF47020A56D72004C1329 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DF46F20A56D72004C1329 /* CheckInViewModel.swift */; };
 		178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */; };
 		17BB583A20AC4E380057B7F6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB583920AC4E380057B7F6 /* Order.swift */; };
@@ -48,6 +49,7 @@
 		171D29D520A411BF0027ADED /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		17202FE420AC0C060069927A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1758430120A35BD70052B30D /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		176B939320AEA3DE009918EC /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		178DF46F20A56D72004C1329 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
 		178ED3502089BF5D003BAE76 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		17BB583920AC4E380057B7F6 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				17CBF4DB20A727D000D63E3B /* AuthorizedUser */,
 				17CBF4DA20A727A400D63E3B /* UnuthorizedUser */,
 				17D45E1020A592B90049148D /* UserViewModel.swift */,
+				176B939320AEA3DE009918EC /* OrderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				1758430220A35BD70052B30D /* LogInViewModel.swift in Sources */,
 				17E08BB0202026DC00947053 /* EditNameViewController.swift in Sources */,
 				17E08BB62020278200947053 /* EditPhoneNumberViewController.swift in Sources */,
+				176B939420AEA3DE009918EC /* OrderViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
