@@ -16,4 +16,5 @@ public enum UserErrors : Error{
 
 public enum OrderErrors : Error{
     case GetInformationError
+    case CreateOrderError
 }

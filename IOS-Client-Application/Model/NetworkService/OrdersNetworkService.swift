@@ -25,7 +25,7 @@ extension OrdersNetworkService: TargetType {
             return "/clients/\(clientId)/orders"
         case .getOrder(let orderId):
             return "/orders/\(orderId)"
-        case .createOrder(let clientId):
+        case .createOrder(let clientId, _, _, _, _, _, _):
             return "/clients/\(clientId)/orders/create"
         }
         
