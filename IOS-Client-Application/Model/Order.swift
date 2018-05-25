@@ -181,7 +181,7 @@ class Order {
             }).disposed(by: disposeBag)
     }
     
-    public static func createOrder(clientId: Int, typeID: Int, statusId: Int, numberOfAddresses: Int, informationAboutAddresses: String, description: String, cost: Int, result:@escaping(Int?) ->()){
+    public static func createOrder(clientId: Int, typeID: Int, statusId: Int, numberOfAddresses: Int, informationAboutAddresses: String, description: String, cost: Int, result:@escaping(Order?) ->()){
         provider.rx
             .request(.createOrder(clientId: clientId, orderType: typeID, orderStatusId: statusId, orderNumberOfAddresses: numberOfAddresses, orderInformationAboutAddresses: informationAboutAddresses, orderDescription: description, orderCost: cost))
             .filter(statusCodes: 200...399)
@@ -199,7 +199,7 @@ class Order {
                             result(nil)
                             return
                         }
-                        result(id)
+                        result(Order(id: id, typeOrder: clientId, courierId: 0, statusId: statusId, numberOfAddresses: numberOfAddresses, informationAboutAddresses: informationAboutAddresses, description: description, cost: cost))
                     }
                     catch {
                         result(nil)

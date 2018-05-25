@@ -26,16 +26,8 @@ class OrderViewModel {
                     observer.onNext(OrderErrors.CreateOrderError)
                     return
                 }
-                Order.getInformationAboutOrder(id: result!){
-                    order in
-                    guard order != nil else {
-                        observer.onNext(OrderErrors.CreateOrderError)
-                        return
-                    }
-                    self.ordersArray.append(order!)
-                    observer.onNext(nil)
-                }
-                
+                self.ordersArray.append(result!)
+                observer.onNext(nil)
             }
             return Disposables.create()
         }
