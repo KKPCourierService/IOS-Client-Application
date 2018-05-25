@@ -110,10 +110,25 @@ class UserViewModel {
     public func logOut() {
         self.user.value!.logOut(){
             error in
-            guard error != nil else {
+            guard error == nil else {
                 return
             }
             self.user.accept(nil)
         }
+    }
+    
+    public func editName(name: String)
+        -> Observable<Error?> {
+            return  Observable.create { observer in
+                self.user.value!.editName(name: name){
+                    vvvv in
+                    guard vvvv != nil else {
+                        observer.onNext(nil)
+                        return
+                    }
+                    observer.onNext(UserErrors.EditNameError)
+                }
+                return Disposables.create()
+            }
     }
 }

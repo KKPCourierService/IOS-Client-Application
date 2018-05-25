@@ -219,4 +219,20 @@ public class User {
                 }
             ).disposed(by: User.disposeBag)
     }
+    
+    public func editName(name: String, result:@escaping(Error?) ->()) {
+        User.provider.rx.request(.editName(id: self.id.value, name: name))
+            .filter(statusCodes: 200...399)
+            .subscribe({
+                response in
+                switch response {
+                case .success(_):
+                    self.name.accept(name)
+                    result(nil)
+                case .error(_):
+                    result(UserErrors.EditNameError)
+                }
+                }
+            ).disposed(by: User.disposeBag)
+    }
 }

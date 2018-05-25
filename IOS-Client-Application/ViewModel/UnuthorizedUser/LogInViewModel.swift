@@ -6,7 +6,7 @@
 //  Copyright © 2018 Игорь Коршунов. All rights reserved.
 //
 
-import Foundation
+
 import RxSwift
 
 class LogInViewModel {
