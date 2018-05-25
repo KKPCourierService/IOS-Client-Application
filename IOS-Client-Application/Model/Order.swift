@@ -34,6 +34,21 @@ class Order {
             return typeId.value!
         }
     }
+    public var getInformationAboutAddresses: String{
+        get {
+            return informationAboutAddresses.value!
+        }
+    }
+    public var getDescription: String{
+        get {
+            return description.value!
+        }
+    }
+    public var getCost: Int{
+        get {
+            return cost.value!
+        }
+    }
     
     public init(id: Int,
                 typeOrder: Int,

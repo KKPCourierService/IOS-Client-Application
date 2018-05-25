@@ -12,8 +12,8 @@ import RxCocoa
 class OrderViewModel {
     public static let sharedInstance = OrderViewModel()
     private var ordersCount = BehaviorRelay<Int>(value: 0)
-    private var ordersArray = Array<Order>()
-    public var ordersObservable: Observable<Array<Order>>!
+    public var ordersArray = Array<Order>()
+    public var ordersObservable: Observable<[Order]>!
     
     private init(){
         setModel()
@@ -22,6 +22,7 @@ class OrderViewModel {
     private func setModel(){
         ordersObservable = ordersCount.asObservable()
             .throttle(0.5, scheduler : MainScheduler.instance)
+            .share(replay: 1)
             .map{
                 _ in
                 return self.ordersArray
@@ -51,7 +52,6 @@ class OrderViewModel {
         Order.getAllOrdersId(userId: userId) {
             ordersId in
             guard ordersId != nil else {
-                print("не получил id")
                 return
             }
             for orderId in ordersId! {

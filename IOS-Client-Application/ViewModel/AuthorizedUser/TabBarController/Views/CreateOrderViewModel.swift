@@ -39,7 +39,7 @@ class CreateOrderViewModel {
         {$0 && $1 && $2 && $3}
         let orderInformation = Observable.combineLatest(input.typeOrder, input.whenceAdress, input.whereAdress, input.descriptionOrder, input.cost) {($0 + 1, $1, $2, $3, Int($4))}
         self.createOrderObservable = input.createTap.withLatestFrom(orderInformation).flatMapLatest{ (typeOrder, whenceAdress, whereAdress, descriptionOrder, cost) in
-            return OrderViewModel.sharedInstance.createOrder(clientID: UserViewModel.sharedInstance.getUserId, typeId: typeOrder, statusId: 1, numberOfAddresses: 2, informationAboutAddresses: "\(whenceAdress) + \(whereAdress)", description: descriptionOrder, cost: cost!).observeOn(MainScheduler.instance)
+            return OrderViewModel.sharedInstance.createOrder(clientID: UserViewModel.sharedInstance.getUserId, typeId: typeOrder, statusId: 1, numberOfAddresses: 2, informationAboutAddresses: "\(whenceAdress) -> \(whereAdress)", description: descriptionOrder, cost: cost!).observeOn(MainScheduler.instance)
         }
     }
     
