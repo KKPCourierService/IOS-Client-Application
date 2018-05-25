@@ -20,111 +20,148 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="3Vw-ye-seI">
-                            <rect key="frame" x="0.0" y="225" width="320" height="83"/>
+                            <rect key="frame" x="0.0" y="287" width="320" height="83"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Order" rowHeight="197" id="03g-8Y-eJi">
-                                <rect key="frame" x="0.0" y="28" width="320" height="197"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Order" rowHeight="259" id="03g-8Y-eJi">
+                                <rect key="frame" x="0.0" y="28" width="320" height="259"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="03g-8Y-eJi" id="u71-jq-i0v">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="196.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="258.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Heu-PP-zx0">
-                                            <rect key="frame" x="16" y="11" width="288" height="175"/>
+                                            <rect key="frame" x="16" y="11" width="288" height="237"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGF-sd-mWM" userLabel="Title Date Lable">
-                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="15.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id заказа:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGF-sd-mWM" userLabel="Id">
+                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="15.666666666666666" id="8qc-a7-xIW"/>
+                                                        <constraint firstAttribute="height" constant="15" id="Ap2-GI-V43"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nim-2L-TRu" userLabel="Date Lable">
-                                                    <rect key="frame" x="0.0" y="20.5" width="288" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nim-2L-TRu" userLabel="Order Id">
+                                                    <rect key="frame" x="0.0" y="20" width="288" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20.333333333333329" id="k4X-gv-cXm"/>
+                                                        <constraint firstAttribute="height" constant="15" id="2NC-1o-2iS"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пункт отправления:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heH-Ga-3oj" userLabel="Title Point of Departure Label">
-                                                    <rect key="frame" x="0.0" y="46" width="117.5" height="14.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип заказа:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heH-Ga-3oj" userLabel="Type">
+                                                    <rect key="frame" x="0.0" y="40" width="67.5" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="14.333333333333336" id="w8M-M7-Vpt"/>
+                                                        <constraint firstAttribute="height" constant="15" id="K7l-g8-Sbu"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX5-rh-uAN" userLabel="Point of Departure Label">
-                                                    <rect key="frame" x="0.0" y="65.5" width="288" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX5-rh-uAN" userLabel="Order Type">
+                                                    <rect key="frame" x="0.0" y="60" width="288" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20.333333333333329" id="qvm-Ko-F8p"/>
+                                                        <constraint firstAttribute="height" constant="15" id="1zi-Bc-r2V"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пункт доставки:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zik-VI-ysx" userLabel="Title Delivery Point Label">
-                                                    <rect key="frame" x="0.0" y="90.5" width="96.5" height="14.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Маршрут:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zik-VI-ysx" userLabel="Title Delivery Point Label">
+                                                    <rect key="frame" x="0.0" y="80" width="58" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="14.333333333333329" id="nqb-5h-zOz"/>
+                                                        <constraint firstAttribute="height" constant="15" id="8dH-Jw-pp2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7p-Ow-xgS" userLabel="Delivery Point Label">
-                                                    <rect key="frame" x="0.0" y="110" width="288" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="100" width="288" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20.333333333333343" id="Wsp-nW-4uw"/>
+                                                        <constraint firstAttribute="height" constant="15" id="Gc7-R5-FH6"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKK-Ow-260" userLabel="Title Status Label">
-                                                    <rect key="frame" x="0.0" y="135.5" width="44.5" height="14"/>
+                                                    <rect key="frame" x="0.0" y="120" width="44.5" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="14.333333333333343" id="lyt-vc-uaM"/>
+                                                        <constraint firstAttribute="height" constant="15" id="Gwj-GO-6lJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMi-55-fib" userLabel="Status Label">
-                                                    <rect key="frame" x="0.0" y="154.5" width="288" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="140" width="288" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20.333333333333343" id="46U-wQ-VQV"/>
+                                                        <constraint firstAttribute="height" constant="15" id="MC5-rw-Dhf"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJd-61-kjA" userLabel="Title Status Label">
+                                                    <rect key="frame" x="0.0" y="160" width="62.5" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="F6u-rC-XM9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjx-kb-VO1">
+                                                    <rect key="frame" x="0.0" y="180" width="288" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="ILD-dg-qxC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоимость:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQh-rx-Gba" userLabel="Title Status Label">
+                                                    <rect key="frame" x="0.0" y="200" width="67.5" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="L5U-7E-vqD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVA-6U-p8Y">
+                                                    <rect key="frame" x="0.0" y="220" width="288" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="GMi-55-fib" firstAttribute="leading" secondItem="Heu-PP-zx0" secondAttribute="leading" id="6jJ-An-5eu"/>
-                                                <constraint firstItem="OX5-rh-uAN" firstAttribute="leading" secondItem="Heu-PP-zx0" secondAttribute="leading" id="DYQ-eS-drh"/>
-                                                <constraint firstItem="nim-2L-TRu" firstAttribute="leading" secondItem="Heu-PP-zx0" secondAttribute="leading" id="PzL-j5-y2w"/>
-                                                <constraint firstItem="J7p-Ow-xgS" firstAttribute="leading" secondItem="Heu-PP-zx0" secondAttribute="leading" id="SE4-KW-AmR"/>
-                                                <constraint firstAttribute="trailing" secondItem="OX5-rh-uAN" secondAttribute="trailing" id="fjj-I7-1MX"/>
-                                                <constraint firstAttribute="trailing" secondItem="J7p-Ow-xgS" secondAttribute="trailing" id="kOY-Uv-xcJ"/>
-                                                <constraint firstAttribute="trailing" secondItem="nim-2L-TRu" secondAttribute="trailing" id="lzv-pM-wCV"/>
-                                                <constraint firstAttribute="trailing" secondItem="GMi-55-fib" secondAttribute="trailing" id="t91-XG-xVh"/>
+                                                <constraint firstItem="GMi-55-fib" firstAttribute="leading" secondItem="Heu-PP-zx0" secondAttribute="leading" id="2Gp-0k-sEg"/>
+                                                <constraint firstAttribute="trailing" secondItem="OX5-rh-uAN" secondAttribute="trailing" id="5yW-PC-Fug"/>
+                                                <constraint firstItem="rjx-kb-VO1" firstAttribute="leading" secondItem="Heu-PP-zx0" secondAttribute="leading" id="7GF-7f-D9C"/>
+                                                <constraint firstAttribute="trailing" secondItem="rjx-kb-VO1" secondAttribute="trailing" id="7mV-wC-our"/>
+                                                <constraint firstAttribute="trailing" secondItem="J7p-Ow-xgS" secondAttribute="trailing" id="EGF-m1-Mgw"/>
+                                                <constraint firstItem="OX5-rh-uAN" firstAttribute="leading" secondItem="Heu-PP-zx0" secondAttribute="leading" id="PWA-Oq-Nqz"/>
+                                                <constraint firstItem="nim-2L-TRu" firstAttribute="leading" secondItem="Heu-PP-zx0" secondAttribute="leading" id="SnJ-p7-YKF"/>
+                                                <constraint firstItem="J7p-Ow-xgS" firstAttribute="leading" secondItem="Heu-PP-zx0" secondAttribute="leading" id="alw-8b-yvi"/>
+                                                <constraint firstAttribute="trailing" secondItem="XVA-6U-p8Y" secondAttribute="trailing" id="ewP-eu-4s6"/>
+                                                <constraint firstAttribute="trailing" secondItem="nim-2L-TRu" secondAttribute="trailing" id="jdN-Fs-k7y"/>
+                                                <constraint firstItem="XVA-6U-p8Y" firstAttribute="leading" secondItem="Heu-PP-zx0" secondAttribute="leading" id="vzv-hG-IR9"/>
+                                                <constraint firstAttribute="trailing" secondItem="GMi-55-fib" secondAttribute="trailing" id="yD9-7f-qF8"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Heu-PP-zx0" firstAttribute="bottom" secondItem="u71-jq-i0v" secondAttribute="bottomMargin" id="7Lu-03-wiG"/>
-                                        <constraint firstAttribute="trailing" secondItem="Heu-PP-zx0" secondAttribute="trailing" constant="16" id="IsL-v1-Gpm"/>
-                                        <constraint firstItem="Heu-PP-zx0" firstAttribute="leading" secondItem="u71-jq-i0v" secondAttribute="leading" constant="16" id="WaR-gS-ZLn"/>
-                                        <constraint firstItem="Heu-PP-zx0" firstAttribute="top" secondItem="u71-jq-i0v" secondAttribute="topMargin" id="gg7-OZ-TTZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Heu-PP-zx0" secondAttribute="bottom" id="4I4-q6-ffx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Heu-PP-zx0" secondAttribute="trailing" id="KMV-AZ-5WP"/>
+                                        <constraint firstItem="Heu-PP-zx0" firstAttribute="top" secondItem="u71-jq-i0v" secondAttribute="topMargin" id="W1v-4F-I2l"/>
+                                        <constraint firstItem="Heu-PP-zx0" firstAttribute="leading" secondItem="u71-jq-i0v" secondAttribute="leadingMargin" id="tP8-KB-NkC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -138,7 +175,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvZ-QZ-sjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="345" y="387"/>
+            <point key="canvasLocation" x="345" y="386.61971830985914"/>
         </scene>
         <!--Profile-->
         <scene sceneID="6sO-Zc-xld">
