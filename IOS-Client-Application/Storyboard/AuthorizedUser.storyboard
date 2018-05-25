@@ -13,7 +13,7 @@
         <!--History of Orders-->
         <scene sceneID="ltv-tv-sbC">
             <objects>
-                <tableViewController id="H58-lY-9uy" userLabel="History of Orders" sceneMemberID="viewController">
+                <tableViewController id="H58-lY-9uy" userLabel="History of Orders" customClass="HistoryOfOrdersTableViewController" customModule="IOS_Client_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MNK-NE-fjE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

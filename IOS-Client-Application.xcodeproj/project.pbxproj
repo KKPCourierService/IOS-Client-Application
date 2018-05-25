@@ -30,6 +30,7 @@
 		17E60A0020AC3926007E09FD /* OrdersNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E609FF20AC3926007E09FD /* OrdersNetworkService.swift */; };
 		17F3801D201F6896003F1C59 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F3801C201F6896003F1C59 /* EditPasswordViewController.swift */; };
 		17F3801F201F6A72003F1C59 /* ConfirmPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F3801E201F6A72003F1C59 /* ConfirmPasswordViewController.swift */; };
+		17F3B7C420B7EA2600DFE697 /* HistoryOfOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F3B7C320B7EA2600DFE697 /* HistoryOfOrdersTableViewController.swift */; };
 		783DEE002018197A00554378 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DEDFF2018197A00554378 /* User.swift */; };
 		784896DC200A966D005626BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784896DB200A966D005626BB /* AppDelegate.swift */; };
 		784896E1200A966D005626BB /* UnuthorizedUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784896DF200A966D005626BB /* UnuthorizedUser.storyboard */; };
@@ -68,6 +69,7 @@
 		17E609FF20AC3926007E09FD /* OrdersNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersNetworkService.swift; sourceTree = "<group>"; };
 		17F3801C201F6896003F1C59 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		17F3801E201F6A72003F1C59 /* ConfirmPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordViewController.swift; sourceTree = "<group>"; };
+		17F3B7C320B7EA2600DFE697 /* HistoryOfOrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOfOrdersTableViewController.swift; sourceTree = "<group>"; };
 		5B7287907FEA40860E33032E /* Pods_IOS_Client_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS_Client_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		723E6453F82BED61ADDF8E5D /* Pods-IOS-Client-Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS-Client-Application.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOS-Client-Application/Pods-IOS-Client-Application.release.xcconfig"; sourceTree = "<group>"; };
 		783DEDFF2018197A00554378 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				17E609FC20AC31D9007E09FD /* CreateOrderViewController.swift */,
+				17F3B7C320B7EA2600DFE697 /* HistoryOfOrdersTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				178ED3512089BF5D003BAE76 /* UIViewControllerExtension.swift in Sources */,
 				786E52532018BD3900BE681F /* MainTabBarControllerOfAuthorizedUser.swift in Sources */,
 				171D29D620A411BF0027ADED /* Errors.swift in Sources */,
+				17F3B7C420B7EA2600DFE697 /* HistoryOfOrdersTableViewController.swift in Sources */,
 				78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */,
 				17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */,
 				17CBF4DD20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift in Sources */,
