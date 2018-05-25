@@ -12,7 +12,7 @@ enum OrdersNetworkService {
     case getAllOrders(clientId: Int)
     case getOrder(orderId: Int)
     case createOrder(clientId: Int, orderType: Int, orderStatusId: Int, orderNumberOfAddresses: Int,
-        orderInformationAboutAddresses: String, orderDescription: String, orderCost: Double)
+        orderInformationAboutAddresses: String, orderDescription: String, orderCost: Int)
     
 }
 
@@ -28,8 +28,8 @@ extension OrdersNetworkService: TargetType {
         case .createOrder(let clientId, _, _, _, _, _, _):
             return "/clients/\(clientId)/orders/create"
         }
-        
     }
+    
     var method: Moya.Method {
         switch self {
         case .getAllOrders, .getOrder:
@@ -40,7 +40,6 @@ extension OrdersNetworkService: TargetType {
     }
     var task: Task {
         switch self {
-            
         case let .createOrder(clientId, orderType, orderStatusId, orderNumberOfAddresses, orderInformationAboutAddresses, orderDescription, orderCost):
             return .requestParameters(parameters: ["orderTypeId": orderType, "clientId": clientId, "orderStatusId": orderStatusId, "orderNumberOfAddresses": orderNumberOfAddresses, "orderInformationAboutAddresses": orderInformationAboutAddresses, "orderDescription": orderDescription, "orderCost": orderCost], encoding: JSONEncoding.default)
         case .getAllOrders(_), .getOrder(_):

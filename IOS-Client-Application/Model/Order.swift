@@ -21,10 +21,36 @@ class Order {
     private var numberOfAddresses = BehaviorRelay<Int?>(value: nil)
     private var informationAboutAddresses = BehaviorRelay<String?>(value: nil)
     private var description = BehaviorRelay<String?>(value: nil)
-    private var cost = BehaviorRelay<Double?>(value: nil)
+    private var cost = BehaviorRelay<Int?>(value: nil)
     
-    public init(id: Int){
+    public var getId: Int{
+        get {
+            return id.value
+        }
+    }
+    
+    public var getOrderType: Int{
+        get {
+            return typeId.value!
+        }
+    }
+    
+    public init(id: Int,
+                typeOrder: Int,
+                courierId: Int,
+                statusId: Int,
+                numberOfAddresses: Int,
+                informationAboutAddresses: String,
+                description: String,
+                cost: Int){
         self.id = BehaviorRelay(value: id)
+        self.typeId = BehaviorRelay(value: typeOrder)
+        self.courierId = BehaviorRelay(value: courierId)
+        self.statusId = BehaviorRelay(value: statusId)
+        self.numberOfAddresses = BehaviorRelay(value: numberOfAddresses)
+        self.informationAboutAddresses = BehaviorRelay(value: informationAboutAddresses)
+        self.description = BehaviorRelay(value: description)
+        self.cost = BehaviorRelay(value: cost)
     }
     
     public var IdObservable: Observable<Int>{
@@ -69,7 +95,7 @@ class Order {
         }
     }
     
-    public var CostObservable: Observable<Double?> {
+    public var CostObservable: Observable<Int?> {
         get {
             return cost.asObservable()
         }
@@ -104,21 +130,23 @@ class Order {
             ).disposed(by: disposeBag)
     }
     
-    public func getInformationAboutOrder(result:@escaping(Error?)->()){
+    public static func getInformationAboutOrder(id: Int, result:@escaping(Order?)->()){
         let disposeBag = DisposeBag()
         let provider = MoyaProvider<OrdersNetworkService>()
-        
+        print("tut20")
         provider.rx
-            .request(.getOrder(orderId: self.id.value))
+            .request(.getOrder(orderId: id))
             .filter(statusCodes: 200...399)
             .subscribe({
                 response in
                 switch response {
                 case .success(let responseJson):
+                    print("tut")
                     do{
+                        
                         let json = try responseJson.mapJSON()
                         guard let jsonOrderObject = json as? [String: Any] else {
-                            result(OrderErrors.GetInformationError)
+                            result(nil)
                             return
                         }
                         guard let orderTypeId = (jsonOrderObject["orderTypeId"] as? Int) else {
@@ -141,28 +169,24 @@ class Order {
                             result(nil)
                             return
                         }
-                        guard let orderCost = (jsonOrderObject["orderCost"] as? Double) else {
+                        guard let orderCost = (jsonOrderObject["orderCost"] as? Int) else {
                             result(nil)
                             return
                         }
-                        self.typeId.accept(orderTypeId)
-                        self.statusId.accept(orderStatusId)
-                        self.numberOfAddresses.accept(orderNumberOfAddresses)
-                        self.informationAboutAddresses.accept(orderInformationAboutAddresses)
-                        self.description.accept(orderDescription)
-                        self.cost.accept(orderCost)
-                        result(nil)
+                       
+                        result(Order(id: id, typeOrder: orderTypeId, courierId: 0, statusId: orderStatusId, numberOfAddresses: orderNumberOfAddresses, informationAboutAddresses: orderInformationAboutAddresses, description: orderDescription, cost: orderCost))
                     } catch{
-                        result(OrderErrors.GetInformationError)
+                        result(nil)
                     }
                     result(nil)
                 case .error(_):
-                    result(OrderErrors.GetInformationError)
+                    print("tut2")
+                    result(nil)
                 }
             }).disposed(by: disposeBag)
     }
     
-    public static func createOrder(clientId: Int, typeID: Int, statusId: Int, numberOfAddresses: Int, informationAboutAddresses: String, description: String, cost: Double, result:@escaping(Order?) ->()){
+    public static func createOrder(clientId: Int, typeID: Int, statusId: Int, numberOfAddresses: Int, informationAboutAddresses: String, description: String, cost: Int, result:@escaping(Int?) ->()){
         provider.rx
             .request(.createOrder(clientId: clientId, orderType: typeID, orderStatusId: statusId, orderNumberOfAddresses: numberOfAddresses, orderInformationAboutAddresses: informationAboutAddresses, orderDescription: description, orderCost: cost))
             .filter(statusCodes: 200...399)
@@ -180,7 +204,7 @@ class Order {
                             result(nil)
                             return
                         }
-                        result(Order(id: id))
+                        result(id)
                     }
                     catch {
                         result(nil)

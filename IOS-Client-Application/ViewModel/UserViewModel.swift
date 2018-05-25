@@ -52,6 +52,11 @@ class UserViewModel {
     }
     
 
+    public var getUserId: Int {
+        get{
+            return self.user.value!.GetId
+        }
+    }
     
     public func login(username: String?, password: String?) -> Observable<Error?> {
         return  Observable.create {
@@ -73,7 +78,6 @@ class UserViewModel {
                         observer.onNext(nil)
                         
                     }
-                    
                 }
             } else {
                 observer.onNext(UserErrors.LogInError)

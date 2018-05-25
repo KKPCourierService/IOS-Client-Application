@@ -14,6 +14,7 @@ class CreateOrderViewModel {
     private let validatedWhereAdress: Observable<Bool>
     private let validatedDescription: Observable<Bool>
     private let validatedCost: Observable<Bool>
+    public let createOrderObservable: Observable<Error?>
     let createOrderEnabled: Observable<Bool>
     
     init(input:(typeOrder: Observable<Int>,
@@ -36,15 +37,10 @@ class CreateOrderViewModel {
             .share(replay: 1)
         self.createOrderEnabled = Observable.combineLatest(validatedCost, validatedDescription, validatedWhereAdress, validatedWhenceAdress)
         {$0 && $1 && $2 && $3}
-        
+        let orderInformation = Observable.combineLatest(input.typeOrder, input.whenceAdress, input.whereAdress, input.descriptionOrder, input.cost) {($0 + 1, $1, $2, $3, Int($4))}
+        self.createOrderObservable = input.createTap.withLatestFrom(orderInformation).flatMapLatest{ (typeOrder, whenceAdress, whereAdress, descriptionOrder, cost) in
+            return OrderViewModel.sharedInstance.createOrder(clientID: UserViewModel.sharedInstance.getUserId, typeId: typeOrder, statusId: 1, numberOfAddresses: 2, informationAboutAddresses: "\(whenceAdress) + \(whereAdress)", description: descriptionOrder, cost: cost!).observeOn(MainScheduler.instance)
+        }
     }
-    
-    
-    
-    
-    /*  let userAndPassword = Observable.combineLatest(input.username, input.password) {($0,$1)}
-     
-     self.loginObservable = input.loginTap.withLatestFrom(userAndPassword).flatMapLatest{ (username, password) in
-     return UserViewModel.sharedInstance.login(username: username, password: password).observeOn(MainScheduler.instance)*/
     
 }

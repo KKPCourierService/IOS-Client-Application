@@ -38,6 +38,11 @@ public class User {
         self.phoneNumber = BehaviorRelay(value: phoneNumber)
     }
     
+    public var GetId: Int{
+        get {
+            return id.value
+        }
+    }
     
     public var IdObservable : Observable<Int> {
         get {

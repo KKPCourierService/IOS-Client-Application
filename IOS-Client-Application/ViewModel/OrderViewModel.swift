@@ -17,7 +17,7 @@ class OrderViewModel {
         
     }
     
-    public func createOrder(clientID: Int, typeId: Int, statusId: Int, numberOfAddresses: Int, informationAboutAddresses: String, description: String, cost: Double) -> Observable<Error?>{
+    public func createOrder(clientID: Int, typeId: Int, statusId: Int, numberOfAddresses: Int, informationAboutAddresses: String, description: String, cost: Int) -> Observable<Error?>{
         return Observable.create{
             observer in
             Order.createOrder(clientId: clientID, typeID: typeId, statusId: statusId, numberOfAddresses: numberOfAddresses, informationAboutAddresses: informationAboutAddresses, description: description, cost: cost){
@@ -26,10 +26,8 @@ class OrderViewModel {
                     observer.onNext(OrderErrors.CreateOrderError)
                     return
                 }
-
-                self.ordersArray.append(result!)
-                self.ordersArray.last!.getInformationAboutOrder(){_ in}
                 observer.onNext(nil)
+                
             }
             return Disposables.create()
         }
