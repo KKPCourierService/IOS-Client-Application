@@ -24,7 +24,7 @@ public class User {
     private var email: BehaviorRelay<String>
     private var password: BehaviorRelay<String>
     private var phoneNumber: BehaviorRelay<String>
-  
+    
     
     
     public init (id: Int, name: String, surname: String, patronymic: String, email: String,
@@ -89,7 +89,7 @@ public class User {
         }
     }
     
-
+    
     
     public static func logIn (email: String, password: String, result:@escaping(Int?) ->()) {
         provider.rx
@@ -206,9 +206,7 @@ public class User {
     
     
     public func logOut(result:@escaping(Error?) ->()) {
-        let provider = MoyaProvider<ClientsNetworkService>()
-        let disposeBag = DisposeBag()
-        provider.rx.request(.logOut())
+        User.provider.rx.request(.logOut())
             .filter(statusCodes: 200...399)
             .subscribe({
                 response in
@@ -219,6 +217,6 @@ public class User {
                     result(UserErrors.LogOutError)
                 }
                 }
-            ).disposed(by: disposeBag)
+            ).disposed(by: User.disposeBag)
     }
 }

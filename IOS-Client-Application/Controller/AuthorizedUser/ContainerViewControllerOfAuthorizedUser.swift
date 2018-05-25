@@ -80,8 +80,4 @@ class ContainerViewControllerOfAuthorizedUser: UIViewController {
             leftScreenEdgePanGesture: self.leftScreenEdgePanGestureObservable))
     }
     
-    
-    
-    
-    
 }

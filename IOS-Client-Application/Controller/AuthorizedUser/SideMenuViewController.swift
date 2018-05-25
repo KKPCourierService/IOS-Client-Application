@@ -35,6 +35,7 @@ class SideMenuViewController: UITableViewController {
         case 0:
             MainTabBarControllerOfAuthorizedUserViewModel.sharedInstance.showProfile()
         case 1:
+            userViewModel.logOut()
             ContainerViewControllerOfAuthorizedUserViewModel.sharedInstance.logOut()
         default:
             break

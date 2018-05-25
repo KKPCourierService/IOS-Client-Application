@@ -17,7 +17,7 @@ class UserViewModel {
     private let userObservable: Observable<User?>
     
     
-  
+    
     public var idObservable: Observable<Int>?
     public var nameObservable: Observable<String>?
     public var surnameObservable: Observable<String>?
@@ -48,10 +48,10 @@ class UserViewModel {
             self.emailObservable = nil
             self.passwordObservable = nil
             self.phoneNumberObservable = nil
-        }.disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
     }
     
-
+    
     public var getUserId: Int {
         get{
             return self.user.value!.GetId
@@ -107,20 +107,13 @@ class UserViewModel {
             }
     }
     
-    public func logOut() -> Observable<Error?> {
-            return  Observable.create {
-                    observer in
-                    self.user.value?.logOut(){
-                        error in
-                        guard error != nil else {
-                            observer.onNext(UserErrors.LogOutError)
-                            return
-                        }
-                        observer.onNext(nil)
-                }
-                return Disposables.create()
+    public func logOut() {
+        self.user.value!.logOut(){
+            error in
+            guard error != nil else {
+                return
             }
-            
+            self.user.accept(nil)
+        }
     }
-    
 }
