@@ -110,6 +110,7 @@ public class User {
                             return
                         }
                         result(id)
+                        OrderViewModel.sharedInstance.getAllOrders(userId: id)
                     }
                     catch {
                         result(nil)

@@ -27,10 +27,31 @@ class OrderViewModel {
                     return
                 }
                 self.ordersArray.append(result!)
+                self.ordersCount.accept(self.ordersArray.count)
                 observer.onNext(nil)
             }
             return Disposables.create()
         }
     }
     
+    public func getAllOrders(userId: Int) {
+        ordersCount.accept(0)
+        Order.getAllOrdersId(userId: userId) {
+            ordersId in
+            guard ordersId != nil else {
+                print("не получил id")
+                return
+            }
+            for orderId in ordersId! {
+                Order.getInformationAboutOrder(id: orderId) {
+                    order in
+                    guard order != nil else {
+                        return
+                    }
+                    self.ordersArray.append(order!)
+                    self.ordersCount.accept(self.ordersArray.count)
+                }
+            }
+        }
+    }
 }
