@@ -131,9 +131,6 @@ class Order {
     }
     
     public static func getInformationAboutOrder(id: Int, result:@escaping(Order?)->()){
-        let disposeBag = DisposeBag()
-        let provider = MoyaProvider<OrdersNetworkService>()
-        print("tut20")
         provider.rx
             .request(.getOrder(orderId: id))
             .filter(statusCodes: 200...399)
@@ -141,7 +138,6 @@ class Order {
                 response in
                 switch response {
                 case .success(let responseJson):
-                    print("tut")
                     do{
                         
                         let json = try responseJson.mapJSON()
@@ -180,7 +176,6 @@ class Order {
                     }
                     result(nil)
                 case .error(_):
-                    print("tut2")
                     result(nil)
                 }
             }).disposed(by: disposeBag)
