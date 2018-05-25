@@ -235,4 +235,20 @@ public class User {
                 }
             ).disposed(by: User.disposeBag)
     }
+    
+    public func editSurname(surname: String, result:@escaping(Error?) ->()) {
+        User.provider.rx.request(.editSurname(id: self.id.value, surname: surname))
+            .filter(statusCodes: 200...399)
+            .subscribe({
+                response in
+                switch response {
+                case .success(_):
+                    self.surname.accept(surname)
+                    result(nil)
+                case .error(_):
+                    result(UserErrors.EditSurnameError)
+                }
+                }
+            ).disposed(by: User.disposeBag)
+    }
 }

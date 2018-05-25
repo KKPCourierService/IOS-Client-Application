@@ -121,12 +121,27 @@ class UserViewModel {
         -> Observable<Error?> {
             return  Observable.create { observer in
                 self.user.value!.editName(name: name){
-                    vvvv in
-                    guard vvvv != nil else {
+                    error in
+                    guard error != nil else {
                         observer.onNext(nil)
                         return
                     }
                     observer.onNext(UserErrors.EditNameError)
+                }
+                return Disposables.create()
+            }
+    }
+    
+    public func editSurname(surname: String)
+        -> Observable<Error?> {
+            return  Observable.create { observer in
+                self.user.value!.editSurname(surname: surname){
+                    error in
+                    guard error != nil else {
+                        observer.onNext(nil)
+                        return
+                    }
+                    observer.onNext(UserErrors.EditSurnameError)
                 }
                 return Disposables.create()
             }

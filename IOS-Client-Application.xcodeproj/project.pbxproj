@@ -11,6 +11,7 @@
 		171D29D620A411BF0027ADED /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D29D520A411BF0027ADED /* Errors.swift */; };
 		17202FE520AC0C060069927A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17202FE420AC0C060069927A /* ProfileViewController.swift */; };
 		17207C9C20B8B982009C9672 /* EditNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17207C9B20B8B982009C9672 /* EditNameViewModel.swift */; };
+		17207C9E20B8C346009C9672 /* EditSurnameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17207C9D20B8C346009C9672 /* EditSurnameViewModel.swift */; };
 		1758430220A35BD70052B30D /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1758430120A35BD70052B30D /* LogInViewModel.swift */; };
 		176B939420AEA3DE009918EC /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B939320AEA3DE009918EC /* OrderViewModel.swift */; };
 		178DF47020A56D72004C1329 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DF46F20A56D72004C1329 /* CheckInViewModel.swift */; };
@@ -52,6 +53,7 @@
 		171D29D520A411BF0027ADED /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		17202FE420AC0C060069927A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		17207C9B20B8B982009C9672 /* EditNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewModel.swift; sourceTree = "<group>"; };
+		17207C9D20B8C346009C9672 /* EditSurnameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSurnameViewModel.swift; sourceTree = "<group>"; };
 		1758430120A35BD70052B30D /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		176B939320AEA3DE009918EC /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		178DF46F20A56D72004C1329 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				17207C9B20B8B982009C9672 /* EditNameViewModel.swift */,
+				17207C9D20B8C346009C9672 /* EditSurnameViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				786E52532018BD3900BE681F /* MainTabBarControllerOfAuthorizedUser.swift in Sources */,
 				171D29D620A411BF0027ADED /* Errors.swift in Sources */,
 				17F3B7C420B7EA2600DFE697 /* HistoryOfOrdersTableViewController.swift in Sources */,
+				17207C9E20B8C346009C9672 /* EditSurnameViewModel.swift in Sources */,
 				78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */,
 				17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */,
 				17CBF4DD20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift in Sources */,

@@ -13,6 +13,7 @@ public enum UserErrors : Error{
     case CheckInError
     case LogOutError
     case EditNameError
+    case EditSurnameError
 }
 
 public enum OrderErrors : Error{

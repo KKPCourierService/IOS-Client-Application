@@ -106,9 +106,6 @@
                                             <constraint firstAttribute="height" constant="40" id="oUz-XD-rXv"/>
                                         </constraints>
                                         <state key="normal" title="Сохранить"/>
-                                        <connections>
-                                            <action selector="saveSurnameButtonClick:" destination="03Y-s0-hcV" eventType="touchUpInside" id="wKc-P7-LqC"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,6 +131,10 @@
                         <viewLayoutGuide key="safeArea" id="R1j-9W-CbR"/>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Изменить" id="yjM-wl-AX2" userLabel="Navigation Item"/>
+                    <connections>
+                        <outlet property="editButton" destination="7hp-2l-Zrt" id="zo7-An-1QJ"/>
+                        <outlet property="surname" destination="rF5-ke-OgS" id="Chv-8O-xXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8h-YZ-gxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
