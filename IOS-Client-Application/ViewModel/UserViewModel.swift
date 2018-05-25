@@ -146,4 +146,19 @@ class UserViewModel {
                 return Disposables.create()
             }
     }
+    
+    public func editPatronymic(patronymic: String)
+        -> Observable<Error?> {
+            return  Observable.create { observer in
+                self.user.value!.editPatronymic(patronymic: patronymic){
+                    error in
+                    guard error != nil else {
+                        observer.onNext(nil)
+                        return
+                    }
+                    observer.onNext(UserErrors.EditPatronymicError)
+                }
+                return Disposables.create()
+            }
+    }
 }

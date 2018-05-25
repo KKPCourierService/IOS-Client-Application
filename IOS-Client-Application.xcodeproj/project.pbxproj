@@ -12,6 +12,7 @@
 		17202FE520AC0C060069927A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17202FE420AC0C060069927A /* ProfileViewController.swift */; };
 		17207C9C20B8B982009C9672 /* EditNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17207C9B20B8B982009C9672 /* EditNameViewModel.swift */; };
 		17207C9E20B8C346009C9672 /* EditSurnameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17207C9D20B8C346009C9672 /* EditSurnameViewModel.swift */; };
+		17207CA020B8C7E9009C9672 /* EditPatronymicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17207C9F20B8C7E9009C9672 /* EditPatronymicViewModel.swift */; };
 		1758430220A35BD70052B30D /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1758430120A35BD70052B30D /* LogInViewModel.swift */; };
 		176B939420AEA3DE009918EC /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B939320AEA3DE009918EC /* OrderViewModel.swift */; };
 		178DF47020A56D72004C1329 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DF46F20A56D72004C1329 /* CheckInViewModel.swift */; };
@@ -54,6 +55,7 @@
 		17202FE420AC0C060069927A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		17207C9B20B8B982009C9672 /* EditNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewModel.swift; sourceTree = "<group>"; };
 		17207C9D20B8C346009C9672 /* EditSurnameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSurnameViewModel.swift; sourceTree = "<group>"; };
+		17207C9F20B8C7E9009C9672 /* EditPatronymicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatronymicViewModel.swift; sourceTree = "<group>"; };
 		1758430120A35BD70052B30D /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		176B939320AEA3DE009918EC /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		178DF46F20A56D72004C1329 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				17207C9B20B8B982009C9672 /* EditNameViewModel.swift */,
 				17207C9D20B8C346009C9672 /* EditSurnameViewModel.swift */,
+				17207C9F20B8C7E9009C9672 /* EditPatronymicViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				78EBAC49200E9E8900297D86 /* CheckInViewController.swift in Sources */,
 				17E08BB8202027BB00947053 /* EditEmailViewController.swift in Sources */,
 				17CBF4DD20A7280200D63E3B /* ContainerViewControllerOfAuthorizedUserViewModel.swift in Sources */,
+				17207CA020B8C7E9009C9672 /* EditPatronymicViewModel.swift in Sources */,
 				783DEE002018197A00554378 /* User.swift in Sources */,
 				17CBF4E120A7600B00D63E3B /* MainTabBarControllerOfAuthorizedUserViewModel.swift in Sources */,
 				786E52512018B5AA00BE681F /* SideMenuViewController.swift in Sources */,

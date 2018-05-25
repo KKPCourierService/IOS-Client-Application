@@ -409,9 +409,6 @@
                                             <constraint firstAttribute="height" constant="40" id="CTH-Pf-JtE"/>
                                         </constraints>
                                         <state key="normal" title="Сохранить"/>
-                                        <connections>
-                                            <action selector="savePatronymicButtonClick:" destination="T9s-uM-axu" eventType="touchUpInside" id="DYY-mr-NHC"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -437,6 +434,10 @@
                         <viewLayoutGuide key="safeArea" id="qNM-Ai-TY9"/>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Изменить" id="Raw-nA-vQD" userLabel="Navigation Item"/>
+                    <connections>
+                        <outlet property="editButton" destination="BrC-wI-fGa" id="Pud-PI-Tgu"/>
+                        <outlet property="patronymic" destination="d2M-T1-oOS" id="5Df-RG-kTO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHx-lY-gvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -473,9 +474,6 @@
                                             <constraint firstAttribute="height" constant="40" id="OkF-kh-BFH"/>
                                         </constraints>
                                         <state key="normal" title="Сохранить"/>
-                                        <connections>
-                                            <action selector="savePhoneNumberButtonClick:" destination="vge-b4-FIy" eventType="touchUpInside" id="tfs-bu-Lrf"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -537,9 +535,6 @@
                                             <constraint firstAttribute="height" constant="40" id="gqz-UL-OsP"/>
                                         </constraints>
                                         <state key="normal" title="Сохранить"/>
-                                        <connections>
-                                            <action selector="editEmailButtonClick:" destination="Fws-xW-waV" eventType="touchUpInside" id="FK1-Wf-5c4"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -601,9 +596,6 @@
                                             <constraint firstAttribute="height" constant="40" id="d0X-2g-1im"/>
                                         </constraints>
                                         <state key="normal" title="Подтвердить пароль"/>
-                                        <connections>
-                                            <action selector="confirmButtonClick:" destination="MVD-Fe-Npb" eventType="touchUpInside" id="CXc-iR-X2h"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

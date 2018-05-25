@@ -251,4 +251,20 @@ public class User {
                 }
             ).disposed(by: User.disposeBag)
     }
+    
+    public func editPatronymic(patronymic: String, result:@escaping(Error?) ->()) {
+        User.provider.rx.request(.editPatronymic(id: self.id.value, patronymic: patronymic))
+            .filter(statusCodes: 200...399)
+            .subscribe({
+                response in
+                switch response {
+                case .success(_):
+                    self.patronymic.accept(patronymic)
+                    result(nil)
+                case .error(_):
+                    result(UserErrors.EditPatronymicError)
+                }
+                }
+            ).disposed(by: User.disposeBag)
+    }
 }

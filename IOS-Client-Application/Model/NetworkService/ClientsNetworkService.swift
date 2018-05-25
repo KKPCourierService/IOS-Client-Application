@@ -16,6 +16,7 @@ enum ClientsNetworkService {
     case logOut()
     case editName(id: Int, name: String)
     case editSurname(id: Int, surname: String)
+    case editPatronymic(id: Int, patronymic: String)
 }
 
 
@@ -35,12 +36,14 @@ extension ClientsNetworkService: TargetType {
             return "/clients/\(id)/profile/editName"
         case .editSurname(let id, _):
             return "/clients/\(id)/profile/editSurname"
+        case .editPatronymic(let id, _):
+            return "/clients/\(id)/profile/editPatronymic"
         }
         
     }
     var method: Moya.Method {
         switch self {
-        case .checkInNewUser, .logIn, .logOut, .editName, .editSurname:
+        case .checkInNewUser, .logIn, .logOut, .editName, .editSurname, .editPatronymic:
             return .post
         case .getProfile:
             return .get
@@ -56,6 +59,8 @@ extension ClientsNetworkService: TargetType {
             return .requestParameters(parameters: ["clientName":  name], encoding: JSONEncoding.default)
         case let .editSurname(_, surname):
             return .requestParameters(parameters: ["clientSurname":  surname], encoding: JSONEncoding.default)
+        case let .editPatronymic(_, patronymic):
+            return .requestParameters(parameters: ["clientPatronymic":  patronymic], encoding: JSONEncoding.default)
         case .getProfile(_), .logOut:
             return .requestPlain
         }
@@ -64,7 +69,7 @@ extension ClientsNetworkService: TargetType {
     
     var sampleData: Data {
         switch self {
-        case .checkInNewUser, .logIn(_, _), .getProfile, .logOut, .editName(_, _), .editSurname(_, _):
+        case .checkInNewUser, .logIn(_, _), .getProfile, .logOut, .editName(_, _), .editSurname(_, _), .editPatronymic:
             return  "".data(using: .ascii)!
         }
     }

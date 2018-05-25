@@ -7,17 +7,65 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class EditPatronymicViewController: UIViewController {
 
+    @IBOutlet weak var patronymic: UITextField!
+    @IBOutlet weak var editButton: UIButton!
+    
+    let disposeBag = DisposeBag()
+    
+    private var editPatronymicViewModel: EditPatronymicViewModel!
+    
+    
+    private var patronymicObservable: Observable<String> {
+        return patronymic.rx.text.throttle(0.5, scheduler : MainScheduler.instance).map(){ text in
+            return text ?? ""
+        }
+    }
+    
+    private var editButtonObservable: Observable<Void> {
+        return self.editButton.rx.tap.asObservable()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupModelView()
+        self.editPatronymicViewModel
+            .editObservable
+            .bind{
+                [weak self] error in
+                if(error == nil) {
+                    self?.navigationController?.popViewController(animated: true)
+                } else {
+                    self?.printExeptionAlert(messageText: "Ошибка при изменении имени")
+                }
+            }.disposed(by: disposeBag)
+        
+        self.editPatronymicViewModel
+            .editEnabled
+            .bind{
+                [weak self] valid  in
+                self?.editButton.isEnabled = valid
+                self?.editButton.alpha = valid ? 1 : 0.5
+            }.disposed(by: disposeBag)
     }
-
+    
+    
+    private func setupModelView() {
+        self.editPatronymicViewModel = EditPatronymicViewModel(input: (patronymic: patronymicObservable, editTap: editButtonObservable))
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    @IBAction func savePatronymicButtonClick(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
+    
 }
