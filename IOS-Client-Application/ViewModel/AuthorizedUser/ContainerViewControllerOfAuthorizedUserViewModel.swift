@@ -16,7 +16,7 @@ class ContainerViewControllerOfAuthorizedUserViewModel {
     private var logOutBehaviorRelay = BehaviorRelay<Bool>(value: false)
     private var activateOpenMenu = BehaviorRelay<Bool>(value: true)
     public var openMenuObservable: Observable<Bool>?
-    public var logOutObservable: Observable<Bool>?
+    public var logOutObservable: Observable<Bool>!
     
     
     private init(){}
