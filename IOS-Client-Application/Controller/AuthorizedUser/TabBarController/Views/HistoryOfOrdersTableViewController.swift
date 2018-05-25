@@ -12,8 +12,14 @@ import RxCocoa
 
 class HistoryOfOrdersTableViewController: UITableViewController {
     private var ordersViewController: OrderViewModel!
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         ordersViewController = OrderViewModel.sharedInstance
+        
+        ordersViewController.ordersObservable
+            .bind{
+                value in
+            }.disposed(by: disposeBag)
     }
 }

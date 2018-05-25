@@ -13,8 +13,20 @@ class OrderViewModel {
     public static let sharedInstance = OrderViewModel()
     private var ordersCount = BehaviorRelay<Int>(value: 0)
     private var ordersArray = Array<Order>()
+    public var ordersObservable: Observable<Array<Order>>!
+    
     private init(){
-        
+        setModel()
+    }
+    
+    private func setModel(){
+        ordersObservable = ordersCount.asObservable()
+            .throttle(0.5, scheduler : MainScheduler.instance)
+            .map{
+                _ in
+                return self.ordersArray
+                
+        }
     }
     
     public func createOrder(clientID: Int, typeId: Int, statusId: Int, numberOfAddresses: Int, informationAboutAddresses: String, description: String, cost: Int) -> Observable<Error?>{
